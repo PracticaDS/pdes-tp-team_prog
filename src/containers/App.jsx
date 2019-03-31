@@ -1,24 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { hot } from 'react-hot-loader/root';
-import { connect } from 'react-redux';
-import { Router, Switch, Route } from 'react-router-dom';
-import Helmet from 'react-helmet';
+import { Router } from 'react-router-dom';
+import theme from 'modules/theme';
 import styled, { css, ThemeProvider } from 'styled-components';
-import treeChanges from 'tree-changes';
-
-import history from 'modules/history';
-import theme, { headerHeight } from 'modules/theme';
-import { utils } from 'styled-minimal';
-
-import config from 'config';
-import { showAlert } from 'actions/index';
-
-import Header from 'components/Header';
 import SystemAlerts from 'containers/SystemAlerts';
+import { connect } from 'react-redux';
+import treeChanges from 'tree-changes';
+import { showAlert } from 'actions/index';
+import { nextTick } from 'actions/ticker';
 
-import Footer from 'components/Footer';
-import GlobalStyles from 'components/GlobalStyles';
+const TICK_MINS = 2;
+const tickTimer = TICK_MINS * 1000;
 
 const AppWrapper = styled.div`
   display: flex;
@@ -47,6 +40,23 @@ export class App extends React.Component {
     user: PropTypes.object.isRequired,
   };
 
+  tick = () => {
+    const { dispatch } = this.props;
+    dispatch(nextTick());
+  };
+
+  setTimer = () => {
+    this.timer = setInterval(this.tick, tickTimer);
+  };
+
+  componentDidMount = () => {
+    this.setTimer();
+  };
+
+  componentWillUnmount = () => {
+    clearInterval(this.timer);
+  };
+
   componentWillReceiveProps(nextProps) {
     const { dispatch } = this.props;
     const { changedTo } = treeChanges(this.props, nextProps);
@@ -58,17 +68,7 @@ export class App extends React.Component {
   }
 
   render() {
-    const { dispatch, user } = this.props;
-
-    return (
-      <Router history={history}>
-        <ThemeProvider theme={theme}>
-          <AppWrapper logged={user.isAuthenticated}>
-            <SystemAlerts />
-          </AppWrapper>
-        </ThemeProvider>
-      </Router>
-    );
+    return <div />;
   }
 }
 

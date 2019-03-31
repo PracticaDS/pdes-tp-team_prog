@@ -24,6 +24,9 @@ Object {
       "status": "idle",
     },
   },
+  "tick": Object {
+    "tick": 0,
+  },
   "user": Object {
     "isAuthenticated": false,
     "status": "idle",

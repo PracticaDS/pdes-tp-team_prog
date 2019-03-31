@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Ticker should handle NEXT_TICK 1`] = `
+Object {
+  "tick": 1,
+}
+`;
