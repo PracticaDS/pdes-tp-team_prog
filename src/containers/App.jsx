@@ -10,8 +10,8 @@ import treeChanges from 'tree-changes';
 import { showAlert } from 'actions/index';
 import { nextTick } from 'actions/ticker';
 
-const TICK_MINS = 2
-const tickTimer = TICK_MINS * 1000
+const TICK_MINS = 2;
+const tickTimer = TICK_MINS * 1000;
 
 const AppWrapper = styled.div`
   display: flex;
@@ -35,30 +35,31 @@ const Main = styled.main`
 `;
 
 export class App extends React.Component {
-
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
     user: PropTypes.object.isRequired,
   };
 
   tick = () => {
-    const { dispatch } = this.props
-    dispatch(nextTick())
-    clearInterval(this.timer)
-    this.setTimer()
-  } 
+    const { dispatch } = this.props;
+    dispatch(nextTick());
+  };
 
-  setTimer = () => { this.timer = setInterval(this.tick, tickTimer) }
+  setTimer = () => {
+    this.timer = setInterval(this.tick, tickTimer);
+  };
 
-  componentDidMount = () => { this.setTimer() } 
+  componentDidMount = () => {
+    this.setTimer();
+  };
 
-  componentWillUnmount = () => { 
-    clearInterval(this.timer)
-   }
+  componentWillUnmount = () => {
+    clearInterval(this.timer);
+  };
 
   componentWillReceiveProps(nextProps) {
-    const { dispatch } = this.props
-    const { changedTo } = treeChanges(this.props, nextProps)
+    const { dispatch } = this.props;
+    const { changedTo } = treeChanges(this.props, nextProps);
 
     /* istanbul ignore else */
     if (changedTo('user.isAuthenticated', true)) {
@@ -67,9 +68,7 @@ export class App extends React.Component {
   }
 
   render() {
-    return (
-      <div></div>
-    );
+    return <div />;
   }
 }
 
@@ -80,4 +79,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default hot(connect(mapStateToProps)(App))
+export default hot(connect(mapStateToProps)(App));
