@@ -13,7 +13,7 @@ describe('Ticker', () => {
     ).toMatchSnapshot();
   });
 
-  it(`The store has changed`, () => {
+  it('The store has changed', () => {
     const initialTick = { tick: 0 };
     const currentStore = reducer.tick(initialTick, { type: ActionTypes.NEXT_TICK, payload: {} });
     expect(currentStore).toEqual({ tick: 1 });
