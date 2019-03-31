@@ -17,7 +17,7 @@ const Private = () => (
         <Heading>Oh hai!</Heading>
         <Paragraph>
           You can get this boilerplate{' '}
-          <Link href="https://github.com/gilbarbara/react-redux-saga-boilerplate/" target="_blank">
+          <Link href="https://github.com/PracticaDS/pdes-tp-team_prog/" target="_blank">
             here
           </Link>
         </Paragraph>

@@ -1,14 +1,14 @@
 {
-  "name": "react-redux-saga-boilerplate",
-  "title": "react-redux-saga-boilerplate",
+  "name": "pdes-tp-team_prog",
+  "title": "pdes-tp-team_prog",
   "description": "React-Redux-Saga Boilerplate",
   "version": "2019.2.0",
   "author": "Gil Barbara <gilbarbara@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gilbarbara/react-redux-saga-boilerplate"
+    "url": "https://github.com/PracticaDS/pdes-tp-team_prog"
   },
-  "bugs": "https://github.com/gilbarbara/react-redux-saga-boilerplate/issues",
+  "bugs": "https://github.com/PracticaDS/pdes-tp-team_prog/issues",
   "license": "MIT",
   "keywords": [
     "React",

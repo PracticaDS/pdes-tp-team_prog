@@ -1,7 +1,7 @@
-describe('React-Redux-Saga-Boilerplate', () => {
+describe('pdes-tp-team_prog', () => {
   it('should assert that <title> is correct', () => {
     cy.visit('http://localhost:3000');
-    cy.title().should('include', 'react-redux-saga-boilerplate');
+    cy.title().should('include', 'pdes-tp-team_prog');
   });
 
   it('should be able to start', () => {
