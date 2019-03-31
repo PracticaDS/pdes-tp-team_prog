@@ -7,6 +7,6 @@ import { createActions } from 'redux-actions';
 
 import { ActionTypes } from 'constants/index';
 
-export const nextTick = createActions({
+export const { nextTick } = createActions({
   [ActionTypes.NEXT_TICK]: () => ({}),
 });

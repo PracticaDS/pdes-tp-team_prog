@@ -8,12 +8,11 @@ export const initialTicker = {
 };
 
 export default {
-  user: handleActions(
+  tick: handleActions(
     {
       [ActionTypes.NEXT_TICK]: state =>
         immutable(state, {
-          tick: { $set: state.tick + 1 },
-          status: { $set: STATUS.IDLE },
+          tick: { $set: state.tick + 1 }
         }),
     },
     initialTicker,
