@@ -20,7 +20,7 @@
 
 - cd `.../pdes-tp-team_prog`
 
-- Build the image Runing `docker build . -t react-docker`
+- Build the image Running `docker build . -t react-docker`
 
 - Run container Running `docker run -p 8000:80 react-docker`
 
