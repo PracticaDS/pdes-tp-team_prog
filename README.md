@@ -12,4 +12,4 @@
 
 ### Look the test coverage:
 
-- Run `yarn test:coverage`
+- Run `yarn test --coverage`
