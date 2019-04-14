@@ -4,7 +4,7 @@
 
 - Run `yarn`
 
-- Run `yarn install`
+- Run `yarn start`
 
 ### Run tests:
 
