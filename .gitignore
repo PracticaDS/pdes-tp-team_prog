@@ -9,4 +9,4 @@ reports/
 webpack.stats.json
 package-lock.json
 .idea/
-
+.DS_Store
