@@ -10585,7 +10585,7 @@ react-resize-detector@^3.2.1:
     prop-types "^15.6.2"
     resize-observer-polyfill "^1.5.1"
 
-react-scripts@2.1.8:
+react-scripts@^2.1.8:
   version "2.1.8"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-2.1.8.tgz#21195bb928b2c0462aa98b2d32edf7d034cff2a9"
   integrity sha512-mDC8fYWCyuB9VROti8OCPdHE79UEchVVZmuS/yaIs47VkvZpgZqUvzghYBswZRchqnW0aARNY8xXrzoFRhhK7A==
