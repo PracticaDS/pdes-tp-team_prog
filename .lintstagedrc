@@ -2,7 +2,8 @@
   "linters": {
     "**/*.+(js|jsx)": [
       "eslint --fix",
-      "git add"
+      "git add",
+      "yarn test --findRelatedTests"
     ],
     "**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)": [
       "prettier --write",
