@@ -25,7 +25,7 @@
   "plugins": [
     "babel",
     "cypress",
-    "flowtype",
+    "flowtype"
   ],
   "settings": {
     "import/resolver": {
@@ -198,6 +198,6 @@
           ]
         }
       }
-    ],
+    ]
   }
 }
