@@ -1,0 +1,26 @@
+.machineElement {
+  /* flex: 0 40%; */
+  flex-basis: auto;
+  margin: 3px;
+  border: 2px solid rgb(199, 200, 200);
+  height: 40px;
+  width: 40px;
+}
+
+.myContainer {
+  --heith: 300px;
+  --width: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: var(--heith);
+  width: var(--width);
+  padding: 5px;
+  border: 2px solid rgb(199, 200, 200);
+}
+
+.myItem {
+  flex: 0 50%;
+}
