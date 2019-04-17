@@ -7,20 +7,34 @@
   width: 40px;
 }
 
+.machineElement:hover {
+  border: 2px solid rgb(0, 76, 255);
+}
+
+.machineElement:active {
+  border: 2px solid rgb(101, 253, 0);
+}
+
 .myContainer {
   --heith: 300px;
-  --width: 200px;
+  height: var(--heith);
   display: flex;
   justify-content: flex-start;
   align-content: flex-start;
   flex-wrap: wrap;
   align-items: flex-start;
-  height: var(--heith);
-  width: var(--width);
   padding: 5px;
   border: 2px solid rgb(199, 200, 200);
 }
 
-.myItem {
-  flex: 0 50%;
+.myTitle {
+  display: flex;
+  justify-content: space-around;
+}
+
+.myMainContainer {
+  --heith: 300px;
+  height: var(--heith);
+  --width: 220px;
+  width: var(--width);
 }
