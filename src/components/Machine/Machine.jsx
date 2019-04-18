@@ -1,7 +1,5 @@
 import React from 'react'
 
-// import image from '../../assets/crafter.png'
-
 import './Machine.css'
 
 // eslint-disable-next-line react/prop-types
