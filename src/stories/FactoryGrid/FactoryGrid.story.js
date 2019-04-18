@@ -2,7 +2,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import FactoryGrid from '../../components/FactoryGrid/FactoryGrid'
-import Block from '../../components/FactoryBlocks/Block/Block'
+import Block from '../../components/FactoryBlock/Block'
 
 storiesOf('FactoryGrid', module)
   .add('Simple Grid with 1x2 empty blocks', () => {
