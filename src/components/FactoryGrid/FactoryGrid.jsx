@@ -4,10 +4,10 @@ import './FactoryGrid.css'
 // eslint-disable-next-line react/prop-types
 const FactoryGrid = ({ componenets }) => (
   <div className="FactoryGrid">
-    {componenets.map((RowComponents, Rindex) => (
+    {componenets.map((RowComponent, Rindex) => (
       <div key={Rindex} className="FactoryRow">
-        {RowComponents.map((Component, CIndex) => (
-          <Component position={{ row: Rindex, column: CIndex }} key={CIndex} />
+        {RowComponent.map((Component, CIndex) => (
+          <Component key={CIndex} position={{ row: Rindex, column: CIndex }} />
         ))}
       </div>
     ))}

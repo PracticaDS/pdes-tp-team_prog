@@ -2,22 +2,26 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import FactoryGrid from '../../components/FactoryGrid/FactoryGrid'
-import EmptyFactoryBlock from '../../components/FactoryBlocks/EmptyFactoryBlock/EmptyFactoryBlock'
+import Block from '../../components/FactoryBlocks/Block/Block'
 
 storiesOf('FactoryGrid', module)
-  .add('Simple Grid without blocks', () => <FactoryGrid componenets={[[]]} />)
+  .add('Simple Grid with 1x2 empty blocks', () => {
+    const rowBlock = [Block, Block]
+    const blocks = [rowBlock]
+    return <FactoryGrid componenets={blocks} />
+  })
+  .add('Simple Grid with 2x1 empty blocks', () => {
+    const rowBlock = [Block]
+    const blocks = [rowBlock, rowBlock]
+    return <FactoryGrid componenets={blocks} />
+  })
   .add('Simple Grid with 2x2 empty blocks', () => {
-    const columnsBlock = [EmptyFactoryBlock, EmptyFactoryBlock]
-    const blocks = [columnsBlock, columnsBlock]
+    const rowBlock = [Block, Block]
+    const blocks = [rowBlock, rowBlock]
     return <FactoryGrid componenets={blocks} />
   })
   .add('Simple Grid with 5x4 empty blocks', () => {
-    const columnsBlock = [
-      EmptyFactoryBlock,
-      EmptyFactoryBlock,
-      EmptyFactoryBlock,
-      EmptyFactoryBlock,
-    ]
-    const blocks = [columnsBlock, columnsBlock, columnsBlock, columnsBlock]
+    const rowBlock = [Block, Block, Block, Block]
+    const blocks = [rowBlock, rowBlock, rowBlock, rowBlock, rowBlock]
     return <FactoryGrid componenets={blocks} />
   })
