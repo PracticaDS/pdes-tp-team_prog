@@ -7,8 +7,8 @@ import EmptyFactoryBlock from '../../components/FactoryBlocks/EmptyFactoryBlock/
 storiesOf('FactoryGrid', module)
   .add('Simple Grid without blocks', () => <FactoryGrid componenets={[[]]} />)
   .add('Simple Grid with 2x2 empty blocks', () => {
-    const twoBlocks = [EmptyFactoryBlock, EmptyFactoryBlock]
-    const blocks = [twoBlocks, twoBlocks]
+    const columnsBlock = [EmptyFactoryBlock, EmptyFactoryBlock]
+    const blocks = [columnsBlock, columnsBlock]
     return <FactoryGrid componenets={blocks} />
   })
   .add('Simple Grid with 5x4 empty blocks', () => {
@@ -18,6 +18,6 @@ storiesOf('FactoryGrid', module)
       EmptyFactoryBlock,
       EmptyFactoryBlock,
     ]
-    const blocks = [columnsBlock, columnsBlock, columnsBlock, columnsBlock, columnsBlock]
+    const blocks = [columnsBlock, columnsBlock, columnsBlock, columnsBlock]
     return <FactoryGrid componenets={blocks} />
   })
