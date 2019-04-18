@@ -4,8 +4,9 @@ import './EmptyFactoryBlock.css'
 
 // eslint-disable-next-line react/prop-types
 const EmptyFactoryBlock = ({ position: { row, column } }) => (
-  <div>
+  <div className="Block">
     {`Row: ${row}`}
+    {'\n'}
     {`Column: ${column}`}
   </div>
 )

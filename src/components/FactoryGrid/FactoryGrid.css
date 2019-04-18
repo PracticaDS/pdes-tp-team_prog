@@ -10,8 +10,3 @@
   flex-direction: row;
   align-items: center;
 }
-
-.FactoryColumns {
-  display: flex;
-  flex-direction: column;
-}

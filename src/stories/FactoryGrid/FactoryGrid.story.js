@@ -11,3 +11,13 @@ storiesOf('FactoryGrid', module)
     const blocks = [twoBlocks, twoBlocks]
     return <FactoryGrid componenets={blocks} />
   })
+  .add('Simple Grid with 5x4 empty blocks', () => {
+    const columnsBlock = [
+      EmptyFactoryBlock,
+      EmptyFactoryBlock,
+      EmptyFactoryBlock,
+      EmptyFactoryBlock,
+    ]
+    const blocks = [columnsBlock, columnsBlock, columnsBlock, columnsBlock, columnsBlock]
+    return <FactoryGrid componenets={blocks} />
+  })
