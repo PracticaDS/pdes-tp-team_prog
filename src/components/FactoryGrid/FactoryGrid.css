@@ -1,0 +1,17 @@
+.FactoryGrid {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.FactoryRows {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.FactoryColumns {
+  display: flex;
+  flex-direction: column;
+}
