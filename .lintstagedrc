@@ -1,14 +1,18 @@
 {
+  "test": {
+    "**/*.spec.+(js|jsx)": [
+      "jest --all"
+    ]
+  },
   "linters": {
     "**/*.+(js|jsx)": [
       "eslint --fix",
-      "git add",
-      "jest --all"
+      "git add"
     ],
     "**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)": [
       "prettier --write",
       "git add"
     ]
   },
-  "ignore": ["**/dist/*"]
+  "ignore": ["**/dist/*", "*.constants.*"]
 }

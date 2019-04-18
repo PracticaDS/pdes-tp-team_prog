@@ -1,19 +1,47 @@
 import React from 'react'
 
 import { storiesOf } from '@storybook/react'
+import crafter from '../../assets/crafter.png'
+import furnace from '../../assets/furnace.png'
+import seller from '../../assets/seller.png'
+import starter from '../../assets/starter.png'
+import transporter from '../../assets/transporter.png'
 
 import MachineTypes from './MachineTypes'
+
+const myElements = [
+  {
+    image: starter,
+    title: 'Starter',
+  },
+  {
+    image: seller,
+    title: 'Seller',
+  },
+  {
+    image: crafter,
+    title: 'Crafter',
+  },
+  {
+    image: furnace,
+    title: 'Furnace',
+  },
+  {
+    image: transporter,
+    title: 'Transporter',
+  },
+]
 
 storiesOf('MachineTypes', module).add('Empty', () => <MachineTypes elements={[]} />)
 
 storiesOf('MachineTypes', module).add('Single Row not full', () => (
-  <MachineTypes elements={['A', 'B', 'C']} />
+  <MachineTypes elements={myElements.slice(0, 3)} />
 ))
 
 storiesOf('MachineTypes', module).add('Single Row full', () => (
-  <MachineTypes elements={['A', 'B', 'C', 'D']} />
+  <MachineTypes elements={myElements.slice(0, 4)} />
 ))
 
-storiesOf('MachineTypes', module).add("3 Rows, 2 full, last one isn't", () => (
-  <MachineTypes elements={['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']} />
+storiesOf('MachineTypes', module).add("2 Rows, 1 full, last one isn't", () => (
+  <MachineTypes elements={myElements.slice(0, 5)} />
 ))
