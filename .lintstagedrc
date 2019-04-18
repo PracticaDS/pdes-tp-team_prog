@@ -9,7 +9,7 @@
       "git add"
     ],
     "**/*.spec.+(js|jsx)": [
-      "jest --all"
+      "jest --findRelatedTests"
     ]
   },
   "ignore": ["**/dist/*", "*.constants.*"]
