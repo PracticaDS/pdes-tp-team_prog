@@ -1,13 +1,11 @@
 .myContainer {
-  width: auto;
   display: flex;
   justify-content: flex-start;
   align-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding: 5px;
-  border: 2px solid rgb(255, 255, 255);
-  background-color: rgb(255, 255, 255);
+  padding: 0.2rem;
+  border: 2rem solid rgb(255, 255, 255);
 }
 
 .myTitle {
@@ -17,10 +15,5 @@
 }
 
 .myMainContainer {
-  --heith: 300px;
-  height: var(--heith);
-  --width: 250px;
-  width: var(--width);
-  border: 2px solid rgb(73, 78, 78);
-  background-color: rgb(73, 78, 78);
+  border: 0.01rem solid rgb(73, 78, 78);
 }
