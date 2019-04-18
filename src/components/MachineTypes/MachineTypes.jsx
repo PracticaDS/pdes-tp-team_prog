@@ -1,26 +1,21 @@
 import React from 'react'
+import { Card, CardContent, CardHeader } from '@material-ui/core'
 
 import './MachineTypes.css'
 
 import Constants from './MachineTypes.constants'
 import Machine from '../Machine/Machine'
 
-const elementClicked = val => {
-  alert(`Se ha clickeado la opcion ${JSON.stringify(val)}`)
-}
-
 // eslint-disable-next-line react/prop-types
 const MachineTypes = ({ elements }) => (
-  <div className="myMainContainer">
-    <div className="myTitle">{Constants.title}</div>
-    <div className="myContainer commonStyle">
+  <Card className="myMainContainer">
+    <CardHeader title={Constants.title} />
+    <CardContent className="myContainer">
       {elements.map((machine, index) => (
-        <div key={index} className="machineElement" onClick={() => elementClicked(machine.title)}>
-          <Machine image={machine.image} />
-        </div>
+        <Machine key={index} machine={machine} />
       ))}
-    </div>
-  </div>
+    </CardContent>
+  </Card>
 )
 
 export default MachineTypes

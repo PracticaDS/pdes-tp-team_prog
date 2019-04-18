@@ -6,8 +6,10 @@ import { linkTo } from '@storybook/addon-links'
 
 import { Button, Welcome } from '@storybook/react/demo'
 
-import '../components/MachineTypes/MachineTypes.stories'
-import '../components/Machine/Machine.stories'
+// eslint-disable-next-line import/extensions
+import '../components/MachineTypes/MachineTypes.stories.jsx'
+// eslint-disable-next-line import/extensions
+import '../components/Machine/Machine.stories.jsx'
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />)
 

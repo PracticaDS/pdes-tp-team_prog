@@ -4,3 +4,21 @@
   position: relative;
   border-radius: 20%;
 }
+
+.machineElement {
+  /* flex: 0 40%; */
+  flex-basis: auto;
+  margin: 3px;
+  border: 2px solid rgb(199, 200, 200);
+  border-radius: 20%;
+  height: 2.55rem;
+  width: 2.55rem;
+}
+
+.machineElement:hover {
+  border: 2px solid rgb(0, 76, 255);
+}
+
+.machineElement:active {
+  border: 2px solid rgb(101, 253, 0);
+}
