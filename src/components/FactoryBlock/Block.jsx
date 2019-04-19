@@ -3,24 +3,18 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import './Block.css'
 
-import { Card, CardContent } from '@material-ui/core'
+import { Card } from '@material-ui/core'
 import EmptyMachineNode from '../MachineNodes/EmptyMachineNode/EmptyMachineNode'
 
 // eslint-disable-next-line react/prop-types
-const Block = ({ position: { row, column }, Machine }) => (
+const Block = ({ position: { row, column }, MachineNode }) => (
   <Card className="Block">
-    <CardContent>
-      <Machine />
-    </CardContent>
+    <MachineNode />
   </Card>
 )
 
-Block.propTypes = {
-  Machine: PropTypes.object,
-}
-
 Block.defaultProps = {
-  Machine: EmptyMachineNode,
+  MachineNode: EmptyMachineNode,
 }
 
 export default Block

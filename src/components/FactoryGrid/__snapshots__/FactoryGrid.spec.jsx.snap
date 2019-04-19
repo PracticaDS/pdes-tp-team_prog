@@ -11,25 +11,15 @@ exports[`render simple Grid Component with 2x2 Blocks 1`] = `
       className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1 Block"
     >
       <div
-        className="MuiCardContent-root-29"
-      >
-        Row: 0
-        
-
-        Column: 0
-      </div>
+        className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+      />
     </div>
     <div
       className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1 Block"
     >
       <div
-        className="MuiCardContent-root-29"
-      >
-        Row: 0
-        
-
-        Column: 1
-      </div>
+        className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+      />
     </div>
   </div>
   <div
@@ -39,25 +29,15 @@ exports[`render simple Grid Component with 2x2 Blocks 1`] = `
       className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1 Block"
     >
       <div
-        className="MuiCardContent-root-29"
-      >
-        Row: 1
-        
-
-        Column: 0
-      </div>
+        className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+      />
     </div>
     <div
       className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1 Block"
     >
       <div
-        className="MuiCardContent-root-29"
-      >
-        Row: 1
-        
-
-        Column: 1
-      </div>
+        className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+      />
     </div>
   </div>
 </div>
