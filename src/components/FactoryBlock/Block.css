@@ -1,0 +1,12 @@
+.Block {
+  display: flex;
+  color: black;
+  margin: 0.1rem;
+  border: 0.1rem solid black;
+  width: 4rem;
+  height: 4rem;
+}
+
+.MachineNode {
+  display: flex;
+}
