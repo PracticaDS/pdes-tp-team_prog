@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import PropTypes from 'prop-types'
 import React from 'react'
 import './Block.css'
@@ -10,11 +11,6 @@ const Block = ({ position: { row, column }, Machine }) => (
   <Card className="Block">
     <CardContent>
       <Machine />
-      <div>
-        {`Row: ${row}`}
-        {'\n'}
-        {`Column: ${column}`}
-      </div>
     </CardContent>
   </Card>
 )
