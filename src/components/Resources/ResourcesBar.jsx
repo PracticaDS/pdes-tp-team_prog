@@ -6,7 +6,7 @@ import './ResourcesBar.css'
 // eslint-disable-next-line react/prop-types
 const ResourcesBar = ({ currency }) => (
   <div className="ResourcesBar">
-    <AppBar position="static" color="default">
+    <AppBar color="default">
       <Toolbar variant="dense">
         <Typography variant="h6" color="inherit">
           {`${`${Constant.currency}: ${currency}`}`}
