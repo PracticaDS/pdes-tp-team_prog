@@ -9,7 +9,7 @@ import EmptyMachineNode from '../MachineNodes/EmptyMachineNode/EmptyMachineNode'
 // eslint-disable-next-line react/prop-types
 const Block = ({ position: { row, column }, MachineNode }) => (
   <Card className="Block">
-    <MachineNode />
+    <MachineNode className="MachineNode" />
   </Card>
 )
 

@@ -1,9 +1,12 @@
 .Block {
-  padding: 2.5rem;
+  display: flex;
   color: black;
   margin: 0.1rem;
   border: 0.1rem solid black;
-  background-color: white;
-  width: 1rem;
-  height: 1rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.MachineNode {
+  display: flex;
 }
