@@ -8,6 +8,7 @@ import FurnaceMachineNode from '../../components/MachineNodes/FurnaceMachineNode
 import SellerMachineNode from '../../components/MachineNodes/SellerMachineNode/SellerMachineNode'
 import TransporterMachineNode from '../../components/MachineNodes/TransporterMachineNode/TransporterMachineNode'
 import EmptyMachineNode from '../../components/MachineNodes/EmptyMachineNode/EmptyMachineNode'
+import StarterMachineNode from '../../components/MachineNodes/StarterMachineNode/StarterMachineNode'
 
 storiesOf('FactoryGrid', module)
   .add('Simple Grid with 1x2 empty blocks', () => {
@@ -30,17 +31,55 @@ storiesOf('FactoryGrid', module)
     const blocks = [rowBlock, rowBlock, rowBlock, rowBlock, rowBlock]
     return <FactoryGrid componenets={blocks} />
   })
-  .add('Grid with 5x4 and differents types of Machines', () => {
-    const rowBlock = [EmptyMachineNode, EmptyMachineNode, EmptyMachineNode, EmptyMachineNode]
-    const rowBlock1 = [EmptyMachineNode, CrafterMachineNode, EmptyMachineNode, SellerMachineNode]
-    const rowBlock2 = [FurnaceMachineNode, EmptyMachineNode, EmptyMachineNode, EmptyMachineNode]
+  .add('Grid with 6x6 and differents types of Machines', () => {
+    const rowBlock1 = [
+      EmptyMachineNode,
+      CrafterMachineNode,
+      EmptyMachineNode,
+      SellerMachineNode,
+      EmptyMachineNode,
+      CrafterMachineNode,
+    ]
+    const rowBlock2 = [
+      FurnaceMachineNode,
+      EmptyMachineNode,
+      EmptyMachineNode,
+      EmptyMachineNode,
+      EmptyMachineNode,
+      EmptyMachineNode,
+    ]
     const rowBlock3 = [
       TransporterMachineNode,
       EmptyMachineNode,
       CrafterMachineNode,
       EmptyMachineNode,
+      TransporterMachineNode,
+      EmptyMachineNode,
     ]
-    const rowBlock4 = [EmptyMachineNode, SellerMachineNode, EmptyMachineNode, CrafterMachineNode]
-    const blocks = [rowBlock1, rowBlock2, rowBlock3, rowBlock4, rowBlock]
+    const rowBlock4 = [
+      EmptyMachineNode,
+      SellerMachineNode,
+      EmptyMachineNode,
+      CrafterMachineNode,
+      FurnaceMachineNode,
+      StarterMachineNode,
+    ]
+    const rowBlock5 = [
+      FurnaceMachineNode,
+      FurnaceMachineNode,
+      EmptyMachineNode,
+      EmptyMachineNode,
+      EmptyMachineNode,
+      CrafterMachineNode,
+    ]
+    const rowBlock6 = [
+      TransporterMachineNode,
+      EmptyMachineNode,
+      CrafterMachineNode,
+      StarterMachineNode,
+      SellerMachineNode,
+      EmptyMachineNode,
+    ]
+    const blocks = [rowBlock1, rowBlock2, rowBlock3, rowBlock4, rowBlock5, rowBlock6]
     return <FactoryGrid componenets={blocks} />
   })
