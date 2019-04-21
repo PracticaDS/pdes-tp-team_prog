@@ -34,6 +34,7 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@storybook/addon-actions": "^5.0.7",
     "@storybook/addon-links": "^5.0.7",
     "@storybook/addons": "^5.0.7",
