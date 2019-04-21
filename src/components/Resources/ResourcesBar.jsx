@@ -14,4 +14,8 @@ const ResourcesBar = ({ currency }) => (
   </div>
 )
 
+ResourcesBar.defaultProps = {
+  currency: 0,
+}
+
 export default ResourcesBar

@@ -1,58 +1,45 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
+import React, { Component } from 'react'
 import ResourcesBar from '../Resources/ResourcesBar'
-import crafter from '../../assets/crafter.png'
-import furnace from '../../assets/furnace.png'
-import seller from '../../assets/seller.png'
-import starter from '../../assets/starter.png'
-import transporter from '../../assets/transporter.png'
 import MachineTypes from '../MachineTypes/MachineTypes'
 import EmptyMachineNode from '../MachineNodes/EmptyMachineNode/EmptyMachineNode'
 import FactoryGrid from '../FactoryGrid/FactoryGrid'
+import { machineTypes } from './Game.constants'
 import './Game.css'
 
-const machineTypes = [
-  {
-    image: starter,
-    title: 'Starter',
-  },
-  {
-    image: seller,
-    title: 'Seller',
-  },
-  {
-    image: crafter,
-    title: 'Crafter',
-  },
-  {
-    image: furnace,
-    title: 'Furnace',
-  },
-  {
-    image: transporter,
-    title: 'Transporter',
-  },
-]
+// n columns, m rows
+const initializeBlocks = (n, m) => Array(m).fill(Array(n).fill(EmptyMachineNode))
 
-const rowBlock = [
-  EmptyMachineNode,
-  EmptyMachineNode,
-  EmptyMachineNode,
-  EmptyMachineNode,
-  EmptyMachineNode,
-]
-const blocks = [rowBlock, rowBlock, rowBlock, rowBlock, rowBlock]
+class Game extends Component {
+  constructor(props) {
+    super(props)
+    const { dimensions } = props
+    const { n, m } = dimensions
+    this.state = {
+      currentBlocks: initializeBlocks(n, m),
+    }
+    this.initialGame()
+  }
 
-// TODO: we dont need pass every state components
-const Game = () => (
-  <div className="Game">
-    {/* When we have redux, we wont pass the currency */}
-    <ResourcesBar currency={0} />
-    <div className="HorizontalGameParts">
-      <MachineTypes elements={machineTypes.slice(0, 5)} />
-      <FactoryGrid componenets={blocks} />
-      <MachineTypes elements={[]} /> {/* TODO: we need change this component */}
-    </div>
-  </div>
-)
+  initialGame = () => {
+    const { restartCurrency, startGame } = this.props
+    restartCurrency() // Should call to an action that restart the global currency
+    startGame() // Should call to an action that start the game (Ticks)
+  }
+
+  render = () => {
+    const { currentBlocks } = this.state
+    return (
+      <div className="Game">
+        <ResourcesBar />
+        <div className="HorizontalGameParts">
+          <MachineTypes elements={machineTypes} />
+          <FactoryGrid componenets={currentBlocks} />
+          <MachineTypes elements={[]} /> {/* TODO: we need change this component */}
+        </div>
+      </div>
+    )
+  }
+}
 
 export default Game
