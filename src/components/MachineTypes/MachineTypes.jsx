@@ -9,7 +9,7 @@ import Machine from '../Machine/Machine'
 // eslint-disable-next-line react/prop-types
 const MachineTypes = ({ elements }) => (
   <Card className="myMainContainer">
-    <CardHeader title={Constants.title} />
+    <CardHeader className="Header" title={Constants.title} />
     <CardContent className="myContainer">
       {elements.map((machine, index) => (
         <Machine key={index} machine={machine} />
