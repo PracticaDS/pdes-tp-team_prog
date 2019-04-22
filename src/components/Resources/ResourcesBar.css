@@ -1,4 +1,9 @@
 .ResourcesBar {
   display: flex;
-  align-content: center;
+  margin: 3rem;
+}
+
+.Currency {
+  display: flex;
+  justify-content: center;
 }

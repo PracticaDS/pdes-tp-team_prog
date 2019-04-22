@@ -1,5 +1,5 @@
 const Constants = {
-  title: 'Maquinas',
+  title: 'Machines',
 }
 
 export default Constants

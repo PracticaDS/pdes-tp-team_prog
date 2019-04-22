@@ -16,6 +16,10 @@
   justify-content: space-around;
 }
 
+.Header {
+  text-align: center;
+}
+
 .myMainContainer {
   --heith: 300px;
   height: var(--heith);
