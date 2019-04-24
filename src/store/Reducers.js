@@ -1,3 +1,2 @@
-import * as containers from '../reducers'
-
-export const reducers = Object.assign({}, containers)
+// Foreach reducer, we need export it here
+export * from '../reducers/simpleReducer'

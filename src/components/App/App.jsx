@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
-import { reducers } from '../../store/Reducers'
 import configureStore from '../../store/ReduxStore'
 import logo from '../../assets/logo.svg'
 import './App.css'
 
-const store = configureStore(reducers)
+const store = configureStore()
 
 class App extends Component {
   render() {
