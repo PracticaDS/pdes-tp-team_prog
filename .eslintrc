@@ -2,7 +2,6 @@
   "extends": [
     "airbnb",
     "plugin:prettier/recommended",
-    "prettier/flowtype",
     "prettier/react"
   ],
   "parser": "babel-eslint",
@@ -24,17 +23,13 @@
   },
   "plugins": [
     "babel",
-    "cypress",
-    "flowtype"
+    "cypress"
   ],
   "settings": {
-    "import/resolver": {
-      "webpack": {
-        "config": "config/webpack.config.js"
+    "import/resolver": {	
+      "webpack": {	
+        "config": "config/webpack.config.js"	
       }
-    },
-    "flowtype": {
-      "onlyFilesWithFlowAnnotation": true
     }
   },
   "rules": {
@@ -126,12 +121,6 @@
           "eslint-enable"
         ]
       }
-    ],
-    "flowtype/require-parameter-type": ["warn", { "excludeArrowFunctions": true }],
-    "flowtype/require-return-type": ["warn", "always", { "excludeArrowFunctions": true }],
-    "flowtype/space-after-type-colon": [
-      "error",
-      "always"
     ],
     "import/no-dynamic-require": "off",
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
