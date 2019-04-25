@@ -1,9 +1,9 @@
-import { PLAY_GAME, NEXT_TICK } from '../utils/actionTypes'
+import { PLAY_GAME, TICK } from '../utils/actionTypes'
 
 export const playGame = () => ({
   type: PLAY_GAME,
 })
 
-export const nextTick = () => ({
-  type: NEXT_TICK,
+export const tick = () => ({
+  type: TICK,
 })

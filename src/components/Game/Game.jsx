@@ -6,6 +6,7 @@ import EmptyMachineNode from '../MachineNodes/EmptyMachineNode/EmptyMachineNode'
 import FactoryGrid from '../FactoryGrid/FactoryGrid'
 import { machineTypes } from './Game.constants'
 import connector from './GameConnector'
+import { TIMER_TIME } from '../../utils/defaultValues'
 import './Game.css'
 
 const initializeBlocks = (n, m) => Array(m).fill(Array(n).fill(EmptyMachineNode))
@@ -17,14 +18,21 @@ class Game extends Component {
     const { n, m } = dimensions
     this.state = {
       currentBlocks: initializeBlocks(n, m),
+      timer: null,
     }
     this.initialGame()
   }
 
+  componentWillUnmount = () => {
+    const { timer } = this.state
+    this.clearInterval(timer)
+  }
+
   initialGame = () => {
-    const { restartCurrency, startGame } = this.props
+    const { restartCurrency, startGame, tick } = this.props
     restartCurrency()
     startGame()
+    this.setState({ timer: setInterval(tick, TIMER_TIME) })
   }
 
   render = () => {

@@ -1,4 +1,4 @@
-import { PLAY_GAME, NEXT_TICK, RESTART_CURRENCY } from '../utils/actionTypes'
+import { PLAY_GAME, TICK, RESTART_CURRENCY } from '../utils/actionTypes'
 
 const STATES = {
   PAUSED: 'PAUSED',
@@ -20,7 +20,7 @@ export const GameState = (state = initialState, action) => {
   switch (type) {
     case `${PLAY_GAME}`:
       return playGame(state)
-    case `${NEXT_TICK}`:
+    case `${TICK}`:
       return nextTick(state)
     case `${RESTART_CURRENCY}`:
       return restartCurrency(state)

@@ -1,8 +1,7 @@
+import { DEFAULT_DIMENSIONS } from '../utils/defaultValues'
+
 const initialState = {
-  dimensions: {
-    n: 5, // defaults
-    m: 5,
-  },
+  dimensions: DEFAULT_DIMENSIONS,
 }
 
 export const Grid = (state = initialState, action) => {
