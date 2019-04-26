@@ -16,7 +16,7 @@ exports[`render simple Game Component 1`] = `
         <h3
           className="MuiTypography-root-41 MuiTypography-subheading-48"
         >
-          Currency $0
+          Currency $1000
         </h3>
       </div>
     </header>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { AppBar, Typography, Toolbar } from '@material-ui/core'
 import { Constant } from './ResourcesBar.constants'
+import connector from './ResourcesConnector'
 import './ResourcesBar.css'
 
 // eslint-disable-next-line react/prop-types
@@ -14,8 +15,4 @@ const ResourcesBar = ({ currency }) => (
   </div>
 )
 
-ResourcesBar.defaultProps = {
-  currency: 0,
-}
-
-export default ResourcesBar
+export default connector(ResourcesBar)
