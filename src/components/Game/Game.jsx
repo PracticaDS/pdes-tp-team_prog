@@ -5,9 +5,10 @@ import MachineTypes from '../MachineTypes/MachineTypes'
 import EmptyMachineNode from '../MachineNodes/EmptyMachineNode/EmptyMachineNode'
 import FactoryGrid from '../FactoryGrid/FactoryGrid'
 import { machineTypes } from './Game.constants'
+import connector from './GameConnector'
+import { TIMER_TIME } from '../../utils/defaultValues'
 import './Game.css'
 
-// n columns, m rows
 const initializeBlocks = (n, m) => Array(m).fill(Array(n).fill(EmptyMachineNode))
 
 class Game extends Component {
@@ -17,14 +18,24 @@ class Game extends Component {
     const { n, m } = dimensions
     this.state = {
       currentBlocks: initializeBlocks(n, m),
+      timer: null,
     }
+  }
+
+  componentDidMount() {
     this.initialGame()
   }
 
+  componentWillUnmount = () => {
+    const { timer } = this.state
+    this.clearInterval(timer)
+  }
+
   initialGame = () => {
-    const { restartCurrency, startGame } = this.props
-    restartCurrency() // Should call to an action that restart the global currency
-    startGame() // Should call to an action that start the game (Ticks)
+    const { restartCurrency, startGame, tick } = this.props
+    restartCurrency()
+    startGame()
+    this.setState({ timer: setInterval(tick, TIMER_TIME) })
   }
 
   render = () => {
@@ -42,4 +53,4 @@ class Game extends Component {
   }
 }
 
-export default Game
+export default connector(Game)
