@@ -2,35 +2,884 @@
 
 exports[`renders without crashing 1`] = `
 <div
-  className="App"
+  className="Game"
 >
-  <header
-    className="App-header"
+  <div
+    className="ResourcesBar"
   >
-    <img
-      alt="logo"
-      className="App-logo"
-      src={
-        Object {
-          "process": [Function],
-        }
-      }
-    />
-    <p>
-      Edit 
-      <code>
-        src/App.js
-      </code>
-       and save to reload.
-    </p>
-    <a
-      className="App-link"
-      href="https://reactjs.org"
-      rel="noopener noreferrer"
-      target="_blank"
+    <header
+      className="MuiPaper-root-10 MuiPaper-elevation4-16 MuiAppBar-root-1 MuiAppBar-positionAbsolute-3"
     >
-      Learn React
-    </a>
-  </header>
+      <div
+        className="MuiToolbar-root-37 MuiToolbar-regular-39 MuiToolbar-gutters-38 Currency"
+      >
+        <h3
+          className="MuiTypography-root-41 MuiTypography-subheading-48"
+        >
+          Currency $0
+        </h3>
+      </div>
+    </header>
+  </div>
+  <div
+    className="HorizontalGameParts"
+  >
+    <div
+      className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 myMainContainer"
+    >
+      <div
+        className="MuiCardHeader-root-78 Header"
+      >
+        <div
+          className="MuiCardHeader-content-81"
+        >
+          <span
+            className="MuiTypography-root-41 MuiTypography-headline-46 MuiCardHeader-title-82"
+          >
+            Machines
+          </span>
+        </div>
+      </div>
+      <div
+        className="MuiCardContent-root-84 myContainer"
+      >
+        <div
+          className="machineElement"
+          onClick={[Function]}
+        >
+          <img
+            alt="myImage"
+            className="basicMachine"
+            src={
+              Object {
+                "process": [Function],
+              }
+            }
+          />
+        </div>
+        <div
+          className="machineElement"
+          onClick={[Function]}
+        >
+          <img
+            alt="myImage"
+            className="basicMachine"
+            src={
+              Object {
+                "process": [Function],
+              }
+            }
+          />
+        </div>
+        <div
+          className="machineElement"
+          onClick={[Function]}
+        >
+          <img
+            alt="myImage"
+            className="basicMachine"
+            src={
+              Object {
+                "process": [Function],
+              }
+            }
+          />
+        </div>
+        <div
+          className="machineElement"
+          onClick={[Function]}
+        >
+          <img
+            alt="myImage"
+            className="basicMachine"
+            src={
+              Object {
+                "process": [Function],
+              }
+            }
+          />
+        </div>
+        <div
+          className="machineElement"
+          onClick={[Function]}
+        >
+          <img
+            alt="myImage"
+            className="basicMachine"
+            src={
+              Object {
+                "process": [Function],
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="FactoryGrid"
+    >
+      <div
+        className="FactoryRow"
+      >
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+      </div>
+      <div
+        className="FactoryRow"
+      >
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+      </div>
+      <div
+        className="FactoryRow"
+      >
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+      </div>
+      <div
+        className="FactoryRow"
+      >
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+      </div>
+      <div
+        className="FactoryRow"
+      >
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+      </div>
+      <div
+        className="FactoryRow"
+      >
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+      </div>
+      <div
+        className="FactoryRow"
+      >
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+      </div>
+      <div
+        className="FactoryRow"
+      >
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+      </div>
+      <div
+        className="FactoryRow"
+      >
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+      </div>
+      <div
+        className="FactoryRow"
+      >
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+        <div
+          className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 Block"
+        >
+          <div
+            className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiPaper-root-10 MuiPaper-elevation1-13 MuiPaper-rounded-11 MuiCard-root-77 myMainContainer"
+    >
+      <div
+        className="MuiCardHeader-root-78 Header"
+      >
+        <div
+          className="MuiCardHeader-content-81"
+        >
+          <span
+            className="MuiTypography-root-41 MuiTypography-headline-46 MuiCardHeader-title-82"
+          >
+            Machines
+          </span>
+        </div>
+      </div>
+      <div
+        className="MuiCardContent-root-84 myContainer"
+      />
+    </div>
+     
+  </div>
 </div>
 `;
