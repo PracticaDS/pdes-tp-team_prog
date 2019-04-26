@@ -20,6 +20,9 @@ class Game extends Component {
       currentBlocks: initializeBlocks(n, m),
       timer: null,
     }
+  }
+
+  componentDidMount() {
     this.initialGame()
   }
 
