@@ -10,7 +10,7 @@ exports[`render simple ResourcesBar Component 1`] = `
     <font
       className="TitleFont"
     >
-      Currency 
+      Currency
     </font>
     <font
       className="CountFont"

@@ -7,7 +7,7 @@ import './ResourcesBar.css'
 const ResourcesBar = ({ currency }) => (
   <div className="ResourcesBar">
     <div className="Currency">
-      <font className="TitleFont">{`${Constant.currency} `}</font>
+      <font className="TitleFont">{`${Constant.currency}`}</font>
       <font className="CountFont">{`$${currency}`}</font>
     </div>
   </div>
