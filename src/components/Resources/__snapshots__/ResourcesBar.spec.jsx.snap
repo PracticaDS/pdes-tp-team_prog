@@ -4,18 +4,19 @@ exports[`render simple ResourcesBar Component 1`] = `
 <div
   className="ResourcesBar"
 >
-  <header
-    className="MuiPaper-root-10 MuiPaper-elevation4-16 MuiAppBar-root-1 MuiAppBar-positionAbsolute-3"
+  <div
+    className="Currency"
   >
-    <div
-      className="MuiToolbar-root-37 MuiToolbar-regular-39 MuiToolbar-gutters-38 Currency"
+    <font
+      className="TitleFont"
     >
-      <h3
-        className="MuiTypography-root-41 MuiTypography-subheading-48"
-      >
-        Currency $1000
-      </h3>
-    </div>
-  </header>
+      Currency 
+    </font>
+    <font
+      className="CountFont"
+    >
+      $1000
+    </font>
+  </div>
 </div>
 `;

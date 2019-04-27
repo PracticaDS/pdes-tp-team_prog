@@ -1,9 +1,20 @@
 .ResourcesBar {
-  display: flex;
+  display: inline-block;
   margin: 3rem;
 }
 
 .Currency {
   display: flex;
+  text-align: center;
   justify-content: center;
+}
+
+.TitleFont {
+  color: rgb(233, 124, 52);
+  font-weight: bold;
+}
+
+.CountFont {
+  color: rgb(123, 170, 197);
+  font-weight: bold;
 }

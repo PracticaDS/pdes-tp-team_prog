@@ -1,10 +1,9 @@
 .myContainer {
-  width: auto;
+  width: 8rem;
   display: flex;
-  justify-content: flex-start;
-  align-content: flex-start;
-  align-items: flex-start;
   flex-wrap: wrap;
+  flex-direction: 'row';
+  justify-content: space-around;
   padding: 5px;
   border: 2px solid rgb(255, 255, 255);
   background-color: rgb(255, 255, 255);
@@ -12,19 +11,15 @@
 
 .myTitle {
   color: darkorange;
-  display: flex;
   justify-content: space-around;
 }
 
 .Header {
+  display: flex;
   text-align: center;
-}
-
-.myMainContainer {
-  --heith: 300px;
-  height: var(--heith);
-  --width: 250px;
-  width: var(--width);
-  border: 2px solid rgb(73, 78, 78);
-  background-color: rgb(73, 78, 78);
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 1rem;
+  color: rgb(233, 124, 52);
+  font-weight: bold;
 }
