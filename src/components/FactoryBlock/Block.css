@@ -5,6 +5,7 @@
 .Block {
   display: flex;
   margin: 0.1rem;
+  border-radius: 10%;
   background: rgb(255, 255, 255);
   border: 0.1rem solid rgb(0, 0, 0);
   width: 3rem;
