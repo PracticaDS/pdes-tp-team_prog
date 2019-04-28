@@ -1,6 +1,8 @@
 .Game {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: #243646;
 }
 
 .HorizontalGameParts {
