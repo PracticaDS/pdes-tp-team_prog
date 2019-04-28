@@ -156,7 +156,7 @@
     "react/no-unused-state": "warn",
     "react/no-unescaped-entities": "off",
     "react/prefer-stateless-function": "off",
-    "react/prop-types": "error",
+    "react/prop-types": "off",
     "react/require-default-props": "off",
     "react/sort-prop-types": "warn",
     "react/sort-comp": [

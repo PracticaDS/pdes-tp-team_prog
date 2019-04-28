@@ -6,7 +6,6 @@ import './MachineTypes.css'
 import Constants from './MachineTypes.constants'
 import Machine from '../Machine/Machine'
 
-// eslint-disable-next-line react/prop-types
 const MachineTypes = ({ elements }) => (
   <div>
     <font className="machineTypesHeader">{Constants.title}</font>

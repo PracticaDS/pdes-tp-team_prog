@@ -3,7 +3,6 @@ import './FactoryGrid.css'
 import connector from './FactoryGridConnector'
 import Block from '../FactoryBlock/Block'
 
-// eslint-disable-next-line react/prop-types
 const FactoryGrid = ({ currentNodes }) => (
   <div className="FactoryGrid">
     {currentNodes.map((RowComponent, Rindex) => (
