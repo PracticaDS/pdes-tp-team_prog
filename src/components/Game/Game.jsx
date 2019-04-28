@@ -25,7 +25,7 @@ class Game extends Component {
     this.initialGame()
   }
 
-  componentWillUnmount = () => {
+  componentWillUnmount() {
     const { timer } = this.state
     clearInterval(timer)
   }
@@ -35,6 +35,13 @@ class Game extends Component {
     restartCurrency()
     startGame()
     this.setState({ timer: setInterval(tick, TIMER_TIME) })
+  }
+
+  renderDetail() {
+    const { selectedAction } = this.state
+
+    if (selectedAction && selectedAction.type === 'machine') return <Detail {...selectedAction} />
+    return null
   }
 
   render = () => (
@@ -47,9 +54,7 @@ class Game extends Component {
         <div className="gameMidPanel">
           <FactoryGrid />
         </div>
-        <div className="gamePanel gameRightPanel">
-          <Detail />
-        </div>
+        <div className="gamePanel gameRightPanel">{this.renderDetail()}</div>
       </div>
     </div>
   )
