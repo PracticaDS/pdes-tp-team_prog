@@ -1,18 +1,18 @@
 import { PLAY_GAME, TICK, RESTART_CURRENCY, SELECT_MACHINE } from '../utils/actionTypes'
 
-const STATES = {
+const statuses = {
   PAUSED: 'PAUSED',
   PLAYING: 'PLAYING',
   EDITING: 'EDITING',
 }
 const initialState = {
-  gameState: STATES.PAUSED,
+  status: statuses.PAUSED,
   machineSelected: null,
   currency: 0,
   tick: 0,
 }
 
-const playGame = state => ({ ...state, gameState: STATES.PLAYING })
+const playGame = state => ({ ...state, status: statuses.PLAYING })
 const restartCurrency = state => ({ ...state, currency: 0 })
 const nextTick = state => ({ ...state, tick: state.tick + 1 })
 const changeMachineSelected = (state, { machine }) => ({
