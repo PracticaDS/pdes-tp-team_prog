@@ -1,11 +1,27 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import configureStore from 'redux-mock-store'
+import { Provider } from 'react-redux'
 import Block from '../../components/FactoryBlock/Block'
-import CrafterMachineNode from '../../components/MachineNodes/CrafterMachineNode/CrafterMachineNode'
+
+const state = {
+  updateBlock: () => true,
+  GameState: {
+    machineSelected: 'bla',
+  },
+}
+const mockStore = configureStore()
+const store = mockStore(state)
 
 storiesOf('FactoryBlock', module)
-  .add('Simple EmptyBlock', () => <Block position={{ row: 1, column: 1 }} />)
+  .add('Simple EmptyBlock', () => (
+    <Provider store={store}>
+      <Block position={{ row: 1, column: 1 }} node={{ type: 'Empty' }} />
+    </Provider>
+  ))
   .add('With a MachineNode', () => (
-    <Block position={{ row: 1, column: 1 }} MachineNode={CrafterMachineNode} />
+    <Provider store={store}>
+      <Block position={{ row: 1, column: 1 }} node={{ type: 'Empty' }} />
+    </Provider>
   ))

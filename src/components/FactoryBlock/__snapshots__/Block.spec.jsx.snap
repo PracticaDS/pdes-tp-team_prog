@@ -3,6 +3,7 @@
 exports[`render simple Block Component 1`] = `
 <div
   className="Block"
+  onClick={[Function]}
 >
   <div
     className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"

@@ -1,22 +1,32 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import PropTypes from 'prop-types'
-import React from 'react'
+import React, { Component } from 'react'
+import { Card } from '@material-ui/core'
+import connector from './BlockConnector'
+import { machineByType, Empty } from '../../utils/machineUtils'
 import './Block.css'
 
-import { Card } from '@material-ui/core'
-import EmptyMachineNode from '../MachineNodes/EmptyMachineNode/EmptyMachineNode'
+class Block extends Component {
+  onClick = () => {
+    const { position, machineSelected, updateBlock, node } = this.props
 
-// eslint-disable-next-line react/prop-types
-const Block = ({ position: { row, column }, MachineNode }) => (
-  <div className="Block">
-    <Card>
-      <MachineNode className="MachineNode" />
-    </Card>
-  </div>
-)
+    if (machineSelected && node.type === Empty) {
+      // TODO: maybe this check should be in another place
+      updateBlock(position, machineSelected)
+    }
+  }
 
-Block.defaultProps = {
-  MachineNode: EmptyMachineNode,
+  render() {
+    const { node } = this.props
+    const MachineNode = machineByType[node.type]
+    return (
+      <div className="Block" onClick={this.onClick}>
+        <Card>
+          <MachineNode className="MachineNode" />
+        </Card>
+      </div>
+    )
+  }
 }
 
-export default Block
+export default connector(Block)

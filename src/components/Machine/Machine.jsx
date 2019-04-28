@@ -1,16 +1,13 @@
 import React from 'react'
+import connector from './MachineConnector'
 
 import './Machine.css'
 
-const elementClicked = val => {
-  alert(`Se ha clickeado la opcion ${JSON.stringify(val)}`)
-}
-
 // eslint-disable-next-line react/prop-types
-const Machine = ({ machine }) => (
-  <div onClick={() => elementClicked(machine.title)}>
+const Machine = ({ machine, selectMachine }) => (
+  <div onClick={() => selectMachine(machine.title)}>
     <img className="machineElement" src={machine.image} alt="myImage" />
   </div>
 )
 
-export default Machine
+export default connector(Machine)

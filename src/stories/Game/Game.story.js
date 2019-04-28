@@ -9,7 +9,10 @@ const state = {
   restartCurrency: () => true,
   startGame: () => true,
   tick: () => true,
-  Grid: { dimensions: { n: 6, m: 6 } },
+  Grid: {
+    dimensions: { n: 6, m: 6 },
+    gridValues: Array(6).fill(Array(6).fill({ type: 'Empty' })),
+  },
   GameState: {
     currency: 1000,
   },
