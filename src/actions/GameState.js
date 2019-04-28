@@ -1,4 +1,4 @@
-import { PLAY_GAME, TICK, SELECT_MACHINE } from '../utils/actionTypes'
+import { PLAY_GAME, TICK, SELECT_MACHINE, SELECT_ACTION } from '../utils/actionTypes'
 
 export const playGame = () => ({
   type: PLAY_GAME,
@@ -13,4 +13,9 @@ export const tick = () => ({
 export const selectMachine = machine => ({
   type: SELECT_MACHINE,
   body: { machine },
+})
+
+export const selectAction = actionType => ({
+  type: SELECT_ACTION,
+  body: { actionType },
 })

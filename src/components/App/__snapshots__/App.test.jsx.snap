@@ -134,7 +134,7 @@ exports[`renders without crashing 1`] = `
         <div
           style={
             Object {
-              "margin-top": "1rem",
+              "marginTop": "1rem",
             }
           }
         >
