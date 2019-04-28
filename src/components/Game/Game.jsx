@@ -10,7 +10,7 @@ import { machines, editionOptions } from './Game.constants'
 import './Game.css'
 
 import connector from './GameConnector'
-import { TIMER_TIME } from '../../utils/defaultValues'
+// import { TIMER_TIME } from '../../utils/defaultValues'
 
 class Game extends Component {
   constructor(props) {
@@ -30,10 +30,10 @@ class Game extends Component {
   }
 
   initialGame = () => {
-    const { restartCurrency, startGame, tick } = this.props
+    const { restartCurrency, startGame } = this.props
     restartCurrency()
     startGame()
-    this.setState({ timer: setInterval(tick, TIMER_TIME) })
+    // this.setState({ timer: setInterval(tick, TIMER_TIME) })
   }
 
   renderDetail() {
