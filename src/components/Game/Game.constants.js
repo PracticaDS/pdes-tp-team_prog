@@ -8,26 +8,41 @@ import deleteOption from '../../assets/delete.png'
 import rotateOption from '../../assets/rotate.png'
 import moveOption from '../../assets/move.png'
 
-export const machineTypes = [
+export const machines = [
   {
     image: starter,
-    title: 'Starter',
+    name: 'Starter',
+    type: 'machine',
+    cost: 800,
+    frequency: 1,
   },
   {
     image: seller,
-    title: 'Seller',
+    name: 'Seller',
+    type: 'machine',
+    cost: 1000,
+    frequency: 1,
   },
   {
     image: crafter,
-    title: 'Crafter',
+    name: 'Crafter',
+    type: 'machine',
+    cost: 1200,
+    frequency: 1,
   },
   {
     image: furnace,
-    title: 'Furnace',
+    name: 'Furnace',
+    type: 'machine',
+    cost: 1500,
+    frequency: 1,
   },
   {
     image: transporter,
-    title: 'Transporter',
+    name: 'Transporter',
+    type: 'machine',
+    cost: 500,
+    frequency: 1,
   },
 ]
 
