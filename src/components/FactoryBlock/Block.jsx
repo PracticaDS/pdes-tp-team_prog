@@ -12,7 +12,7 @@ class Block extends Component {
 
     if (machineSelected && node.type === Empty) {
       // TODO: maybe this check should be in another place
-      updateBlock(position, machineSelected)
+      updateBlock(position, machineSelected.name)
     }
   }
 

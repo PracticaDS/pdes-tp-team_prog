@@ -4,7 +4,7 @@ import { selectMachine } from '../../actions/GameState'
 const connector = Machine => {
   const mapStateToProps = () => ({})
   const mapDispatchToProps = dispatch => ({
-    selectMachine: machineType => dispatch(selectMachine(machineType)),
+    selectMachine: machine => dispatch(selectMachine(machine)),
   })
 
   return connect(

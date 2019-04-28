@@ -8,7 +8,7 @@ import Block from '../../components/FactoryBlock/Block'
 const state = {
   updateBlock: () => true,
   GameState: {
-    machineSelected: 'bla',
+    machineSelected: null,
   },
 }
 const mockStore = configureStore()
