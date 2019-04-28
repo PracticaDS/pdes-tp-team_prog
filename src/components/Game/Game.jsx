@@ -1,13 +1,18 @@
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react'
+
 import ResourcesBar from '../Resources/ResourcesBar'
 import EmptyMachineNode from '../MachineNodes/EmptyMachineNode/EmptyMachineNode'
 import FactoryGrid from '../FactoryGrid/FactoryGrid'
+import LeftPanel from '../LeftPanel/LeftPanel'
+import Detail from '../Detail/Detail'
+
 import { machineTypes, editionOptions } from './Game.constants'
+
+import './Game.css'
+
 import connector from './GameConnector'
 import { TIMER_TIME } from '../../utils/defaultValues'
-import './Game.css'
-import LeftPanel from '../LeftPanel/LeftPanel'
 
 const initializeBlocks = (n, m) => Array(m).fill(Array(n).fill(EmptyMachineNode))
 
@@ -51,7 +56,7 @@ class Game extends Component {
             <FactoryGrid componenets={currentBlocks} />
           </div>
           <div className="gamePanel gameRightPanel">
-            <LeftPanel machineTypes={machineTypes} editionOptions={machineTypes} />
+            <Detail />
           </div>
         </div>
       </div>
