@@ -1,17 +1,18 @@
-.machineTypesContainer {
+.editionContainer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.machineTypesElement {
+.editionElement {
   height: 3rem;
   width: 3rem;
   margin: 0.2rem;
   padding: 0.2rem;
 }
 
-.machineTypesHeader {
+.editionHeader {
+  margin-top: 0.3rem;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -21,7 +22,6 @@
   font-weight: bold;
 }
 
-.machineTypesMainContainer {
-  /* border: 2px solid rgb(73, 78, 78); */
+.editionMainContainer {
   background-color: rgb(73, 78, 78);
 }

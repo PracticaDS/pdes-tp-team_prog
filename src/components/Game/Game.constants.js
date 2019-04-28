@@ -4,6 +4,10 @@ import seller from '../../assets/seller.png'
 import starter from '../../assets/starter.png'
 import transporter from '../../assets/transporter.png'
 
+import deleteOption from '../../assets/delete.png'
+import rotateOption from '../../assets/rotate.png'
+import moveOption from '../../assets/move.png'
+
 export const machineTypes = [
   {
     image: starter,
@@ -24,5 +28,20 @@ export const machineTypes = [
   {
     image: transporter,
     title: 'Transporter',
+  },
+]
+
+export const editionOptions = [
+  {
+    image: deleteOption,
+    title: 'Delete',
+  },
+  {
+    image: rotateOption,
+    title: 'Rotate',
+  },
+  {
+    image: moveOption,
+    title: 'Move',
   },
 ]

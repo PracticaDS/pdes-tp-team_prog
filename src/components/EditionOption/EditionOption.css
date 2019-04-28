@@ -1,14 +1,14 @@
-.machineElement {
+.editionOptionElement {
   width: 100%;
   height: 100%;
   border: 2px solid rgb(199, 200, 200);
   border-radius: 20%;
 }
 
-.machineElement:hover {
+.editionOptionElement:hover {
   border: 2px solid rgb(0, 76, 255);
 }
 
-.machineElement:active {
+.editionOptionElement:active {
   border: 2px solid rgb(101, 253, 0);
 }
