@@ -1,5 +1,5 @@
 import { DEFAULT_DIMENSIONS } from '../utils/defaultValues'
-import { UPDATE_BLOCK } from '../utils/actionTypes'
+import { UPDATE_BLOCK, DELETE_BLOCK } from '../utils/actionTypes'
 import { Empty } from '../utils/machineUtils'
 
 const initialState = {
@@ -20,8 +20,25 @@ const updateBlock = (state, { row, column, machineType }) => ({
   ],
 })
 
+const deletePosition = (gridValues, { row, column }) => {
+  const oldGridValues = gridValues
+
+  oldGridValues[row] = oldGridValues[row].map((value, index) => {
+    if (index === column) return { type: Empty }
+    return value
+  })
+
+  return oldGridValues
+}
+
+const deleteBlock = (state, { row, column }) => ({
+  ...state,
+  gridValues: deletePosition(state.gridValues, { row, column }),
+})
+
 const ACTION_HANDLER_TYPES = {
   [UPDATE_BLOCK]: updateBlock,
+  [DELETE_BLOCK]: deleteBlock,
 }
 
 export const Grid = (state = initialState, { type, body }) => {
