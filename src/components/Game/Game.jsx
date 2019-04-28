@@ -28,7 +28,7 @@ class Game extends Component {
 
   componentWillUnmount = () => {
     const { timer } = this.state
-    this.clearInterval(timer)
+    clearInterval(timer)
   }
 
   initialGame = () => {
