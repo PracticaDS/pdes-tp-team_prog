@@ -671,52 +671,7 @@ exports[`render simple Game Component 1`] = `
     </div>
     <div
       className="gamePanel gameRightPanel"
-    >
-      <div
-        className="detail"
-      >
-        <h6
-          className="MuiTypography-root-30 MuiTypography-h6-47 MuiTypography-gutterBottom-57 title text-content"
-        >
-          Details
-        </h6>
-        <div
-          className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-        >
-          <div
-            className="MuiCardContent-root-29"
-          >
-            <p
-              className="MuiTypography-root-30 MuiTypography-body1-39 MuiTypography-gutterBottom-57 text-content"
-            >
-              No Name
-            </p>
-            <p
-              className="MuiTypography-root-30 MuiTypography-body1-39 MuiTypography-gutterBottom-57 text-content"
-            >
-              Cost: 
-              <span
-                className="text-content-number"
-              >
-                $
-                0
-              </span>
-            </p>
-            <p
-              className="MuiTypography-root-30 MuiTypography-body1-39 text-content"
-            >
-              Frequency: 
-              <span
-                className="text-content-number"
-              >
-                0
-                /s
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    />
   </div>
 </div>
 `;

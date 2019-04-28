@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card, CardContent, Typography } from '@material-ui/core'
 import './Detail.css'
+import connector from './DetailConnector'
 
 const Detail = ({ name, cost, frequency }) => (
   <div className="detail">
@@ -29,4 +30,4 @@ Detail.defaultProps = {
   name: 'No Name',
 }
 
-export default Detail
+export default connector(Detail)

@@ -1,11 +1,30 @@
 import React from 'react'
+import { Provider } from 'react-redux'
 import { mount } from 'enzyme'
+import configureStore from 'redux-mock-store'
 import Detail from './Detail'
 
-it('should render a Detail component with the default prop values', () => {
-  const detail = mount(<Detail />)
+const state = {
+  GameState: {
+    machineSelected: {
+      cost: 1000,
+      frequency: 1,
+      name: 'Starter',
+    },
+  },
+}
+const mockStore = configureStore()
+const store = mockStore(state)
 
-  expect(detail.prop('cost')).toEqual(0)
-  expect(detail.prop('frequency')).toEqual(0)
-  expect(detail.prop('name')).toEqual('No Name')
+it('should render a Detail component with the default prop values', () => {
+  const wrapper = mount(
+    <Provider store={store}>
+      <Detail />
+    </Provider>,
+  )
+  const detail = wrapper.find('Detail') // just fetch the functional component
+
+  expect(detail.prop('cost')).toEqual(1000)
+  expect(detail.prop('frequency')).toEqual(1)
+  expect(detail.prop('name')).toEqual('Starter')
 })

@@ -6,8 +6,14 @@ import Block from '../../components/FactoryBlock/Block'
 
 const state = {
   updateBlock: () => true,
+  Grid: {
+    gridValues: [
+      [{ type: 'Empty' }, { type: 'Crafter' }],
+      [{ type: 'Empty' }, { type: 'Crafter' }],
+    ],
+  },
   GameState: {
-    machineSelected: 'bla',
+    machineSelected: null,
   },
 }
 const mockStore = configureStore()
@@ -16,11 +22,11 @@ const store = mockStore(state)
 storiesOf('FactoryBlock', module)
   .add('Simple EmptyBlock', () => (
     <Provider store={store}>
-      <Block position={{ row: 1, column: 1 }} node={{ type: 'Empty' }} />
+      <Block position={{ row: 0, column: 0 }} />
     </Provider>
   ))
   .add('With a MachineNode', () => (
     <Provider store={store}>
-      <Block position={{ row: 1, column: 1 }} node={{ type: 'Empty' }} />
+      <Block position={{ row: 0, column: 1 }} />
     </Provider>
   ))

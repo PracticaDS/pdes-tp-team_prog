@@ -4,7 +4,7 @@ import connector from './MachineConnector'
 import './Machine.css'
 
 const Machine = ({ machine, selectMachine }) => (
-  <div onClick={() => selectMachine(machine.title)}>
+  <div onClick={() => selectMachine(machine)}>
     <img className="machineElement" src={machine.image} alt="myImage" />
   </div>
 )

@@ -28,9 +28,9 @@ const changeActionSelected = (state, { actionType }) => ({
 })
 const restartCurrency = state => ({ ...state, currency: 0 })
 const nextTick = state => ({ ...state, tick: state.tick + 1 })
-const changeMachineSelected = (state, body) => ({
+const changeMachineSelected = (state, { machine }) => ({
   ...state,
-  machineSelected: body.machineType ? body.machineType : state.machineSelected,
+  machineSelected: machine,
   actionSelected: SELECTION,
 })
 

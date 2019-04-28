@@ -10,7 +10,16 @@ exports[`render simple Block Component 1`] = `
   >
     <div
       className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-    />
+    >
+      <img
+        className="MuiCardMedia-root-29 MuiCardMedia-media-30"
+        src={
+          Object {
+            "process": [Function],
+          }
+        }
+      />
+    </div>
   </div>
 </div>
 `;
