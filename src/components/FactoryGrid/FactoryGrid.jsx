@@ -3,12 +3,14 @@ import './FactoryGrid.css'
 import connector from './FactoryGridConnector'
 import Block from '../FactoryBlock/Block'
 
-const FactoryGrid = ({ currentNodes }) => (
+const simpleArray = (n, m) => Array(m).fill(Array(n).fill(''))
+
+const FactoryGrid = ({ dimensions: { n, m } }) => (
   <div className="FactoryGrid">
-    {currentNodes.map((RowComponent, Rindex) => (
+    {simpleArray(n, m).map((RowComponent, Rindex) => (
       <div key={Rindex} className="FactoryRow">
         {RowComponent.map((node, CIndex) => (
-          <Block key={CIndex} position={{ row: Rindex, column: CIndex }} node={node} />
+          <Block key={CIndex} position={{ row: Rindex, column: CIndex }} />
         ))}
       </div>
     ))}
