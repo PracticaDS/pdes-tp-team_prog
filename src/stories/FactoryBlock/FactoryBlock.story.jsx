@@ -13,7 +13,7 @@ const state = {
     ],
   },
   GameState: {
-    machineSelected: 'bla',
+    machineSelected: null,
   },
 }
 const mockStore = configureStore()

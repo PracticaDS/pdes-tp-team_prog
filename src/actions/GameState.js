@@ -10,7 +10,7 @@ export const tick = () => ({
   body: {},
 })
 
-export const selectMachine = machineType => ({
+export const selectMachine = machine => ({
   type: SELECT_MACHINE,
-  body: { machineType },
+  body: { machine },
 })

@@ -5,7 +5,7 @@ import FactoryGrid from '../FactoryGrid/FactoryGrid'
 import LeftPanel from '../LeftPanel/LeftPanel'
 import Detail from '../Detail/Detail'
 
-import { machineTypes, editionOptions } from './Game.constants'
+import { machines, editionOptions } from './Game.constants'
 
 import './Game.css'
 
@@ -24,7 +24,7 @@ class Game extends Component {
     this.initialGame()
   }
 
-  componentWillUnmount = () => {
+  componentWillUnmount() {
     const { timer } = this.state
     clearInterval(timer)
   }
@@ -36,19 +36,25 @@ class Game extends Component {
     this.setState({ timer: setInterval(tick, TIMER_TIME) })
   }
 
+  renderDetail() {
+    const { machineSelected } = this.props
+
+    if (machineSelected && machineSelected.type === 'machine')
+      return <Detail {...machineSelected} />
+    return null
+  }
+
   render = () => (
     <div className="gameMainContainer">
       <ResourcesBar />
       <div className="HorizontalGameParts">
         <div className="gamePanel gameLeftPanel">
-          <LeftPanel machineTypes={machineTypes} editionOptions={editionOptions} />
+          <LeftPanel machineTypes={machines} editionOptions={editionOptions} />
         </div>
         <div className="gameMidPanel">
           <FactoryGrid />
         </div>
-        <div className="gamePanel gameRightPanel">
-          <Detail />
-        </div>
+        <div className="gamePanel gameRightPanel">{this.renderDetail()}</div>
       </div>
     </div>
   )
