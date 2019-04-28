@@ -6,7 +6,7 @@ import FactoryGrid from '../FactoryGrid/FactoryGrid'
 import LeftPanel from '../LeftPanel/LeftPanel'
 import Detail from '../Detail/Detail'
 
-import { machineTypes, editionOptions } from './Game.constants'
+import { machines, editionOptions } from './Game.constants'
 
 import './Game.css'
 
@@ -38,9 +38,10 @@ class Game extends Component {
   }
 
   renderDetail() {
-    const { selectedAction } = this.state
+    const { machineSelected } = this.props
 
-    if (selectedAction && selectedAction.type === 'machine') return <Detail {...selectedAction} />
+    if (machineSelected && machineSelected.type === 'machine')
+      return <Detail {...machineSelected} />
     return null
   }
 
@@ -49,7 +50,7 @@ class Game extends Component {
       <ResourcesBar />
       <div className="HorizontalGameParts">
         <div className="gamePanel gameLeftPanel">
-          <LeftPanel machineTypes={machineTypes} editionOptions={editionOptions} />
+          <LeftPanel machineTypes={machines} editionOptions={editionOptions} />
         </div>
         <div className="gameMidPanel">
           <FactoryGrid />
