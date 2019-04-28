@@ -13,7 +13,10 @@
 }
 
 .Block:active {
-  background: #adadad;
   width: 2.9rem;
   height: 2.9rem;
+}
+
+.Block:hover {
+  background: rgb(218, 216, 216);
 }

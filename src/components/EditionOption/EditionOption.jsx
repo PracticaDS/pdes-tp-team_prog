@@ -1,15 +1,22 @@
 import React from 'react'
+import connector from './EditionActionConnector'
 
 import './EditionOption.css'
 
-const elementClicked = val => {
-  alert(`Se ha clickeado la opcion ${JSON.stringify(val)}`)
-}
-
-const EditionOption = ({ editionOption }) => (
-  <div onClick={() => elementClicked(editionOption.title)}>
-    <img className="editionOptionElement" src={editionOption.image} alt="myImage" />
+const EditionOption = ({
+  editionOption: { title, image },
+  onSelectAction,
+  editionActionSelected,
+}) => (
+  <div onClick={() => onSelectAction(title)}>
+    <img
+      className={
+        editionActionSelected === title ? 'editionOptionElementSelected' : 'editionOptionElement'
+      }
+      src={image}
+      alt="myImage"
+    />
   </div>
 )
 
-export default EditionOption
+export default connector(EditionOption)
