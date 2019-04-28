@@ -1,20 +1,17 @@
-.myContainer {
-  width: 8rem;
+.machineTypesContainer {
   display: flex;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  flex-direction: 'row';
-  justify-content: space-around;
-  padding: 5px;
-  border: 2px solid rgb(255, 255, 255);
-  background-color: rgb(255, 255, 255);
 }
 
-.myTitle {
-  color: darkorange;
-  justify-content: space-around;
+.machineTypesElement {
+  height: 3rem;
+  width: 3rem;
+  margin: 1rem;
+  padding: 1rem;
 }
 
-.Header {
+.machineTypesHeader {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -22,4 +19,9 @@
   padding-bottom: 1rem;
   color: rgb(233, 124, 52);
   font-weight: bold;
+}
+
+.machineTypesMainContainer {
+  /* border: 2px solid rgb(73, 78, 78); */
+  background-color: rgb(73, 78, 78);
 }

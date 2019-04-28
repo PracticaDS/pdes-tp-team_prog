@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react'
 
 import { storiesOf } from '@storybook/react'
@@ -7,7 +8,7 @@ import seller from '../../assets/seller.png'
 import starter from '../../assets/starter.png'
 import transporter from '../../assets/transporter.png'
 
-import MachineTypes from './MachineTypes'
+import MachineTypes from '../../components/MachineTypes/MachineTypes'
 
 const myElements = [
   {

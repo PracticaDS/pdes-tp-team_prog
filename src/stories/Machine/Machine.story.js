@@ -7,7 +7,7 @@ import seller from '../../assets/seller.png'
 import starter from '../../assets/starter.png'
 import transporter from '../../assets/transporter.png'
 
-import Machine from './Machine'
+import Machine from '../../components/Machine/Machine'
 
 const crafterMachine = {
   title: 'Crafter',

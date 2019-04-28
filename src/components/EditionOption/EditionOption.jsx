@@ -8,8 +8,8 @@ const elementClicked = val => {
 
 // eslint-disable-next-line react/prop-types
 const EditionOption = ({ editionOption }) => (
-  <div className="machineElement" onClick={() => elementClicked(editionOption.title)}>
-    <img className="basicMachine" src={editionOption.image} alt="myImage" />
+  <div onClick={() => elementClicked(editionOption.title)}>
+    <img className="editionOptionElement" src={editionOption.image} alt="myImage" />
   </div>
 )
 
