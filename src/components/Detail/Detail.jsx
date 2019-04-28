@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Card, CardContent, Typography } from '@material-ui/core'
 import './Detail.css'
+import connector from './DetailConnector'
 
 const Detail = ({ name, cost, frequency }) => (
   <div className="detail">
@@ -36,4 +37,4 @@ Detail.propTypes = {
   name: PropTypes.string,
 }
 
-export default Detail
+export default connector(Detail)
