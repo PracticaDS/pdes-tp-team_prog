@@ -7,6 +7,7 @@ import FactoryGrid from './FactoryGrid'
 const state = {
   Grid: {
     gridValues: Array(2).fill(Array(2).fill({ type: 'Crafter' })),
+    dimensions: { n: 2, m: 2 },
   },
   GameState: {
     machineSelected: 'bla',
