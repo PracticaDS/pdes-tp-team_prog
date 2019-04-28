@@ -1,7 +1,6 @@
 .machineElement {
   width: 100%;
   height: 100%;
-  margin: 3px;
   border: 2px solid rgb(199, 200, 200);
   border-radius: 20%;
 }
