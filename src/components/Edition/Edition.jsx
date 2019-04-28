@@ -6,7 +6,6 @@ import './Edition.css'
 
 import Constants from './Edition.constants'
 
-// eslint-disable-next-line react/prop-types
 const Edition = ({ elements }) => (
   <div style={{ 'margin-top': '1rem' }}>
     <font className="editionHeader">{Constants.title}</font>

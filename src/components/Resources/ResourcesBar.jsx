@@ -3,7 +3,6 @@ import { Constant } from './ResourcesBar.constants'
 import connector from './ResourcesConnector'
 import './ResourcesBar.css'
 
-// eslint-disable-next-line react/prop-types
 const ResourcesBar = ({ currency }) => (
   <div className="ResourcesBar">
     <div className="Currency">
