@@ -1,6 +1,9 @@
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react'
 
 import { storiesOf } from '@storybook/react'
+import configureStore from 'redux-mock-store'
+import { Provider } from 'react-redux'
 import crafter from '../../assets/crafter.png'
 import furnace from '../../assets/furnace.png'
 import seller from '../../assets/seller.png'
@@ -30,8 +33,34 @@ const transporterMachine = {
   image: transporter,
 }
 
-storiesOf('Machine', module).add('Crafter', () => <Machine machine={crafterMachine} />)
-storiesOf('Machine', module).add('Furnace', () => <Machine machine={furnaceMachine} />)
-storiesOf('Machine', module).add('Seller', () => <Machine machine={sellerMachine} />)
-storiesOf('Machine', module).add('Starter', () => <Machine machine={starterMachine} />)
-storiesOf('Machine', module).add('Transporter', () => <Machine machine={transporterMachine} />)
+const state = {
+  selectMachine: () => true,
+}
+const mockStore = configureStore()
+const store = mockStore(state)
+
+storiesOf('Machine', module).add('Crafter', () => (
+  <Provider store={store}>
+    <Machine machine={crafterMachine} />
+  </Provider>
+))
+storiesOf('Machine', module).add('Furnace', () => (
+  <Provider store={store}>
+    <Machine machine={furnaceMachine} />
+  </Provider>
+))
+storiesOf('Machine', module).add('Seller', () => (
+  <Provider store={store}>
+    <Machine machine={sellerMachine} />
+  </Provider>
+))
+storiesOf('Machine', module).add('Starter', () => (
+  <Provider store={store}>
+    <Machine machine={starterMachine} />
+  </Provider>
+))
+storiesOf('Machine', module).add('Transporter', () => (
+  <Provider store={store}>
+    <Machine machine={transporterMachine} />
+  </Provider>
+))

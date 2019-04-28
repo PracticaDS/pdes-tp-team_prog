@@ -2,6 +2,8 @@
 import React from 'react'
 
 import { storiesOf } from '@storybook/react'
+import { Provider } from 'react-redux'
+import configureStore from 'redux-mock-store'
 import crafter from '../../assets/crafter.png'
 import furnace from '../../assets/furnace.png'
 import seller from '../../assets/seller.png'
@@ -33,16 +35,32 @@ const myElements = [
   },
 ]
 
-storiesOf('MachineTypes', module).add('Empty', () => <MachineTypes elements={[]} />)
+const state = {
+  selectMachine: () => true,
+}
+const mockStore = configureStore()
+const store = mockStore(state)
+
+storiesOf('MachineTypes', module).add('Empty', () => (
+  <Provider store={store}>
+    <MachineTypes elements={[]} />
+  </Provider>
+))
 
 storiesOf('MachineTypes', module).add('Single Row not full', () => (
-  <MachineTypes elements={myElements.slice(0, 3)} />
+  <Provider store={store}>
+    <MachineTypes elements={myElements.slice(0, 3)} />
+  </Provider>
 ))
 
 storiesOf('MachineTypes', module).add('Single Row full', () => (
-  <MachineTypes elements={myElements.slice(0, 4)} />
+  <Provider store={store}>
+    <MachineTypes elements={myElements.slice(0, 4)} />
+  </Provider>
 ))
 
 storiesOf('MachineTypes', module).add("2 Rows, 1 full, last one isn't", () => (
-  <MachineTypes elements={myElements.slice(0, 5)} />
+  <Provider store={store}>
+    <MachineTypes elements={myElements.slice(0, 5)} />
+  </Provider>
 ))
