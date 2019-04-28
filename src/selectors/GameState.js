@@ -1,1 +1,3 @@
-export const getCurrency = state => state.GameState.currency
+const gameState = state => state.GameState
+export const getCurrency = state => gameState(state).currency
+export const machineSelected = state => gameState(state).machineSelected

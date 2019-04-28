@@ -11,3 +11,9 @@
   width: 3rem;
   height: 3rem;
 }
+
+.Block:active {
+  background: #adadad;
+  width: 2.9rem;
+  height: 2.9rem;
+}

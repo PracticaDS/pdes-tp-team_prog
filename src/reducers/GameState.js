@@ -1,4 +1,4 @@
-import { PLAY_GAME, TICK, RESTART_CURRENCY } from '../utils/actionTypes'
+import { PLAY_GAME, TICK, RESTART_CURRENCY, SELECT_MACHINE } from '../utils/actionTypes'
 
 const STATES = {
   PAUSED: 'PAUSED',
@@ -7,6 +7,7 @@ const STATES = {
 }
 const initialState = {
   gameState: STATES.PAUSED,
+  machineSelected: null,
   currency: 0,
   tick: 0,
 }
@@ -14,17 +15,19 @@ const initialState = {
 const playGame = state => ({ ...state, gameState: STATES.PLAYING })
 const restartCurrency = state => ({ ...state, currency: 0 })
 const nextTick = state => ({ ...state, tick: state.tick + 1 })
+const changeMachineSelected = (state, body) => ({
+  ...state,
+  machineSelected: body.machineType ? body.machineType : state.machineSelected,
+})
 
-export const GameState = (state = initialState, action) => {
-  const { type } = action
-  switch (type) {
-    case `${PLAY_GAME}`:
-      return playGame(state)
-    case `${TICK}`:
-      return nextTick(state)
-    case `${RESTART_CURRENCY}`:
-      return restartCurrency(state)
-    default:
-      return state
-  }
+const ACTION_HANDLER_TYPES = {
+  [PLAY_GAME]: playGame,
+  [TICK]: nextTick,
+  [RESTART_CURRENCY]: restartCurrency,
+  [SELECT_MACHINE]: changeMachineSelected,
+}
+
+export const GameState = (state = initialState, { type, body }) => {
+  const handler = ACTION_HANDLER_TYPES[type]
+  return handler ? handler(state, body) : state
 }
