@@ -1,0 +1,19 @@
+.detail {
+  align-self: start;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: darkorange !important;
+  text-align: center;
+}
+
+.text-content {
+  font-weight: bold !important;
+}
+
+.text-content-number {
+  color: darkviolet;
+}
