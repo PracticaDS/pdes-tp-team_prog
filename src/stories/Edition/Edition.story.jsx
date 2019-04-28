@@ -1,7 +1,7 @@
 import React from 'react'
-
 import { storiesOf } from '@storybook/react'
-
+import configureStore from 'redux-mock-store'
+import { Provider } from 'react-redux'
 import Edition from '../../components/Edition/Edition'
 import deleteImage from '../../assets/delete.png'
 import rotateImage from '../../assets/rotate.png'
@@ -21,6 +21,24 @@ const moveOption = {
   image: moveImage,
 }
 
+const state = {
+  updateBlock: () => true,
+  GameState: {
+    machineSelected: 'bla',
+    actionSelected: 'Selection',
+  },
+}
+const mockStore = configureStore()
+const store = mockStore(state)
+
 storiesOf('Edition', module)
-  .add('Empty Edition', () => <Edition elements={[]} />)
-  .add('Full Edition', () => <Edition elements={[deleteOption, moveOption, rotateOption]} />)
+  .add('Empty Edition', () => (
+    <Provider store={store}>
+      <Edition elements={[]} />
+    </Provider>
+  ))
+  .add('Full Edition', () => (
+    <Provider store={store}>
+      <Edition elements={[deleteOption, moveOption, rotateOption]} />
+    </Provider>
+  ))
