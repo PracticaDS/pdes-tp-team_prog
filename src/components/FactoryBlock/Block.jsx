@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 import React, { Component } from 'react'
 import { Card } from '@material-ui/core'
 import connector from './BlockConnector'

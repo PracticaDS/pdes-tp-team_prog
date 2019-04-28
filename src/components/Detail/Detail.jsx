@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Card, CardContent, Typography } from '@material-ui/core'
 import './Detail.css'
 
@@ -28,12 +27,6 @@ Detail.defaultProps = {
   cost: 0,
   frequency: 0,
   name: 'No Name',
-}
-
-Detail.propTypes = {
-  cost: PropTypes.number,
-  frequency: PropTypes.number,
-  name: PropTypes.string,
 }
 
 export default Detail
