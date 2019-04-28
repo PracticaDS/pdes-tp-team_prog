@@ -9,24 +9,44 @@ exports[`render simple Grid Component with 2x2 Blocks 1`] = `
   >
     <div
       className="Block"
+      onClick={[Function]}
     >
       <div
         className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
       >
         <div
           className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-        />
+        >
+          <img
+            className="MuiCardMedia-root-29 MuiCardMedia-media-30"
+            src={
+              Object {
+                "process": [Function],
+              }
+            }
+          />
+        </div>
       </div>
     </div>
     <div
       className="Block"
+      onClick={[Function]}
     >
       <div
         className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
       >
         <div
           className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-        />
+        >
+          <img
+            className="MuiCardMedia-root-29 MuiCardMedia-media-30"
+            src={
+              Object {
+                "process": [Function],
+              }
+            }
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -35,24 +55,44 @@ exports[`render simple Grid Component with 2x2 Blocks 1`] = `
   >
     <div
       className="Block"
+      onClick={[Function]}
     >
       <div
         className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
       >
         <div
           className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-        />
+        >
+          <img
+            className="MuiCardMedia-root-29 MuiCardMedia-media-30"
+            src={
+              Object {
+                "process": [Function],
+              }
+            }
+          />
+        </div>
       </div>
     </div>
     <div
       className="Block"
+      onClick={[Function]}
     >
       <div
         className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
       >
         <div
           className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-        />
+        >
+          <img
+            className="MuiCardMedia-root-29 MuiCardMedia-media-30"
+            src={
+              Object {
+                "process": [Function],
+              }
+            }
+          />
+        </div>
       </div>
     </div>
   </div>

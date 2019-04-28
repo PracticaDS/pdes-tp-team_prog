@@ -6,10 +6,13 @@ import Game from './Game'
 
 it('render simple Game Component', () => {
   const state = {
-    restartCurrency: jest.fn(),
-    startGame: jest.fn(),
-    tick: jest.fn(),
-    Grid: { dimensions: { n: 6, m: 6 } },
+    restartCurrency: () => true,
+    startGame: () => true,
+    tick: () => true,
+    Grid: {
+      dimensions: { n: 6, m: 6 },
+      gridValues: Array(6).fill(Array(6).fill({ type: 'Empty' })),
+    },
     GameState: {
       currency: 1000,
     },

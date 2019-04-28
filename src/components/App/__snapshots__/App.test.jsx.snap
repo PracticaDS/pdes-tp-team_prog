@@ -216,6 +216,7 @@ exports[`renders without crashing 1`] = `
         >
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -227,6 +228,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -238,6 +240,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -249,6 +252,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -260,6 +264,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -271,6 +276,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -282,6 +288,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -293,6 +300,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -304,6 +312,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -315,120 +324,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          className="FactoryRow"
-        >
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -444,6 +340,7 @@ exports[`renders without crashing 1`] = `
         >
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -455,6 +352,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -466,6 +364,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -477,6 +376,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -488,6 +388,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -499,6 +400,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -510,6 +412,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -521,6 +424,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -532,6 +436,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -543,120 +448,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          className="FactoryRow"
-        >
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -672,6 +464,7 @@ exports[`renders without crashing 1`] = `
         >
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -683,6 +476,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -694,6 +488,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -705,6 +500,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -716,6 +512,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -727,6 +524,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -738,6 +536,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -749,6 +548,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -760,6 +560,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -771,120 +572,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          className="FactoryRow"
-        >
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -900,6 +588,7 @@ exports[`renders without crashing 1`] = `
         >
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -911,6 +600,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -922,6 +612,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -933,6 +624,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -944,6 +636,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -955,6 +648,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -966,6 +660,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -977,6 +672,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -988,6 +684,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -999,120 +696,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          className="FactoryRow"
-        >
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-          >
-            <div
-              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-            >
-              <div
-                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -1128,6 +712,7 @@ exports[`renders without crashing 1`] = `
         >
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -1139,6 +724,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -1150,6 +736,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -1161,6 +748,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -1172,6 +760,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -1183,6 +772,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -1194,6 +784,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -1205,6 +796,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -1216,6 +808,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -1227,6 +820,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -1242,6 +836,7 @@ exports[`renders without crashing 1`] = `
         >
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -1253,6 +848,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -1264,6 +860,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -1275,6 +872,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -1286,6 +884,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -1297,6 +896,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -1308,6 +908,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -1319,6 +920,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -1330,6 +932,7 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -1341,6 +944,503 @@ exports[`renders without crashing 1`] = `
           </div>
           <div
             className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="FactoryRow"
+        >
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="FactoryRow"
+        >
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="FactoryRow"
+        >
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="FactoryRow"
+        >
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
           >
             <div
               className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
