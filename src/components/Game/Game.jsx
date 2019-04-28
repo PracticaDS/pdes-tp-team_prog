@@ -2,7 +2,6 @@
 import React, { Component } from 'react'
 
 import ResourcesBar from '../Resources/ResourcesBar'
-import EmptyMachineNode from '../MachineNodes/EmptyMachineNode/EmptyMachineNode'
 import FactoryGrid from '../FactoryGrid/FactoryGrid'
 import LeftPanel from '../LeftPanel/LeftPanel'
 import Detail from '../Detail/Detail'
@@ -14,15 +13,10 @@ import './Game.css'
 import connector from './GameConnector'
 import { TIMER_TIME } from '../../utils/defaultValues'
 
-const initializeBlocks = (n, m) => Array(m).fill(Array(n).fill(EmptyMachineNode))
-
 class Game extends Component {
   constructor(props) {
     super(props)
-    const { dimensions } = props
-    const { n, m } = dimensions
     this.state = {
-      currentBlocks: initializeBlocks(n, m),
       timer: null,
     }
   }
@@ -43,25 +37,22 @@ class Game extends Component {
     this.setState({ timer: setInterval(tick, TIMER_TIME) })
   }
 
-  render = () => {
-    const { currentBlocks } = this.state
-    return (
-      <div className="gameMainContainer">
-        <ResourcesBar />
-        <div className="HorizontalGameParts">
-          <div className="gamePanel gameLeftPanel">
-            <LeftPanel machineTypes={machineTypes} editionOptions={editionOptions} />
-          </div>
-          <div className="gameMidPanel">
-            <FactoryGrid componenets={currentBlocks} />
-          </div>
-          <div className="gamePanel gameRightPanel">
-            <Detail />
-          </div>
+  render = () => (
+    <div className="gameMainContainer">
+      <ResourcesBar />
+      <div className="HorizontalGameParts">
+        <div className="gamePanel gameLeftPanel">
+          <LeftPanel machineTypes={machineTypes} editionOptions={editionOptions} />
+        </div>
+        <div className="gameMidPanel">
+          <FactoryGrid />
+        </div>
+        <div className="gamePanel gameRightPanel">
+          <Detail />
         </div>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default connector(Game)

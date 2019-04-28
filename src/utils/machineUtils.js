@@ -3,6 +3,7 @@ import TransporterMachineNode from '../components/MachineNodes/TransporterMachin
 import SellerMachineNode from '../components/MachineNodes/SellerMachineNode/SellerMachineNode'
 import CrafterMachineNode from '../components/MachineNodes/CrafterMachineNode/CrafterMachineNode'
 import FurnaceMachineNode from '../components/MachineNodes/FurnaceMachineNode/FurnaceMachineNode'
+import EmptyMachineNode from '../components/MachineNodes/EmptyMachineNode/EmptyMachineNode'
 
 export const Starter = 'Starter'
 export const Transporter = 'Transporter'
@@ -17,4 +18,5 @@ export const machineByType = {
   [Seller]: SellerMachineNode,
   [Crafter]: CrafterMachineNode,
   [Furnace]: FurnaceMachineNode,
+  [Empty]: EmptyMachineNode,
 }

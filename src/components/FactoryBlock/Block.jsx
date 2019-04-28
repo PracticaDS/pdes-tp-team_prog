@@ -3,31 +3,22 @@
 import React, { Component } from 'react'
 import { Card } from '@material-ui/core'
 import connector from './BlockConnector'
-import EmptyMachineNode from '../MachineNodes/EmptyMachineNode/EmptyMachineNode'
-import { machineByType } from '../../utils/machineUtils'
+import { machineByType, Empty } from '../../utils/machineUtils'
 import './Block.css'
 
 class Block extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      MachineNode: EmptyMachineNode,
-    }
-  }
-
   onClick = () => {
-    const { position, machineSelected, updateBlock } = this.props
-    const { MachineNode } = this.state
+    const { position, machineSelected, updateBlock, node } = this.props
 
-    if (machineSelected && MachineNode === EmptyMachineNode) {
+    if (machineSelected && node.type === Empty) {
       // TODO: maybe this check should be in another place
-      this.setState({ MachineNode: machineByType[machineSelected] })
       updateBlock(position, machineSelected)
     }
   }
 
   render() {
-    const { MachineNode } = this.state
+    const { node } = this.props
+    const MachineNode = machineByType[node.type]
     return (
       <div className="Block" onClick={this.onClick}>
         <Card>
@@ -36,10 +27,6 @@ class Block extends Component {
       </div>
     )
   }
-}
-
-Block.defaultProps = {
-  MachineNode: EmptyMachineNode,
 }
 
 export default connector(Block)
