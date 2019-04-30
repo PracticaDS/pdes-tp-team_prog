@@ -7,34 +7,23 @@ const initialState = {
   gridValues: Array(DEFAULT_DIMENSIONS.m).fill(Array(DEFAULT_DIMENSIONS.n).fill({ type: Empty })),
 }
 
-const updateBlock = (state, { row, column, machineType }) => ({
-  ...state,
-  gridValues: [
-    ...state.gridValues.slice(0, row),
-    [
-      ...state.gridValues[row].slice(0, column),
-      { type: machineType },
-      ...state.gridValues[row].slice(column + 1),
-    ],
-    ...state.gridValues.slice(row + 1),
-  ],
-})
-
-const deletePosition = (gridValues, { row, column }) => {
+const update = (gridValues, { row, column, machineType }) => {
   const oldGridValues = gridValues
 
-  oldGridValues[row] = oldGridValues[row].map((value, index) => {
-    if (index === column) return { type: Empty }
-    return value
-  })
+  oldGridValues[row] = oldGridValues[row].map((value, index) =>
+    index === column ? { type: machineType } : value,
+  )
 
   return oldGridValues
 }
 
-const deleteBlock = (state, { row, column }) => ({
+const updateBlock = (state, { row, column, machineType }) => ({
   ...state,
-  gridValues: deletePosition(state.gridValues, { row, column }),
+  gridValues: update(state.gridValues, { row, column, machineType }),
 })
+
+const deleteBlock = (state, { row, column }) =>
+  updateBlock(state, { row, column, machineType: Empty })
 
 const ACTION_HANDLER_TYPES = {
   [UPDATE_BLOCK]: updateBlock,
