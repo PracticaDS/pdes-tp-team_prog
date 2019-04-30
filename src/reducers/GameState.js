@@ -5,7 +5,7 @@ import {
   SELECT_MACHINE,
   SELECT_ACTION,
 } from '../utils/actionTypes'
-import { SELECTION } from '../utils/editionUtils'
+import { SELECTION, EDITIONS } from '../utils/editionUtils'
 
 const STATES = {
   PAUSED: 'PAUSED',
@@ -24,7 +24,7 @@ const playGame = state => ({ ...state, gameState: STATES.PLAYING })
 const changeActionSelected = (state, { actionType }) => ({
   ...state,
   actionSelected: actionType,
-  machineSelected: actionType !== SELECTION ? null : state.machineSelected,
+  machineSelected: EDITIONS.includes(actionType) ? null : state.machineSelected,
 })
 const restartCurrency = state => ({ ...state, currency: 0 })
 const nextTick = state => ({ ...state, tick: state.tick + 1 })
