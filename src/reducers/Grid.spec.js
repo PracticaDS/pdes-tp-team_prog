@@ -25,7 +25,7 @@ describe('grid reducer', () => {
     const invalidPosition = createPosition(-1, -1)
     const invalidUpdateBlockAction = updateBlock(invalidPosition, createStarterMachine({}))
 
-    it('should return the initial state', () => {
+    it('should throw an exception', () => {
       expect(() => {
         reducer(initialState, invalidUpdateBlockAction)
       }).toThrow()
