@@ -11,7 +11,7 @@ it('render simple Game Component', () => {
     tick: () => true,
     Grid: {
       dimensions: { n: 6, m: 6 },
-      gridValues: Array(6).fill(Array(6).fill({ type: 'Empty' })),
+      gridValues: Array(6).fill(Array(6).fill({ machine: { type: 'Empty' } })),
     },
     GameState: {
       currency: 1000,

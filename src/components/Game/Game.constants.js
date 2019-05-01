@@ -12,37 +12,92 @@ export const machines = [
   {
     image: starter,
     name: 'Starter',
-    type: 'machine',
-    cost: 800,
+    type: 'Starter',
+    buy: 800,
+    sell: 400,
     frequency: 1,
+    direction: 'DOWN',
+    metadata: {
+      selectedMaterial: { name: 'agua', price: 10 },
+      availableMaterials: [{ name: 'agua', price: 10 }],
+    },
+    process(materials, func) {
+      func(this.direction, [], [{ ...this.metadata.selectedMaterial, frequency: this.frequency }])
+    },
   },
   {
     image: seller,
     name: 'Seller',
-    type: 'machine',
-    cost: 1000,
+    type: 'Seller',
+    buy: 1000,
+    sell: 500,
     frequency: 1,
+    direction: 'DOWN',
+    process: (materials, func) => {
+      func(null, materials, { name: 'currency' })
+    },
   },
   {
     image: crafter,
     name: 'Crafter',
-    type: 'machine',
-    cost: 1200,
+    type: 'Seller',
+    buy: 800,
+    sell: 400,
     frequency: 1,
+    direction: 'DOWN',
+    metadata: {
+      recipeSelected: {
+        materialsRequired: [{ name: 'harina', quantity: 1 }, { name: 'agua', quantity: 2 }],
+        product: {
+          name: 'pan',
+        },
+      },
+      availableRecipes: [{ required: ['harina', 'agua'], product: 'pan' }],
+    },
+    process: (materials, func) => {
+      func(this.direction, this.metadata.recipeSelected.materialsRequired, [
+        { ...this.metadata.recipeSelected.product, quantity: this.frequency },
+      ])
+    },
   },
   {
     image: furnace,
     name: 'Furnace',
-    type: 'machine',
-    cost: 1500,
+    type: 'Furnace',
+    buy: 800,
+    sell: 400,
     frequency: 1,
+    direction: 'DOWN',
+    metadata: {
+      recipeSelected: {
+        materialsRequired: [{ name: 'gold', quantity: 1 }],
+        product: {
+          name: 'liquid_gold',
+        },
+      },
+      availableRecipes: [
+        { materialsRequired: [{ name: 'gold', quantity: 1 }], product: 'liquid_gold' },
+        { materialsRequired: [{ name: 'silver', quantity: 1 }], product: 'liquid_silver' },
+      ],
+    },
+    process: (materials, func) => {
+      // los materiales estan incluidos en los requeridos de la receta
+      func(this.direction, this.metadata.recipeSelected.materialsRequired, [
+        { ...this.metadata.recipeSelected.product, quantity: this.frequency },
+      ])
+    },
   },
   {
     image: transporter,
     name: 'Transporter',
-    type: 'machine',
-    cost: 500,
+    type: 'Transporter',
+    buy: 800,
+    sell: 400,
     frequency: 1,
+    direction: 'DOWN',
+    process(materials, func) {
+      func(this.direction, materials, materials)
+    },
   },
 ]
 

@@ -7,7 +7,7 @@ import './Edition.css'
 import Constants from './Edition.constants'
 
 const Edition = ({ elements }) => (
-  <div style={{ 'margin-top': '1rem' }}>
+  <div style={{ marginTop: '1rem' }}>
     <font className="editionHeader">{Constants.title}</font>
     <Card className="editionMainContainer">
       <CardContent className="editionContainer">

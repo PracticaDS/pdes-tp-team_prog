@@ -7,7 +7,7 @@ import Block from './Block'
 const state = {
   updateBlock: () => true,
   Grid: {
-    gridValues: Array(2).fill(Array(2).fill({ type: 'Crafter' })),
+    gridValues: Array(2).fill(Array(2).fill({ machine: { type: 'Crafter' } })),
   },
   GameState: {
     machineSelected: 'bla',
