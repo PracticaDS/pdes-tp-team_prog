@@ -14,7 +14,7 @@ const connector = Block => {
   const mapDispatchToProps = dispatch => ({
     updateBlock: (position, machineType) => {
       if (machineType) {
-        dispatch(updateBlock(position, machineType.name))
+        dispatch(updateBlock(position, machineType))
       }
     },
     deleteBlock: position => dispatch(deleteBlock(position)),
@@ -22,7 +22,7 @@ const connector = Block => {
       dispatch(moveBlock(selectedNode, position))
       dispatch(deselectMoveBlock())
     },
-    selectMoveBlock: (node, position) => dispatch(selectMoveBlock(node, position)),
+    selectMoveBlock: node => dispatch(selectMoveBlock(node)),
   })
 
   return connect(

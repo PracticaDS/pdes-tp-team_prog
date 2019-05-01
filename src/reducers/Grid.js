@@ -123,12 +123,17 @@ const moveSelectBlock = (state, { moveSelectedNode, newSelectedNode: { row, colu
   const { gridValues } = state
   const currentNode = gridValues[row][column]
 
-  if (currentNode.type === Empty) {
+  if (currentNode.machine.type === Empty) {
     const partialState = deleteBlock(state, {
-      row: moveSelectedNode.position.row,
-      column: moveSelectedNode.position.column,
+      position: {
+        row: moveSelectedNode.position.row,
+        column: moveSelectedNode.position.column,
+      },
     })
-    return updateBlock(partialState, { row, column, machineType: moveSelectedNode.type })
+    return updateBlock(partialState, {
+      position: { row, column },
+      machine: moveSelectedNode.machine,
+    })
   }
 
   return state

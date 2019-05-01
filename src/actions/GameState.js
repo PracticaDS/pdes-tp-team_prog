@@ -27,9 +27,9 @@ export const selectAction = actionType => ({
   body: { actionType },
 })
 
-export const selectMoveBlock = (node, position) => ({
+export const selectMoveBlock = node => ({
   type: SELECT_MOVE_BLOCK,
-  body: { ...node, position },
+  body: { ...node },
 })
 
 export const deselectMoveBlock = () => ({
