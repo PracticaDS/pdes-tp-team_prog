@@ -8,7 +8,16 @@ import {
   ROTATE_BLOCK,
 } from '../utils/actionTypes'
 import { Empty } from '../utils/machineUtils'
-import { GetNextDirection } from '../utils/directions'
+import { DOWN, UP, LEFT, RIGHT } from '../utils/directions'
+
+const NextDirection = {
+  Right: DOWN,
+  Down: LEFT,
+  Left: UP,
+  Up: RIGHT,
+}
+
+const nextDirection = Direction => NextDirection[Direction]
 
 const createInitialBlockState = (position, machine = { type: Empty }, items = {}) => ({
   position,
@@ -124,7 +133,7 @@ const rotatePositionOfBlock = block => ({
   ...block,
   machine: {
     ...block.machine,
-    direction: GetNextDirection(block.machine.direction),
+    direction: nextDirection(block.machine.direction),
   },
 })
 

@@ -32,7 +32,7 @@ export const deleteItems = (position, items) => ({
   body: { position, items },
 })
 
-export const rotateBlock = ({ row, column }) => ({
+export const rotateBlock = position => ({
   type: ROTATE_BLOCK,
-  body: { row, column },
+  body: { position },
 })
