@@ -10,7 +10,9 @@ const actionHandler = {
   [SELECTION]: ({ updateBlock, position, machineSelected }) =>
     updateBlock(position, machineSelected),
   [MOVE]: ({ moveBlock, selectMoveBlock, position, node, moveSelectedNode }) =>
-    moveSelectedNode ? moveBlock(moveSelectedNode, position) : selectMoveBlock(node, position),
+    moveSelectedNode && moveSelectedNode.position !== position
+      ? moveBlock(moveSelectedNode, position)
+      : selectMoveBlock(node, position),
 }
 
 const displayAction = props =>
