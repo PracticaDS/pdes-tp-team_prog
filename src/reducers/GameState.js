@@ -24,7 +24,6 @@ const initialState = {
 }
 
 const playGame = state => ({ ...state, status: statuses.PLAYING })
-const playGame = state => ({ ...state, gameState: STATES.PLAYING })
 const changeActionSelected = (state, { actionType }) => ({
   ...state,
   actionSelected: actionType,
