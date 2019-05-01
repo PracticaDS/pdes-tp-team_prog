@@ -3,7 +3,7 @@ import { Card } from '@material-ui/core'
 import connector from './BlockConnector'
 import { machineByType, Empty } from '../../utils/machineUtils'
 import './Block.css'
-import { SELECTION, DELETE } from '../../utils/editionUtils'
+import { SELECTION, DELETE, ROTATE } from '../../utils/editionUtils'
 
 const isEmptyNode = node => node.machine && node.machine.type && node.machine.type === Empty
 
@@ -16,6 +16,11 @@ const blockActionHandler = {
   [DELETE]: ({ position, node, deleteBlock }) => {
     if (!isEmptyNode(node)) {
       deleteBlock(position)
+    }
+  },
+  [ROTATE]: ({ node, rotateBlock }) => {
+    if (!isEmptyNode(node)) {
+      rotateBlock(node.position)
     }
   },
 }

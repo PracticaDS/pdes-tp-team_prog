@@ -5,8 +5,10 @@ import {
   CREATE_RAW_MATERIAL,
   CREATE_ITEMS,
   DELETE_ITEMS,
+  ROTATE_BLOCK,
 } from '../utils/actionTypes'
 import { Empty } from '../utils/machineUtils'
+import { GetNextDirection } from '../utils/directions'
 
 const createInitialBlockState = (position, machine = { type: Empty }, items = {}) => ({
   position,
@@ -118,12 +120,26 @@ const deleteItems = (state, { position, items }) => ({
   gridValues: modifyBlock(state.gridValues, position, deleteItemsInBlock(items)),
 })
 
+const rotatePositionOfBlock = block => ({
+  ...block,
+  machine: {
+    ...block.machine,
+    direction: GetNextDirection(block.machine.direction),
+  },
+})
+
+const rotateBlock = (state, { position }) => ({
+  ...state,
+  gridValues: modifyBlock(state.gridValues, position, rotatePositionOfBlock),
+})
+
 const ACTION_HANDLER_TYPES = {
   [UPDATE_BLOCK]: updateBlock,
   [DELETE_BLOCK]: deleteBlock,
   [CREATE_RAW_MATERIAL]: createRawMaterial,
   [CREATE_ITEMS]: createItems,
   [DELETE_ITEMS]: deleteItems,
+  [ROTATE_BLOCK]: rotateBlock,
 }
 
 export const Grid = (state = initialState, { type, body }) => {

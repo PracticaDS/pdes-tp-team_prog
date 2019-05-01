@@ -4,6 +4,7 @@ import {
   CREATE_RAW_MATERIAL,
   CREATE_ITEMS,
   DELETE_ITEMS,
+  ROTATE_BLOCK,
 } from '../utils/actionTypes'
 
 export const updateBlock = (position, machine) => ({
@@ -29,4 +30,9 @@ export const createItems = (position, items) => ({
 export const deleteItems = (position, items) => ({
   type: DELETE_ITEMS,
   body: { position, items },
+})
+
+export const rotateBlock = ({ row, column }) => ({
+  type: ROTATE_BLOCK,
+  body: { row, column },
 })

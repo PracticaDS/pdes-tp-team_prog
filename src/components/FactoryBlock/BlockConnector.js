@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { machineSelected, actionSelected } from '../../selectors/GameState'
 import { selectMachineNode } from '../../selectors/Grid'
-import { updateBlock, deleteBlock } from '../../actions/Grid'
+import { updateBlock, deleteBlock, rotateBlock } from '../../actions/Grid'
 
 const connector = Block => {
   const mapStateToProps = (state, props) => ({
@@ -12,6 +12,7 @@ const connector = Block => {
   const mapDispatchToProps = dispatch => ({
     deleteBlock: position => dispatch(deleteBlock(position)),
     updateBlock: (position, machine) => dispatch(updateBlock(position, machine)),
+    rotateBlock: position => dispatch(rotateBlock(position)),
   })
 
   return connect(
