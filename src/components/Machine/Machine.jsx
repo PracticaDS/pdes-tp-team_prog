@@ -3,9 +3,13 @@ import connector from './MachineConnector'
 
 import './Machine.css'
 
-const Machine = ({ machine, selectMachine }) => (
+const Machine = ({ machine, selectMachine, machineSelected }) => (
   <div onClick={() => selectMachine(machine)}>
-    <img className="machineElement" src={machine.image} alt="myImage" />
+    <img
+      className={machineSelected === machine ? 'machineSelected' : 'machineElement'}
+      src={machine.image}
+      alt="myImage"
+    />
   </div>
 )
 
