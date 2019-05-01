@@ -9,13 +9,13 @@ import {
 } from '../utils/actionTypes'
 import { SELECTION, EDITIONS } from '../utils/editionUtils'
 
-const STATES = {
+const statuses = {
   PAUSED: 'PAUSED',
   PLAYING: 'PLAYING',
   EDITING: 'EDITING',
 }
 const initialState = {
-  gameState: STATES.PAUSED,
+  status: statuses.PAUSED,
   machineSelected: null,
   moveSelectedNode: null,
   actionSelected: SELECTION,
@@ -23,7 +23,7 @@ const initialState = {
   tick: 0,
 }
 
-const playGame = state => ({ ...state, gameState: STATES.PLAYING })
+const playGame = state => ({ ...state, status: statuses.PLAYING })
 const changeActionSelected = (state, { actionType }) => ({
   ...state,
   actionSelected: actionType,
