@@ -21,7 +21,7 @@ export const machines = [
       selectedMaterial: { name: 'agua', price: 10 },
       availableMaterials: [{ name: 'agua', price: 10 }],
     },
-    process: function(materials, func) {
+    process(materials, func) {
       func(this.direction, [], [{ ...this.metadata.selectedMaterial, frequency: this.frequency }])
     },
   },
@@ -95,7 +95,7 @@ export const machines = [
     sell: 400,
     frequency: 1,
     direction: 'DOWN',
-    process: function (materials, func) {
+    process(materials, func) {
       func(this.direction, materials, materials)
     },
   },

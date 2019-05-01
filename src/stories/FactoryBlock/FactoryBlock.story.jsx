@@ -8,8 +8,8 @@ const state = {
   updateBlock: () => true,
   Grid: {
     gridValues: [
-      [{ type: 'Empty' }, { type: 'Crafter' }],
-      [{ type: 'Empty' }, { type: 'Crafter' }],
+      [{ machine: { type: 'Empty' } }, { machine: { type: 'Crafter' } }],
+      [{ machine: { type: 'Empty' } }, { machine: { type: 'Crafter' } }],
     ],
   },
   GameState: {

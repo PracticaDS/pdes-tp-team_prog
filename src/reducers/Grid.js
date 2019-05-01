@@ -5,6 +5,7 @@ import {
   CREATE_RAW_MATERIAL,
   CREATE_ITEMS,
   DELETE_ITEMS,
+  MOVE_BLOCK,
 } from '../utils/actionTypes'
 import { Empty } from '../utils/machineUtils'
 
@@ -118,12 +119,33 @@ const deleteItems = (state, { position, items }) => ({
   gridValues: modifyBlock(state.gridValues, position, deleteItemsInBlock(items)),
 })
 
+const moveSelectBlock = (state, { moveSelectedNode, newSelectedNode: { row, column } }) => {
+  const { gridValues } = state
+  const currentNode = gridValues[row][column]
+
+  if (currentNode.machine.type === Empty) {
+    const partialState = deleteBlock(state, {
+      position: {
+        row: moveSelectedNode.position.row,
+        column: moveSelectedNode.position.column,
+      },
+    })
+    return updateBlock(partialState, {
+      position: { row, column },
+      machine: moveSelectedNode.machine,
+    })
+  }
+
+  return state
+}
+
 const ACTION_HANDLER_TYPES = {
   [UPDATE_BLOCK]: updateBlock,
   [DELETE_BLOCK]: deleteBlock,
   [CREATE_RAW_MATERIAL]: createRawMaterial,
   [CREATE_ITEMS]: createItems,
   [DELETE_ITEMS]: deleteItems,
+  [MOVE_BLOCK]: moveSelectBlock,
 }
 
 export const Grid = (state = initialState, { type, body }) => {
