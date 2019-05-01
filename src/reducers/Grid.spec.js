@@ -2,13 +2,31 @@ import { Grid as reducer } from './Grid'
 import { Empty } from '../utils/machineUtils'
 import { updateBlock, deleteBlock } from '../actions/Grid'
 
-const createInitialState = (n = 1, m = 1) => ({
-  dimensions: { n, m },
-  gridValues: Array(n).fill(Array(m).fill({ type: Empty })),
+const createInitialBlockState = (position, machine = { type: Empty }, items = {}) => ({
+  position,
+  machine,
+  items,
 })
 
-const createEmptyBlock = () => ({ type: 'Empty' })
-const createStarterBlock = () => ({ type: 'Starter' })
+const generateGrid = (MAX_ROW, MAX_COLUMN) => {
+  const result = new Array(MAX_ROW)
+  for (let row = 0; row < MAX_ROW; row++) {
+    result[row] = new Array(MAX_COLUMN)
+    for (let column = 0; column < MAX_COLUMN; column++) {
+      result[row][column] = createInitialBlockState({ row, column })
+    }
+  }
+  return result
+}
+
+const createInitialState = (n = 1, m = 1) => ({
+  dimensions: { n, m },
+  gridValues: generateGrid(n, m),
+})
+
+const createMachine = (machine = { type: 'Empty', direction: 'DOWN' }) => ({ machine })
+const createEmptyBlock = () => createMachine()
+const createStarterBlock = () => createMachine({ type: 'Starter', direction: 'DOWN' })
 
 describe('grid reducer', () => {
   it('should return the initial state', () => {
