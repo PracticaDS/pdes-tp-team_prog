@@ -15,15 +15,23 @@ const actionHandler = {
       : selectMoveBlock(node, position),
 }
 
+const isSelectedInMoveAction = (position, moveSelectedNode) =>
+  moveSelectedNode && moveSelectedNode.position === position
+
 const displayAction = props =>
   actionHandler[props.actionSelected] ? actionHandler[props.actionSelected](props) : null
 
 class Block extends Component {
   render() {
-    const { node } = this.props
+    const { node, position, moveSelectedNode } = this.props
     const MachineNode = machineByType[node.machine.type]
     return (
-      <div className="Block" onClick={() => displayAction(this.props)}>
+      <div
+        className={
+          isSelectedInMoveAction(position, moveSelectedNode) ? 'MoveSelectedBlock' : 'Block'
+        }
+        onClick={() => displayAction(this.props)}
+      >
         <Card>
           <MachineNode className="MachineNode" {...this.props} />
         </Card>
