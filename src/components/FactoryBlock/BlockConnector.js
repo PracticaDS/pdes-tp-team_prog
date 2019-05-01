@@ -12,9 +12,9 @@ const connector = Block => {
     node: selectMachineNode(state, props.position),
   })
   const mapDispatchToProps = dispatch => ({
-    updateBlock: (position, machineType) => {
-      if (machineType) {
-        dispatch(updateBlock(position, machineType))
+    updateBlock: (position, machine) => {
+      if (machine) {
+        dispatch(updateBlock(position, machine))
       }
     },
     deleteBlock: position => dispatch(deleteBlock(position)),
