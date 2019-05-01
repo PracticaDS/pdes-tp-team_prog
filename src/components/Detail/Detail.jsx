@@ -3,24 +3,26 @@ import { Card, CardContent, Typography } from '@material-ui/core'
 import './Detail.css'
 import connector from './DetailConnector'
 
+const title = 'Details'
+
 const Detail = ({ name, cost, frequency }) => (
-  <div className="detail">
-    <Typography className="title text-content" variant="h6" gutterBottom>
-      Details
-    </Typography>
-    <Card>
-      <CardContent>
-        <Typography className="text-content" gutterBottom>
-          {name}
-        </Typography>
-        <Typography className="text-content" gutterBottom>
-          Cost: <span className="text-content-number">${cost}</span>
-        </Typography>
-        <Typography className="text-content">
-          Frequency: <span className="text-content-number">{frequency}/s</span>
-        </Typography>
-      </CardContent>
-    </Card>
+  <div>
+    <font className="DetailHeader">{title}</font>
+    <div className="detail">
+      <Card>
+        <CardContent>
+          <Typography className="text-content" gutterBottom>
+            {name}
+          </Typography>
+          <Typography className="text-content" gutterBottom>
+            Cost: <span className="text-content-number">${cost}</span>
+          </Typography>
+          <Typography className="text-content">
+            Frequency: <span className="text-content-number">{frequency}/s</span>
+          </Typography>
+        </CardContent>
+      </Card>
+    </div>
   </div>
 )
 
