@@ -8,7 +8,11 @@ import deleteOption from '../../assets/delete.png'
 import rotateOption from '../../assets/rotate.png'
 import moveOption from '../../assets/move.png'
 
+<<<<<<< HEAD
 import { Starter, Seller, Crafter, Furnace, Transporter } from '../../utils/machineUtils'
+=======
+import { DOWN } from '../../utils/directions'
+>>>>>>> Fix - merge conflicts
 
 export const machines = [
   {
@@ -18,7 +22,7 @@ export const machines = [
     buy: 800,
     sell: 400,
     frequency: 1,
-    direction: 'DOWN',
+    direction: DOWN,
     metadata: {
       selectedMaterial: { name: 'agua', price: 10 },
       availableMaterials: [{ name: 'agua', price: 10 }],
@@ -34,7 +38,7 @@ export const machines = [
     buy: 1000,
     sell: 500,
     frequency: 1,
-    direction: 'DOWN',
+    direction: DOWN,
     process: (materials, func) => {
       func(null, materials, { name: 'currency' })
     },
@@ -46,7 +50,7 @@ export const machines = [
     buy: 800,
     sell: 400,
     frequency: 1,
-    direction: 'DOWN',
+    direction: DOWN,
     metadata: {
       recipeSelected: {
         materialsRequired: [{ name: 'harina', quantity: 1 }, { name: 'agua', quantity: 2 }],
@@ -69,7 +73,7 @@ export const machines = [
     buy: 800,
     sell: 400,
     frequency: 1,
-    direction: 'DOWN',
+    direction: DOWN,
     metadata: {
       recipeSelected: {
         materialsRequired: [{ name: 'gold', quantity: 1 }],
@@ -96,8 +100,13 @@ export const machines = [
     buy: 800,
     sell: 400,
     frequency: 1,
+<<<<<<< HEAD
     direction: 'DOWN',
     process(materials, func) {
+=======
+    direction: DOWN,
+    process: function(materials, func) {
+>>>>>>> Fix - merge conflicts
       func(this.direction, materials, materials)
     },
   },

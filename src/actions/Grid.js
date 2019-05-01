@@ -5,6 +5,7 @@ import {
   CREATE_ITEMS,
   DELETE_ITEMS,
   MOVE_BLOCK,
+  ROTATE_BLOCK,
 } from '../utils/actionTypes'
 
 export const updateBlock = (position, machine) => ({
@@ -35,4 +36,9 @@ export const deleteItems = (position, items) => ({
 export const moveBlock = (moveSelectedNode, newSelectedNode) => ({
   type: MOVE_BLOCK,
   body: { moveSelectedNode, newSelectedNode },
+})
+
+export const rotateBlock = ({ row, column }) => ({
+  type: ROTATE_BLOCK,
+  body: { row, column },
 })

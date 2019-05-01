@@ -6,6 +6,7 @@ import {
   CREATE_ITEMS,
   DELETE_ITEMS,
   MOVE_BLOCK,
+  ROTATE_BLOCK,
 } from '../utils/actionTypes'
 import { Empty } from '../utils/machineUtils'
 import { generateEmptyGrid } from '../utils/gridUtils'
@@ -122,6 +123,18 @@ const moveSelectBlock = (state, { moveSelectedNode, newSelectedNode: { row, colu
 
   return state
 }
+const rotatePositionOfBlock = block => ({
+  ...block,
+  machine: {
+    ...block.machine,
+    direction: 'Left',
+  },
+})
+
+const rotateBlock = (state, { position }) => ({
+  ...state,
+  gridValues: modifyBlock(state.gridValues, position, rotatePositionOfBlock),
+})
 
 const ACTION_HANDLER_TYPES = {
   [UPDATE_BLOCK]: updateBlock,
@@ -130,6 +143,7 @@ const ACTION_HANDLER_TYPES = {
   [CREATE_ITEMS]: createItems,
   [DELETE_ITEMS]: deleteItems,
   [MOVE_BLOCK]: moveSelectBlock,
+  [ROTATE_BLOCK]: rotateBlock,
 }
 
 export const Grid = (state = initialState, { type, body }) => {
