@@ -8,11 +8,13 @@ import deleteOption from '../../assets/delete.png'
 import rotateOption from '../../assets/rotate.png'
 import moveOption from '../../assets/move.png'
 
+import { Starter, Seller, Crafter, Furnace, Transporter } from '../../utils/machineUtils'
+
 export const machines = [
   {
     image: starter,
     name: 'Starter',
-    type: 'Starter',
+    type: Starter,
     buy: 800,
     sell: 400,
     frequency: 1,
@@ -21,14 +23,14 @@ export const machines = [
       selectedMaterial: { name: 'agua', price: 10 },
       availableMaterials: [{ name: 'agua', price: 10 }],
     },
-    process: function(materials, func) {
+    process(materials, func) {
       func(this.direction, [], [{ ...this.metadata.selectedMaterial, frequency: this.frequency }])
     },
   },
   {
     image: seller,
     name: 'Seller',
-    type: 'Seller',
+    type: Seller,
     buy: 1000,
     sell: 500,
     frequency: 1,
@@ -40,7 +42,7 @@ export const machines = [
   {
     image: crafter,
     name: 'Crafter',
-    type: 'Seller',
+    type: Crafter,
     buy: 800,
     sell: 400,
     frequency: 1,
@@ -63,7 +65,7 @@ export const machines = [
   {
     image: furnace,
     name: 'Furnace',
-    type: 'Furnace',
+    type: Furnace,
     buy: 800,
     sell: 400,
     frequency: 1,
@@ -90,12 +92,12 @@ export const machines = [
   {
     image: transporter,
     name: 'Transporter',
-    type: 'Transporter',
+    type: Transporter,
     buy: 800,
     sell: 400,
     frequency: 1,
     direction: 'DOWN',
-    process: function (materials, func) {
+    process(materials, func) {
       func(this.direction, materials, materials)
     },
   },
