@@ -5,35 +5,36 @@ import { machineByType, Empty } from '../../utils/machineUtils'
 import './Block.css'
 import { SELECTION, DELETE } from '../../utils/editionUtils'
 
-const actionHandler = ({ action, position, deleteDispatch }) => {
-  if (action === DELETE) {
-    deleteDispatch(position)
-  }
+const isEmptyNode = node => node.machine && node.machine.type && node.machine.type === Empty
+
+const blockActionHandler = {
+  [SELECTION]: ({ machineSelected, updateBlock, node, position }) => {
+    if (machineSelected && isEmptyNode(node)) {
+      updateBlock(position, machineSelected)
+    }
+  },
+  [DELETE]: ({ position, node, deleteBlock }) => {
+    if (!isEmptyNode(node)) {
+      deleteBlock(position)
+    }
+  },
 }
+
+const blockActionDispatcher = props =>
+  blockActionHandler[props.actionSelected] ? blockActionHandler[props.actionSelected](props) : null
 
 class Block extends Component {
   onClick = () => {
-    const { position, machineSelected, actionSelected, updateBlock, node, deleteBlock } = this.props
-
-    // @TODO maybe this check could be in another place
-    if (!machineSelected && actionSelected === SELECTION) return
-
-    if (machineSelected && node.type === Empty) {
-      updateBlock(position, machineSelected.name)
-    }
-
-    if (actionSelected !== SELECTION && node.type !== Empty) {
-      actionHandler({ action: actionSelected, position, deleteDispatch: deleteBlock })
-    }
+    blockActionDispatcher(this.props)
   }
 
   render() {
     const { node } = this.props
-    const MachineNode = machineByType[node.type]
+    const MachineNode = machineByType[node.machine.type]
     return (
       <div className="Block" onClick={this.onClick}>
         <Card>
-          <MachineNode className="MachineNode" />
+          <MachineNode className="MachineNode" {...this.props} />
         </Card>
       </div>
     )
