@@ -6,9 +6,9 @@
 }
 
 .machineElement:hover {
-  border: 2px solid rgb(0, 76, 255);
+  border: 2px solid rgb(154, 180, 241);
 }
 
 .machineElement:active {
-  border: 2px solid rgb(101, 253, 0);
+  border: 2px solid rgb(94, 122, 187);
 }
