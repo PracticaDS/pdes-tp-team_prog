@@ -7,7 +7,7 @@ import Detail from './Detail'
 const state = {
   GameState: {
     machineSelected: {
-      cost: 1000,
+      buy: 1000,
       frequency: 1,
       name: 'Starter',
     },

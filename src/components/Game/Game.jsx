@@ -39,9 +39,7 @@ class Game extends Component {
   renderDetail() {
     const { machineSelected } = this.props
 
-    if (machineSelected && machineSelected.type === 'machine')
-      return <Detail {...machineSelected} />
-    return null
+    return machineSelected ? <Detail {...machineSelected} /> : null
   }
 
   render = () => (
