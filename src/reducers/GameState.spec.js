@@ -14,10 +14,10 @@ const initialState = {
 describe('GameState reducer', () => {
   describe('SELECT_MOVE_BLOCK action', () => {
     it('should set moveSelectedNode with the node passed', () => {
-      const node = {}
-      const action = selectMoveBlock(node, { row: 1, column: 1 })
+      const node = { position: { row: 1, column: 1 } }
+      const action = selectMoveBlock(node)
       const state = reducer(initialState, action)
-      expect(state.moveSelectedNode).toEqual({ ...node, position: { row: 1, column: 1 } })
+      expect(state.moveSelectedNode).toEqual({ ...node })
     })
   })
 

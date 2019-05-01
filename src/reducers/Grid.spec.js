@@ -88,11 +88,11 @@ describe('grid reducer', () => {
       const initialState = createInitialState(2, 2)
       it('should update the type of machine', () => {
         const action = moveBlock(
-          { position: { row: 1, column: 1 }, type: 'bla' },
+          { position: { row: 1, column: 1 }, machine: { type: 'bla' } },
           { row: 1, column: 1 },
         )
         const newState = reducer(initialState, action)
-        expect(newState.gridValues[1][1].type).toEqual('bla')
+        expect(newState.gridValues[1][1].machine.type).toEqual('bla')
       })
     })
   })
