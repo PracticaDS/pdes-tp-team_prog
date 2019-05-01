@@ -12,13 +12,13 @@ exports[`render simple Grid Component with 2x2 Blocks 1`] = `
       onClick={[Function]}
     >
       <div
-        className="jss2 jss5 jss3 jss1"
+        className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
       >
         <div
-          className="jss2 jss5 jss3 jss1"
+          className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
         >
           <img
-            className="jss29 jss30"
+            className="MuiCardMedia-root-29 MuiCardMedia-media-30"
             src={
               Object {
                 "process": [Function],
@@ -33,13 +33,13 @@ exports[`render simple Grid Component with 2x2 Blocks 1`] = `
       onClick={[Function]}
     >
       <div
-        className="jss2 jss5 jss3 jss1"
+        className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
       >
         <div
-          className="jss2 jss5 jss3 jss1"
+          className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
         >
           <img
-            className="jss29 jss30"
+            className="MuiCardMedia-root-29 MuiCardMedia-media-30"
             src={
               Object {
                 "process": [Function],
@@ -58,13 +58,13 @@ exports[`render simple Grid Component with 2x2 Blocks 1`] = `
       onClick={[Function]}
     >
       <div
-        className="jss2 jss5 jss3 jss1"
+        className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
       >
         <div
-          className="jss2 jss5 jss3 jss1"
+          className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
         >
           <img
-            className="jss29 jss30"
+            className="MuiCardMedia-root-29 MuiCardMedia-media-30"
             src={
               Object {
                 "process": [Function],
@@ -79,13 +79,13 @@ exports[`render simple Grid Component with 2x2 Blocks 1`] = `
       onClick={[Function]}
     >
       <div
-        className="jss2 jss5 jss3 jss1"
+        className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
       >
         <div
-          className="jss2 jss5 jss3 jss1"
+          className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
         >
           <img
-            className="jss29 jss30"
+            className="MuiCardMedia-root-29 MuiCardMedia-media-30"
             src={
               Object {
                 "process": [Function],

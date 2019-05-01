@@ -38,10 +38,10 @@ exports[`render simple Game Component 1`] = `
             Machines
           </font>
           <div
-            className="jss2 jss5 jss3 jss1 machineTypesMainContainer"
+            className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1 machineTypesMainContainer"
           >
             <div
-              className="jss29 machineTypesContainer"
+              className="MuiCardContent-root-29 machineTypesContainer"
             >
               <div
                 className="machineTypesElement"
@@ -144,10 +144,10 @@ exports[`render simple Game Component 1`] = `
             Edition
           </font>
           <div
-            className="jss2 jss5 jss3 jss1 editionMainContainer"
+            className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1 editionMainContainer"
           >
             <div
-              className="jss29 editionContainer"
+              className="MuiCardContent-root-29 editionContainer"
             >
               <div
                 className="editionElement"
@@ -219,10 +219,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -231,10 +231,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -243,10 +243,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -255,10 +255,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -267,10 +267,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -279,86 +279,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          className="FactoryRow"
-        >
-          <div
-            className="Block"
-            onClick={[Function]}
-          >
-            <div
-              className="jss2 jss5 jss3 jss1"
-            >
-              <div
-                className="jss2 jss5 jss3 jss1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-            onClick={[Function]}
-          >
-            <div
-              className="jss2 jss5 jss3 jss1"
-            >
-              <div
-                className="jss2 jss5 jss3 jss1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-            onClick={[Function]}
-          >
-            <div
-              className="jss2 jss5 jss3 jss1"
-            >
-              <div
-                className="jss2 jss5 jss3 jss1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-            onClick={[Function]}
-          >
-            <div
-              className="jss2 jss5 jss3 jss1"
-            >
-              <div
-                className="jss2 jss5 jss3 jss1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-            onClick={[Function]}
-          >
-            <div
-              className="jss2 jss5 jss3 jss1"
-            >
-              <div
-                className="jss2 jss5 jss3 jss1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-            onClick={[Function]}
-          >
-            <div
-              className="jss2 jss5 jss3 jss1"
-            >
-              <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -371,10 +295,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -383,10 +307,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -395,10 +319,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -407,10 +331,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -419,10 +343,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -431,86 +355,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          className="FactoryRow"
-        >
-          <div
-            className="Block"
-            onClick={[Function]}
-          >
-            <div
-              className="jss2 jss5 jss3 jss1"
-            >
-              <div
-                className="jss2 jss5 jss3 jss1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-            onClick={[Function]}
-          >
-            <div
-              className="jss2 jss5 jss3 jss1"
-            >
-              <div
-                className="jss2 jss5 jss3 jss1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-            onClick={[Function]}
-          >
-            <div
-              className="jss2 jss5 jss3 jss1"
-            >
-              <div
-                className="jss2 jss5 jss3 jss1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-            onClick={[Function]}
-          >
-            <div
-              className="jss2 jss5 jss3 jss1"
-            >
-              <div
-                className="jss2 jss5 jss3 jss1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-            onClick={[Function]}
-          >
-            <div
-              className="jss2 jss5 jss3 jss1"
-            >
-              <div
-                className="jss2 jss5 jss3 jss1"
-              />
-            </div>
-          </div>
-          <div
-            className="Block"
-            onClick={[Function]}
-          >
-            <div
-              className="jss2 jss5 jss3 jss1"
-            >
-              <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -523,10 +371,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -535,10 +383,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -547,10 +395,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -559,10 +407,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -571,10 +419,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -583,10 +431,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -599,10 +447,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -611,10 +459,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -623,10 +471,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -635,10 +483,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -647,10 +495,10 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
@@ -659,10 +507,162 @@ exports[`render simple Game Component 1`] = `
             onClick={[Function]}
           >
             <div
-              className="jss2 jss5 jss3 jss1"
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
             >
               <div
-                className="jss2 jss5 jss3 jss1"
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="FactoryRow"
+        >
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="FactoryRow"
+        >
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+              />
+            </div>
+          </div>
+          <div
+            className="Block"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+            >
+              <div
+                className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
               />
             </div>
           </div>
