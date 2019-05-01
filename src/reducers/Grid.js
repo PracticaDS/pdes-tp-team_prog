@@ -11,6 +11,17 @@ import {
 import { Empty } from '../utils/machineUtils'
 import { generateEmptyGrid } from '../utils/gridUtils'
 
+import { DOWN, UP, LEFT, RIGHT } from '../utils/directions'
+
+const NextDirection = {
+  Right: DOWN,
+  Down: LEFT,
+  Left: UP,
+  Up: RIGHT,
+}
+
+const nextDirection = Direction => NextDirection[Direction]
+
 const initialState = {
   dimensions: DEFAULT_DIMENSIONS,
   gridValues: generateEmptyGrid(10, 10),
@@ -127,7 +138,7 @@ const rotatePositionOfBlock = block => ({
   ...block,
   machine: {
     ...block.machine,
-    direction: 'Left',
+    direction: nextDirection(block.machine.direction),
   },
 })
 

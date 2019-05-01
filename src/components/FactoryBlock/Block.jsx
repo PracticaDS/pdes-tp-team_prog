@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Card } from '@material-ui/core'
 import connector from './BlockConnector'
-import { machineByType } from '../../utils/machineUtils'
+import { machineByType, Empty } from '../../utils/machineUtils'
 import './Block.css'
 import { SELECTION, DELETE, MOVE, ROTATE } from '../../utils/editionUtils'
 
@@ -13,7 +13,7 @@ const actionHandler = {
   [SELECTION]: ({ updateBlock, position, machineSelected }) =>
     updateBlock(position, machineSelected),
   [ROTATE]: ({ node, rotateBlock }) => {
-    if (!isEmptyNode(node)) {
+    if (node.machine.type !== Empty) {
       rotateBlock(node.position)
     }
   },

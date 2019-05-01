@@ -38,7 +38,7 @@ export const moveBlock = (moveSelectedNode, newSelectedNode) => ({
   body: { moveSelectedNode, newSelectedNode },
 })
 
-export const rotateBlock = ({ row, column }) => ({
+export const rotateBlock = position => ({
   type: ROTATE_BLOCK,
-  body: { row, column },
+  body: { position },
 })
