@@ -8,27 +8,11 @@ import {
   MOVE_BLOCK,
 } from '../utils/actionTypes'
 import { Empty } from '../utils/machineUtils'
-
-const createInitialBlockState = (position, machine = { type: Empty }, items = {}) => ({
-  position,
-  machine,
-  items,
-})
-
-const generateGrid = (MAX_ROW, MAX_COLUMN) => {
-  const result = new Array(MAX_ROW)
-  for (let row = 0; row < MAX_ROW; row++) {
-    result[row] = new Array(MAX_COLUMN)
-    for (let column = 0; column < MAX_COLUMN; column++) {
-      result[row][column] = createInitialBlockState({ row, column })
-    }
-  }
-  return result
-}
+import { generateEmptyGrid } from '../utils/gridUtils'
 
 const initialState = {
   dimensions: DEFAULT_DIMENSIONS,
-  gridValues: generateGrid(10, 10),
+  gridValues: generateEmptyGrid(10, 10),
 }
 
 const modifyBlock = (gridValues, { row, column }, func) => {
