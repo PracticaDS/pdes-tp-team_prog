@@ -1,6 +1,6 @@
 import { Grid as reducer } from './Grid'
 import { Empty } from '../utils/machineUtils'
-import { updateBlock, deleteBlock } from '../actions/Grid'
+import { updateBlock, deleteBlock, moveBlock } from '../actions/Grid'
 
 const createInitialBlockState = (position, machine = { type: Empty }, items = {}) => ({
   position,
@@ -81,5 +81,19 @@ describe('grid reducer', () => {
     expectedState.gridValues[0][0] = createEmptyBlock()
 
     expect(lastState).toEqual(expectedState)
+  })
+
+  describe('#moveSelectBlock', () => {
+    describe('When the current node is Empty', () => {
+      const initialState = createInitialState(2, 2)
+      it('should update the type of machine', () => {
+        const action = moveBlock(
+          { position: { row: 1, column: 1 }, type: 'bla' },
+          { row: 1, column: 1 },
+        )
+        const newState = reducer(initialState, action)
+        expect(newState.gridValues[1][1].type).toEqual('bla')
+      })
+    })
   })
 })
