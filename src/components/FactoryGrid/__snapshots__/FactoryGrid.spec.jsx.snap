@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render simple Grid Component with 2x2 Blocks 1`] = `
+<div
+  className="FactoryGrid"
+>
+  <div
+    className="FactoryRow"
+  >
+    <div
+      className="Block"
+      onClick={[Function]}
+    >
+      <div
+        className="jss2 jss5 jss3 jss1"
+      >
+        <div
+          className="jss2 jss5 jss3 jss1"
+        >
+          <img
+            className="jss29 jss30"
+            src={
+              Object {
+                "process": [Function],
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="Block"
+      onClick={[Function]}
+    >
+      <div
+        className="jss2 jss5 jss3 jss1"
+      >
+        <div
+          className="jss2 jss5 jss3 jss1"
+        >
+          <img
+            className="jss29 jss30"
+            src={
+              Object {
+                "process": [Function],
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="FactoryRow"
+  >
+    <div
+      className="Block"
+      onClick={[Function]}
+    >
+      <div
+        className="jss2 jss5 jss3 jss1"
+      >
+        <div
+          className="jss2 jss5 jss3 jss1"
+        >
+          <img
+            className="jss29 jss30"
+            src={
+              Object {
+                "process": [Function],
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="Block"
+      onClick={[Function]}
+    >
+      <div
+        className="jss2 jss5 jss3 jss1"
+      >
+        <div
+          className="jss2 jss5 jss3 jss1"
+        >
+          <img
+            className="jss29 jss30"
+            src={
+              Object {
+                "process": [Function],
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

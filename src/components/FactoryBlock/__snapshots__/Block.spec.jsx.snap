@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render simple Block Component 1`] = `
+<div
+  className="Block"
+  onClick={[Function]}
+>
+  <div
+    className="jss2 jss5 jss3 jss1"
+  >
+    <div
+      className="jss2 jss5 jss3 jss1"
+    >
+      <img
+        className="jss29 jss30"
+        src={
+          Object {
+            "process": [Function],
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
