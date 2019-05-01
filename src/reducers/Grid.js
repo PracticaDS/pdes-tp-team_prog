@@ -9,7 +9,6 @@ import {
 } from '../utils/actionTypes'
 import { Empty } from '../utils/machineUtils'
 import { generateEmptyGrid } from '../utils/gridUtils'
-import { isPositionValid } from '../utils/directions'
 
 const initialState = {
   dimensions: DEFAULT_DIMENSIONS,
@@ -18,12 +17,6 @@ const initialState = {
 
 const modifyBlock = (gridValues, { row, column }, func) => {
   const oldGridValues = gridValues
-
-  if (!isPositionValid({ row, column }, { n: oldGridValues.length, m: oldGridValues[0].length })) {
-    throw new Error(
-      `Invalid Grid Position: you are trying to modify the block in the position: ${row} ${column}`,
-    )
-  }
 
   oldGridValues[row] = gridValues[row].map((block, index) =>
     index === column ? func(block) : block,
