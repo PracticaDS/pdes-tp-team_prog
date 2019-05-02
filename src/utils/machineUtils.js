@@ -20,3 +20,30 @@ export const machineByType = {
   [Furnace]: FurnaceMachineNode,
   [Empty]: EmptyMachineNode,
 }
+
+export const createEmptyMachine = () => ({
+  name: Empty,
+  type: Empty,
+})
+
+const starterMachineMetadata = ({
+  selectedMaterial = { name: 'agua', price: 10 },
+  availableMaterials = [{ name: 'agua', price: 10 }],
+}) => ({
+  selectedMaterial,
+  availableMaterials,
+})
+export const createStarterMachine = ({
+  buy = 800,
+  sell = 400,
+  frequency = 1,
+  direction = 'DOWN',
+}) => ({
+  name: 'Starter',
+  type: Starter,
+  buy,
+  sell,
+  frequency,
+  direction,
+  metadata: starterMachineMetadata({}),
+})
