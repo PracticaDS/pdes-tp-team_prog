@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { Card } from '@material-ui/core'
 import connector from './BlockConnector'
-import { machineByType } from '../../utils/machineUtils'
+import { machineByType, Empty } from '../../utils/machineUtils'
 import './Block.css'
-import { SELECTION, DELETE, MOVE } from '../../utils/editionUtils'
+import { SELECTION, DELETE, MOVE, ROTATE } from '../../utils/editionUtils'
+import { getDegree } from '../../utils/directions'
 
 const areSamePosition = (position1, position2) =>
   position1.row === position2.row && position1.column === position2.column
@@ -12,6 +13,11 @@ const actionHandler = {
   [DELETE]: ({ deleteBlock, position }) => deleteBlock(position),
   [SELECTION]: ({ updateBlock, position, machineSelected }) =>
     updateBlock(position, machineSelected),
+  [ROTATE]: ({ node, rotateBlock }) => {
+    if (node.machine.type !== Empty) {
+      rotateBlock(node.position)
+    }
+  },
   [MOVE]: ({ moveBlock, selectMoveBlock, position, node, moveSelectedNode }) =>
     moveSelectedNode && !areSamePosition(moveSelectedNode.position, position)
       ? moveBlock(moveSelectedNode, position)
@@ -33,6 +39,7 @@ class Block extends Component {
         className={
           isSelectedInMoveAction(position, moveSelectedNode) ? 'MoveSelectedBlock' : 'Block'
         }
+        style={node.machine.type !== Empty ? getDegree(node.machine.direction) : {}}
         onClick={() => displayAction(this.props)}
       >
         <Card>
