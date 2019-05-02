@@ -10,7 +10,7 @@ const state = {
   tick: () => true,
   Grid: {
     dimensions: { n: 6, m: 6 },
-    gridValues: Array(6).fill(Array(6).fill({ type: 'Crafter' })),
+    gridValues: Array(6).fill(Array(6).fill({ machine: { type: 'Crafter' } })),
   },
   GameState: {
     currency: 1000,

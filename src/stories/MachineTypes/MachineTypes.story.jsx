@@ -35,7 +35,7 @@ const myElements = [
 ]
 
 const state = {
-  selectMachine: () => true,
+  GameState: {},
 }
 const mockStore = configureStore()
 const store = mockStore(state)
