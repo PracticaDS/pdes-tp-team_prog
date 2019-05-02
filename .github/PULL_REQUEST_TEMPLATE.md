@@ -1,12 +1,3 @@
----
-name: Pull Request template
-about: For any useful PR for this project
-title: ''
-labels: enhancement
-assignees: ''
-
----
-
 # Pull Request Template
 
 ## Description
