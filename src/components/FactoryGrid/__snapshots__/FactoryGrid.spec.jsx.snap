@@ -10,6 +10,11 @@ exports[`render simple Grid Component with 2x2 Blocks 1`] = `
     <div
       className="Block"
       onClick={[Function]}
+      style={
+        Object {
+          "transform": "rotate(0deg)",
+        }
+      }
     >
       <div
         className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -31,6 +36,11 @@ exports[`render simple Grid Component with 2x2 Blocks 1`] = `
     <div
       className="Block"
       onClick={[Function]}
+      style={
+        Object {
+          "transform": "rotate(0deg)",
+        }
+      }
     >
       <div
         className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -56,6 +66,11 @@ exports[`render simple Grid Component with 2x2 Blocks 1`] = `
     <div
       className="Block"
       onClick={[Function]}
+      style={
+        Object {
+          "transform": "rotate(0deg)",
+        }
+      }
     >
       <div
         className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
@@ -77,6 +92,11 @@ exports[`render simple Grid Component with 2x2 Blocks 1`] = `
     <div
       className="Block"
       onClick={[Function]}
+      style={
+        Object {
+          "transform": "rotate(0deg)",
+        }
+      }
     >
       <div
         className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
