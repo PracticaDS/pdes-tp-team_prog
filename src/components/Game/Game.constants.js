@@ -8,11 +8,8 @@ import deleteOption from '../../assets/delete.png'
 import rotateOption from '../../assets/rotate.png'
 import moveOption from '../../assets/move.png'
 
-<<<<<<< HEAD
 import { Starter, Seller, Crafter, Furnace, Transporter } from '../../utils/machineUtils'
-=======
 import { DOWN } from '../../utils/directions'
->>>>>>> Fix - merge conflicts
 
 export const machines = [
   {
@@ -100,13 +97,8 @@ export const machines = [
     buy: 800,
     sell: 400,
     frequency: 1,
-<<<<<<< HEAD
-    direction: 'DOWN',
-    process(materials, func) {
-=======
     direction: DOWN,
     process: function(materials, func) {
->>>>>>> Fix - merge conflicts
       func(this.direction, materials, materials)
     },
   },

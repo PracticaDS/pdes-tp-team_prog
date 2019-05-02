@@ -13,3 +13,13 @@ export const applyDirection = (position, direction) => {
 
 export const isPositionValid = ({ row, column }, { n, m }) =>
   row < n && row >= 0 && column >= 0 && column < m
+
+export const getDegree = direction => {
+  let degree = 'rotate(0deg)' // Dont rotate by default (meaning its facing down)
+  if (direction === LEFT) degree = 'rotate(90deg)'
+  if (direction === UP) degree = 'rotate(180deg)'
+  if (direction === RIGHT) degree = 'rotate(270deg)'
+  return {
+    transform: degree,
+  }
+}

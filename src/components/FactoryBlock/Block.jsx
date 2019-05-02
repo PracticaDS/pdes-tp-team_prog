@@ -4,6 +4,7 @@ import connector from './BlockConnector'
 import { machineByType, Empty } from '../../utils/machineUtils'
 import './Block.css'
 import { SELECTION, DELETE, MOVE, ROTATE } from '../../utils/editionUtils'
+import { getDegree } from '../../utils/directions'
 
 const areSamePosition = (position1, position2) =>
   position1.row === position2.row && position1.column === position2.column
@@ -38,6 +39,7 @@ class Block extends Component {
         className={
           isSelectedInMoveAction(position, moveSelectedNode) ? 'MoveSelectedBlock' : 'Block'
         }
+        style={node.machine.type !== Empty ? getDegree(node.machine.direction) : {}}
         onClick={() => displayAction(this.props)}
       >
         <Card>
