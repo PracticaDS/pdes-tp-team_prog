@@ -47,6 +47,7 @@ exports[`render simple Game Component 1`] = `
                 className="machineTypesElement"
               >
                 <div
+                  data-cy="machine-type-Starter"
                   onClick={[Function]}
                 >
                   <img
@@ -64,6 +65,7 @@ exports[`render simple Game Component 1`] = `
                 className="machineTypesElement"
               >
                 <div
+                  data-cy="machine-type-Seller"
                   onClick={[Function]}
                 >
                   <img
@@ -81,6 +83,7 @@ exports[`render simple Game Component 1`] = `
                 className="machineTypesElement"
               >
                 <div
+                  data-cy="machine-type-Crafter"
                   onClick={[Function]}
                 >
                   <img
@@ -98,6 +101,7 @@ exports[`render simple Game Component 1`] = `
                 className="machineTypesElement"
               >
                 <div
+                  data-cy="machine-type-Furnace"
                   onClick={[Function]}
                 >
                   <img
@@ -115,6 +119,7 @@ exports[`render simple Game Component 1`] = `
                 className="machineTypesElement"
               >
                 <div
+                  data-cy="machine-type-Transporter"
                   onClick={[Function]}
                 >
                   <img
@@ -707,6 +712,7 @@ exports[`render simple Game Component 1`] = `
     </div>
     <div
       className="gamePanel gameRightPanel"
+      data-cy="game-right-panel"
     />
   </div>
 </div>
