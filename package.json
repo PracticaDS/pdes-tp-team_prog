@@ -9,7 +9,11 @@
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetTransformer.js",
       "\\.(css|less)$": "<rootDir>/assetTransformer.js"
-    }
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/cypress/"
+    ]
   },
   "dependencies": {
     "@material-ui/core": "^3.9.3",
@@ -28,7 +32,9 @@
     "test": "jest",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "browserslist": [
     ">0.2%",
@@ -47,6 +53,7 @@
     "babel-eslint": "9",
     "babel-install": "^2.1.0",
     "babel-loader": "^8.0.5",
+    "cypress": "^3.2.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
     "eslint": "5.12.0",
