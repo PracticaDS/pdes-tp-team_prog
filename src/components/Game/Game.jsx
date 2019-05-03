@@ -52,7 +52,9 @@ class Game extends Component {
         <div className="gameMidPanel">
           <FactoryGrid />
         </div>
-        <div className="gamePanel gameRightPanel">{this.renderDetail()}</div>
+        <div className="gamePanel gameRightPanel" data-cy="game-right-panel">
+          {this.renderDetail()}
+        </div>
       </div>
     </div>
   )
