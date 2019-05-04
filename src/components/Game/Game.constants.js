@@ -13,6 +13,7 @@ import { DOWN } from '../../utils/directions'
 
 export const machines = [
   {
+    id: 1,
     image: starter,
     name: 'Starter',
     type: Starter,
@@ -29,6 +30,7 @@ export const machines = [
     },
   },
   {
+    id: 2,
     image: seller,
     name: 'Seller',
     type: Seller,
@@ -41,6 +43,7 @@ export const machines = [
     },
   },
   {
+    id: 3,
     image: crafter,
     name: 'Crafter',
     type: Crafter,
@@ -64,6 +67,7 @@ export const machines = [
     },
   },
   {
+    id: 4,
     image: furnace,
     name: 'Furnace',
     type: Furnace,
@@ -91,6 +95,7 @@ export const machines = [
     },
   },
   {
+    id: 5,
     image: transporter,
     name: 'Transporter',
     type: Transporter,
