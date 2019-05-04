@@ -1,7 +1,13 @@
 // <reference types="Cypress" />
 
-import { machines } from '../../src/components/Game/Game.constants'
-
+// we can't import the Game.constants file there is a problem with cypress and images
+const machines = [
+  { id: 1, name: 'Starter' },
+  { id: 2, name: 'Seller' },
+  { id: 3, name: 'Crafter' },
+  { id: 4, name: 'Furnace' },
+  { id: 5, name: 'Transporter' },
+]
 const defaultCss = 'machineElement'
 const selectedCss = 'machineSelected'
 const validMachineTypes = () => machines.map(mt => mt.id)
