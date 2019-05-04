@@ -5,6 +5,7 @@ import {
   SELECT_ACTION,
   SELECT_MOVE_BLOCK,
   DESELECT_MOVE_BLOCK,
+  BUY_MACHINE,
 } from '../utils/actionTypes'
 
 export const playGame = () => ({
@@ -35,4 +36,9 @@ export const selectMoveBlock = node => ({
 export const deselectMoveBlock = () => ({
   type: DESELECT_MOVE_BLOCK,
   body: {},
+})
+
+export const buyMachine = price => ({
+  type: BUY_MACHINE,
+  body: { price },
 })

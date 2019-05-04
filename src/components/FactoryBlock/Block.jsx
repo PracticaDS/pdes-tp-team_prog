@@ -13,9 +13,9 @@ const isEmptyNode = node => node.machine && node.machine.type && node.machine.ty
 
 const actionHandler = {
   [DELETE]: ({ deleteBlock, position }) => deleteBlock(position),
-  [SELECTION]: ({ updateBlock, node, position, machineSelected }) => {
+  [SELECTION]: ({ updateBlock, node, position, machineSelected, currency }) => {
     if (machineSelected && isEmptyNode(node)) {
-      updateBlock(position, machineSelected)
+      updateBlock(position, machineSelected, currency)
     }
   },
   [ROTATE]: ({ node, rotateBlock }) => {
