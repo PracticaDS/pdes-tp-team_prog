@@ -125,3 +125,5 @@ export const editionOptions = [
     title: 'Move',
   },
 ]
+
+export const areEquals = (machine1, machine2) => machine1 && machine2 && machine1.id === machine2.id

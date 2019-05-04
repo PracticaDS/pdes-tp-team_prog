@@ -1,16 +1,13 @@
 import React from 'react'
 
 import '../Machine.css'
-import { starterMachine } from '../../Game/Game.constants'
+import { starterMachine as machine, areEquals } from '../../Game/Game.constants'
 
-const StarterMachine = ({ selectMachine, isSelected }) => (
-  <div
-    component_name={`machine_${starterMachine.id}`}
-    onClick={() => selectMachine(starterMachine)}
-  >
+const StarterMachine = ({ selectMachine, machineSelected }) => (
+  <div component_name={`machine_${machine.id}`} onClick={() => selectMachine(machine)}>
     <img
-      className={isSelected ? 'machineSelected' : 'machineElement'}
-      src={starterMachine.image}
+      className={areEquals(machineSelected, machine) ? 'machineSelected' : 'machineElement'}
+      src={machine.image}
       alt="myImage"
     />
   </div>
