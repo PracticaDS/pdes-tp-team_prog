@@ -1,4 +1,5 @@
-import Machine from './Machine'
 import MachineConnector from './MachineConnector'
 
-export default MachineConnector(Machine)
+const connectMachine = MachineComponent => MachineConnector(MachineComponent)
+
+export default connectMachine
