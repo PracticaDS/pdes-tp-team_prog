@@ -1,11 +1,13 @@
 // <reference types="Cypress" />
 
+import { machines } from '../../src/components/Game/Game.constants'
+
 const defaultCss = 'machineElement'
 const selectedCss = 'machineSelected'
-const validMachineTypes = ['Starter', 'Seller', 'Crafter', 'Furnace', 'Transporter']
-const filterMachineType = machineType => validMachineTypes.filter(mt => mt !== machineType)
-const cy_selector = name => `[data-cy=${name}]`
-const getMachineTypeSelector = machineType => cy_selector(`machine-type-${machineType}`)
+const validMachineTypes = () => machines.map(mt => mt.id)
+const filterMachineType = machineType => validMachineTypes().filter(mt => mt !== machineType)
+const cy_selector = name => `[component_name=${name}]`
+const getMachineTypeSelector = machineType => cy_selector(`machine_${machineType}`)
 const clickMachineType = machineType => {
   cy.get(getMachineTypeSelector(machineType)).click()
 }
@@ -35,13 +37,13 @@ context('Select Machine', () => {
         .should('not.exist')
     })
     it('should show the default class value for every machine type', () => {
-      validMachineTypes.forEach(machineType => {
+      validMachineTypes().forEach(machineType => {
         testMachineTypeCssClass(machineType, 'machineElement')
       })
     })
   })
   describe('When a user is going to click a machine', () => {
-    validMachineTypes.forEach(machineType => {
+    validMachineTypes().forEach(machineType => {
       describe(`When it is the ${machineType} machine`, () => {
         it(`should change the default class of the ${machineType} machine to ${selectedCss}`, () => {
           testClickedMachineCss(machineType, selectedCss)
