@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
-import ResourcesBar from '../Resources/ResourcesBar'
+import ResourcesBar from '../Resources/ResourcesConnected'
 import FactoryGrid from '../FactoryGrid/FactoryGrid'
 import LeftPanel from '../LeftPanel/LeftPanel'
-import Detail from '../Detail/Detail'
+import Detail from '../Detail/DetailConnected'
 
 import { machines, editionOptions } from './Game.constants'
 

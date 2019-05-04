@@ -1,6 +1,5 @@
 import React from 'react'
 import { Constant } from './ResourcesBar.constants'
-import connector from './ResourcesConnector'
 import './ResourcesBar.css'
 
 const ResourcesBar = ({ currency }) => (
@@ -12,4 +11,4 @@ const ResourcesBar = ({ currency }) => (
   </div>
 )
 
-export default connector(ResourcesBar)
+export default ResourcesBar
