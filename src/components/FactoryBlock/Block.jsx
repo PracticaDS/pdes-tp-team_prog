@@ -9,10 +9,15 @@ import { getDegree } from '../../utils/directions'
 const areSamePosition = (position1, position2) =>
   position1.row === position2.row && position1.column === position2.column
 
+const isEmptyNode = node => node.machine && node.machine.type && node.machine.type === Empty
+
 const actionHandler = {
   [DELETE]: ({ deleteBlock, position }) => deleteBlock(position),
-  [SELECTION]: ({ updateBlock, position, machineSelected }) =>
-    updateBlock(position, machineSelected),
+  [SELECTION]: ({ updateBlock, node, position, machineSelected }) => {
+    if (machineSelected && isEmptyNode(node)) {
+      updateBlock(position, machineSelected)
+    }
+  },
   [ROTATE]: ({ node, rotateBlock }) => {
     if (node.machine.type !== Empty) {
       rotateBlock(node.position)
