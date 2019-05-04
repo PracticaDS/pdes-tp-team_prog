@@ -6,7 +6,7 @@ import connector from './DetailConnector'
 const title = 'Details'
 
 const Detail = ({ name, cost, frequency }) => (
-  <div data-cy="details">
+  <div component_name="details">
     <font className="DetailHeader">{title}</font>
     <div className="detail">
       <Card>
