@@ -1,19 +1,16 @@
 import React from 'react'
 import { Card, CardContent } from '@material-ui/core'
-
 import './MachineTypes.css'
-
 import Constants from './MachineTypes.constants'
-import MachineConnected from '../Machine/MachineConnected'
 
-const MachineTypes = ({ elements }) => (
+const MachineTypes = ({ machines = [], renderMachine }) => (
   <div>
     <font className="machineTypesHeader">{Constants.title}</font>
     <Card className="machineTypesMainContainer">
       <CardContent className="machineTypesContainer">
-        {elements.map((machine, index) => (
+        {machines.map((machine, index) => (
           <div key={index} className="machineTypesElement">
-            <MachineConnected machine={machine} />
+            {renderMachine(machine)}
           </div>
         ))}
       </CardContent>
