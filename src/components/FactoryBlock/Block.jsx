@@ -11,8 +11,8 @@ const areSamePosition = (position1, position2) =>
 
 const actionHandler = {
   [DELETE]: ({ deleteBlock, position }) => deleteBlock(position),
-  [SELECTION]: ({ updateBlock, position, machineSelected }) =>
-    updateBlock(position, machineSelected),
+  [SELECTION]: ({ updateBlock, position, machineSelected, currency }) =>
+    updateBlock(position, machineSelected, currency),
   [ROTATE]: ({ node, rotateBlock }) => {
     if (node.machine.type !== Empty) {
       rotateBlock(node.position)
