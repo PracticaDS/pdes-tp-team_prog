@@ -1,19 +1,17 @@
 import React from 'react'
 import { Card, CardContent } from '@material-ui/core'
-import EditionOption from '../EditionOption/EditionOption'
-
 import './Edition.css'
 
 import Constants from './Edition.constants'
 
-const Edition = ({ elements }) => (
+const Edition = ({ options = [], renderOption }) => (
   <div style={{ marginTop: '1rem' }}>
     <font className="editionHeader">{Constants.title}</font>
     <Card className="editionMainContainer">
       <CardContent className="editionContainer">
-        {elements.map((editionOption, index) => (
+        {options.map((editionOption, index) => (
           <div key={index} className="editionElement">
-            <EditionOption editionOption={editionOption} />
+            {renderOption(editionOption)}
           </div>
         ))}
       </CardContent>
