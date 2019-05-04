@@ -1,13 +1,13 @@
 import React from 'react'
 
 import '../Machine.css'
-import { sellerMachine as machine } from '../../Game/Game.constants'
+import { sellerMachine } from '../../Game/Game.constants'
 
-const SellerMachine = ({ selectMachine, machineSelected }) => (
-  <div onClick={() => selectMachine(machine)}>
+const SellerMachine = ({ selectMachine, isSelected }) => (
+  <div component_name={`machine_${sellerMachine.id}`} onClick={() => selectMachine(sellerMachine)}>
     <img
-      className={machineSelected === machine ? 'machineSelected' : 'machineElement'}
-      src={machine.image}
+      className={isSelected ? 'machineSelected' : 'machineElement'}
+      src={sellerMachine.image}
       alt="myImage"
     />
   </div>

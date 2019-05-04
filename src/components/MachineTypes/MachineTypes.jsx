@@ -8,6 +8,7 @@ import SellerMachine from '../Machine/SellerMachine/SellerMachine'
 import CrafterMachine from '../Machine/CrafterMachine/CrafterMachine'
 import FurnaceMachine from '../Machine/FurnaceMachine/FurnaceMachine'
 import TransporterMachine from '../Machine/TransporterMachine/TransporterMachine'
+import connector from '../Machine/MachineConnector'
 
 const machinesComponents = [
   StarterMachine,
@@ -17,16 +18,19 @@ const machinesComponents = [
   TransporterMachine,
 ]
 
-const MachineTypes = renderMachine => (
+const MachineTypes = () => (
   <div>
     <font className="machineTypesHeader">{Constants.title}</font>
     <Card className="machineTypesMainContainer">
       <CardContent className="machineTypesContainer">
-        {machinesComponents.map((MachineComponent, index) => (
-          <div key={index} className="machineTypesElement">
-            {renderMachine(MachineComponent)}
-          </div>
-        ))}
+        {machinesComponents.map((MachineComponent, index) => {
+          const Machine = connector(MachineComponent)
+          return (
+            <div key={index} className="machineTypesElement">
+              {<Machine />}
+            </div>
+          )
+        })}
       </CardContent>
     </Card>
   </div>
