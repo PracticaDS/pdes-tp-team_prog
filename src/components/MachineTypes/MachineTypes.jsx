@@ -4,7 +4,7 @@ import { Card, CardContent } from '@material-ui/core'
 import './MachineTypes.css'
 
 import Constants from './MachineTypes.constants'
-import Machine from '../Machine/Machine'
+import MachineConnected from '../Machine/MachineConnected'
 
 const MachineTypes = ({ elements }) => (
   <div>
@@ -13,7 +13,7 @@ const MachineTypes = ({ elements }) => (
       <CardContent className="machineTypesContainer">
         {elements.map((machine, index) => (
           <div key={index} className="machineTypesElement">
-            <Machine machine={machine} />
+            <MachineConnected machine={machine} />
           </div>
         ))}
       </CardContent>
