@@ -1,28 +1,30 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
-import { Provider } from 'react-redux'
-import configureStore from 'redux-mock-store'
+import { mount } from 'enzyme'
 import Game from './Game'
 
-it('render simple Game Component', () => {
-  const state = {
-    restartCurrency: () => true,
-    startGame: () => true,
-    tick: () => true,
-    Grid: {
-      dimensions: { n: 6, m: 6 },
-      gridValues: Array(6).fill(Array(6).fill({ machine: { type: 'Empty' } })),
-    },
-    GameState: {
-      currency: 1000,
-    },
-  }
-  const mockStore = configureStore()
-  const store = mockStore(state)
-  const tree = renderer.create(
-    <Provider store={store}>
-      <Game />
-    </Provider>,
-  )
-  expect(tree).not.toBe(null)
+describe('Game Suite', () => {
+  describe('Rendering Game', () => {
+    let renderMock = null
+    let game = null
+
+    beforeEach(() => {
+      renderMock = jest.fn()
+      game = mount(
+        <Game
+          renderTicker={renderMock}
+          renderResources={renderMock}
+          renderLeftPanel={renderMock}
+          renderFactoryGrid={renderMock}
+          renderDetail={renderMock}
+        />,
+      )
+    })
+
+    it('Should be defined', () => {
+      expect(game).toBeDefined()
+    })
+    it('should call the render function 5 times', () => {
+      expect(renderMock.mock.calls.length).toBe(5)
+    })
+  })
 })
