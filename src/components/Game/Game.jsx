@@ -5,7 +5,7 @@ import FactoryGrid from '../FactoryGrid/FactoryGrid'
 import LeftPanel from '../LeftPanel/LeftPanel'
 import Detail from '../Detail/DetailConnected'
 
-import { machines, editionOptions } from './Game.constants'
+import { editionOptions } from './Game.constants'
 
 import './Game.css'
 
@@ -47,7 +47,7 @@ class Game extends Component {
       <ResourcesBar />
       <div className="HorizontalGameParts">
         <div className="gamePanel gameLeftPanel">
-          <LeftPanel machineTypes={machines} editionOptions={editionOptions} />
+          <LeftPanel editionOptions={editionOptions} />
         </div>
         <div className="gameMidPanel">
           <FactoryGrid />

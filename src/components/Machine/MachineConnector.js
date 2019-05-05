@@ -3,8 +3,8 @@ import { selectMachine } from '../../actions/GameState'
 import { machineSelected } from '../../selectors/GameState'
 
 const connector = MachineComponent => {
-  const mapStateToProps = (state, { machine }) => ({
-    isSelected: machineSelected(state) && machineSelected(state).id === machine.id,
+  const mapStateToProps = state => ({
+    machineSelected: machineSelected(state),
   })
   const mapDispatchToProps = dispatch => ({
     selectMachine: machine => dispatch(selectMachine(machine)),
