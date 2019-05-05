@@ -1,26 +1,33 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
-import { Provider } from 'react-redux'
-import configureStore from 'redux-mock-store'
+import { mount } from 'enzyme'
 import FactoryGrid from './FactoryGrid'
+import { generateEmptyGrid } from '../../utils/gridUtils'
 
-const state = {
-  Grid: {
-    gridValues: Array(2).fill(Array(2).fill({ machine: { type: 'Crafter' } })),
-    dimensions: { n: 2, m: 2 },
-  },
-  GameState: {
-    machineSelected: 'bla',
-  },
-}
-const mockStore = configureStore()
-const store = mockStore(state)
+describe('Factory GridSuite', () => {
+  describe('Basic rendering', () => {
+    let dimensionsMock = {}
+    let renderBlockMock = null
+    let customGrid = []
+    let FactoryGridComponent = null
 
-it('render simple Grid Component with 2x2 Blocks', () => {
-  const tree = renderer.create(
-    <Provider store={store}>
-      <FactoryGrid />
-    </Provider>,
-  )
-  expect(tree).toMatchSnapshot()
+    beforeEach(() => {
+      dimensionsMock = { n: 2, m: 2 }
+      renderBlockMock = jest.fn()
+      customGrid = generateEmptyGrid(2, 2)
+      FactoryGridComponent = mount(
+        <FactoryGrid dimensions={dimensionsMock} renderBlock={renderBlockMock} />,
+      )
+    })
+
+    it('render simple Factory Block component', () => {
+      expect(FactoryGridComponent).toBeDefined()
+    })
+    it('render block should be called with every row and column object', () => {
+      customGrid.forEach((row, rowIndex) => {
+        row.forEach((column, columnIndex) => {
+          expect(renderBlockMock).toBeCalledWith({ row: rowIndex, column: columnIndex })
+        })
+      })
+    })
+  })
 })
