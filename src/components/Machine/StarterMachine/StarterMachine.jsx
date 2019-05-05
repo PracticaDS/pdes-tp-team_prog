@@ -9,10 +9,11 @@ import { starterMachine as machine, areEquals, materials } from '../../Game/Game
 
 class StarterMachine extends Component {
   state = {
-    anchorEl: null,
     open: false,
     materialSelected: materials[0],
   }
+
+  contentRef = React.createRef()
 
   updateSelection = () => {
     const { materialSelected } = this.state
@@ -20,29 +21,30 @@ class StarterMachine extends Component {
     selectMachine(machine(materialSelected))
   }
 
-  onClick = event => {
-    const { currentTarget } = event
+  onClick = () => {
     const { open } = this.state
     this.setState({
-      anchorEl: currentTarget,
       open: !open,
     })
     // this.updateSelection()
   }
 
   onMaterialSelected = material => () => {
-    const { open } = this.state
-    this.setState({ materialSelected: material, open: !open })
+    this.setState({ materialSelected: material })
     // this.updateSelection()
   }
 
   render = () => {
     const { machineSelected } = this.props
-    const { open, anchorEl, materialSelected } = this.state
+    const { open, materialSelected } = this.state
     const isSelected = areEquals(machineSelected, machine())
     return (
       <div>
-        <div component_name={`machine_${machine().id}`} onClick={this.onClick}>
+        <div
+          component_name={`machine_${machine().id}`}
+          ref={this.contentRef}
+          onClick={this.onClick}
+        >
           <img
             className={isSelected ? 'machineSelected' : 'machineElement'}
             src={machine().image}
@@ -52,7 +54,7 @@ class StarterMachine extends Component {
         <Popper
           className="Popper"
           open={open}
-          anchorEl={anchorEl}
+          anchorEl={this.contentRef.current}
           placement="right-start"
           transition
         >
