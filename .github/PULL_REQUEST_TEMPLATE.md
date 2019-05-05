@@ -19,14 +19,15 @@ Please delete options that are not relevant.
 
 Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration
 
-- [ ] Test A
-- [ ] Test B
+- [ ] `yarn test`
+- [ ] `yarn cypress:run`
+- [ ] `yarn storybook`
+- [ ] `yarn start`
 
 **Test Configuration**:
-* Firmware version:
-* Hardware:
-* Toolchain:
-* SDK:
+* OS: 
+* Browser: 
+* Hardware: 
 
 ## Checklist:
 
