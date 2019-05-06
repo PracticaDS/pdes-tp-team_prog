@@ -15,7 +15,7 @@ import moveOption from '../../assets/move.png'
 import { Starter, Seller, Crafter, Furnace, Transporter } from '../../utils/machineUtils'
 import { DOWN } from '../../utils/directions'
 
-export const starterMachine = (material = goldMaterial) => ({
+export const starterMachine = {
   id: 1,
   image: starter,
   name: 'Starter',
@@ -25,13 +25,13 @@ export const starterMachine = (material = goldMaterial) => ({
   frequency: 1,
   direction: DOWN,
   metadata: {
-    selectedMaterial: material,
-    availableMaterials: [material],
+    selectedMaterial: null,
+    availableMaterials: [],
   },
   process(materials, func) {
     func(this.direction, [], [{ ...this.metadata.selectedMaterial, frequency: this.frequency }])
   },
-})
+}
 
 export const sellerMachine = {
   id: 2,

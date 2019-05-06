@@ -8,6 +8,10 @@ const connector = MachineComponent => {
   })
   const mapDispatchToProps = dispatch => ({
     selectMachine: machine => dispatch(selectMachine(machine)),
+    selectStarter: (machine, material) => {
+      machine.metadata = { selectedMaterial: material, availableMaterials: [material] }
+      dispatch(selectMachine(machine))
+    },
   })
 
   return connect(
