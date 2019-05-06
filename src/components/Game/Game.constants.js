@@ -1,8 +1,12 @@
+/* eslint-disable no-use-before-define */
 import crafter from '../../assets/crafter.png'
 import furnace from '../../assets/furnace.png'
 import seller from '../../assets/seller.png'
 import starter from '../../assets/starter.png'
 import transporter from '../../assets/transporter.png'
+import gold from '../../assets/gold.png'
+import iron from '../../assets/iron.png'
+import silver from '../../assets/silver.png'
 
 import deleteOption from '../../assets/delete.png'
 import rotateOption from '../../assets/rotate.png'
@@ -21,8 +25,8 @@ export const starterMachine = {
   frequency: 1,
   direction: DOWN,
   metadata: {
-    selectedMaterial: { name: 'agua', price: 10 },
-    availableMaterials: [{ name: 'agua', price: 10 }],
+    selectedMaterial: null,
+    availableMaterials: [],
   },
   process(materials, func) {
     func(this.direction, [], [{ ...this.metadata.selectedMaterial, frequency: this.frequency }])
@@ -125,5 +129,26 @@ export const editionOptions = [
     title: 'Move',
   },
 ]
+
+
+const goldMaterial = {
+  name: 'Gold',
+  image: gold,
+  price: 20,
+}
+
+const silverMaterial = {
+  name: 'Silver',
+  image: silver,
+  price: 10,
+}
+
+const ironMaterial = {
+  name: 'Iron',
+  image: iron,
+  price: 5,
+}
+
+export const materials = [goldMaterial, silverMaterial, ironMaterial]
 
 export const areEquals = (machine1, machine2) => machine1 && machine2 && machine1.id === machine2.id
