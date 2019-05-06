@@ -6,8 +6,10 @@ import {
   SELECT_ACTION,
   SELECT_MOVE_BLOCK,
   DESELECT_MOVE_BLOCK,
+  BUY_MACHINE,
 } from '../utils/actionTypes'
 import { SELECTION, EDITIONS } from '../utils/editionUtils'
+import { DEFAULT_CURRENCY } from '../utils/defaultValues'
 
 const statuses = {
   PAUSED: 'PAUSED',
@@ -19,7 +21,7 @@ const initialState = {
   machineSelected: null,
   moveSelectedNode: null,
   actionSelected: SELECTION,
-  currency: 0,
+  currency: DEFAULT_CURRENCY,
   tick: 0,
 }
 
@@ -30,7 +32,7 @@ const changeActionSelected = (state, { actionType }) => ({
   machineSelected: EDITIONS.includes(actionType) ? null : state.machineSelected,
   moveSelectedNode: null,
 })
-const restartCurrency = state => ({ ...state, currency: 0 })
+const restartCurrency = state => ({ ...state, currency: DEFAULT_CURRENCY })
 const nextTick = state => ({ ...state, tick: state.tick + 1 })
 const changeMachineSelected = (state, { machine }) => ({
   ...state,
@@ -42,6 +44,11 @@ const changeMachineSelected = (state, { machine }) => ({
 const changeSelectedMoveBlock = (state, node) => ({
   ...state,
   moveSelectedNode: node,
+})
+
+const buyMachine = (state, { price }) => ({
+  ...state,
+  currency: state.currency - price,
 })
 
 const deselectMoveBlock = state => ({
@@ -57,6 +64,7 @@ const ACTION_HANDLER_TYPES = {
   [SELECT_ACTION]: changeActionSelected,
   [SELECT_MOVE_BLOCK]: changeSelectedMoveBlock,
   [DESELECT_MOVE_BLOCK]: deselectMoveBlock,
+  [BUY_MACHINE]: buyMachine,
 }
 
 export const GameState = (state = initialState, { type, body }) => {

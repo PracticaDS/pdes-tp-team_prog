@@ -130,6 +130,7 @@ export const editionOptions = [
   },
 ]
 
+
 const goldMaterial = {
   name: 'Gold',
   image: gold,
