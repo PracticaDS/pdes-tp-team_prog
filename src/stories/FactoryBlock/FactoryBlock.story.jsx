@@ -1,8 +1,9 @@
 import React from 'react'
+import { Provider } from 'react-redux'
 import { storiesOf } from '@storybook/react'
 import configureStore from 'redux-mock-store'
-import { Provider } from 'react-redux'
-import Block from '../../components/FactoryBlock/Block'
+import Block from '../../components/FactoryBlock/BlockConnected'
+import EmptyMachineNode from '../../components/MachineNodes/EmptyMachineNode/EmptyMachineNode'
 
 const state = {
   updateBlock: () => true,
@@ -22,11 +23,11 @@ const store = mockStore(state)
 storiesOf('FactoryBlock', module)
   .add('Simple EmptyBlock', () => (
     <Provider store={store}>
-      <Block position={{ row: 0, column: 0 }} />
+      <Block position={{ row: 0, column: 0 }} renderNode={() => <EmptyMachineNode />} />
     </Provider>
   ))
   .add('With a MachineNode', () => (
     <Provider store={store}>
-      <Block position={{ row: 0, column: 1 }} />
+      <Block position={{ row: 0, column: 1 }} renderNode={() => <EmptyMachineNode />} />
     </Provider>
   ))

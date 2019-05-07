@@ -39,27 +39,28 @@ const state = {
 }
 const mockStore = configureStore()
 const store = mockStore(state)
+const renderMachine = machine => machine
 
 storiesOf('MachineTypes', module).add('Empty', () => (
   <Provider store={store}>
-    <MachineTypes elements={[]} />
+    <MachineTypes elements={[]} renderMachine={renderMachine} />
   </Provider>
 ))
 
 storiesOf('MachineTypes', module).add('Single Row not full', () => (
   <Provider store={store}>
-    <MachineTypes elements={myElements.slice(0, 3)} />
+    <MachineTypes elements={myElements.slice(0, 3)} renderMachine={renderMachine} />
   </Provider>
 ))
 
 storiesOf('MachineTypes', module).add('Single Row full', () => (
   <Provider store={store}>
-    <MachineTypes elements={myElements.slice(0, 4)} />
+    <MachineTypes elements={myElements.slice(0, 4)} renderMachine={renderMachine} />
   </Provider>
 ))
 
 storiesOf('MachineTypes', module).add("2 Rows, 1 full, last one isn't", () => (
   <Provider store={store}>
-    <MachineTypes elements={myElements.slice(0, 5)} />
+    <MachineTypes elements={myElements.slice(0, 5)} renderMachine={renderMachine} />
   </Provider>
 ))
