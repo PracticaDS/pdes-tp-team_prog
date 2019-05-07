@@ -1,13 +1,11 @@
 import React from 'react'
 import { Card, CardContent, Typography } from '@material-ui/core'
+import { Constant } from './Detail.constants'
 import './Detail.css'
-import connector from './DetailConnector'
-
-const title = 'Details'
 
 const Detail = ({ name, cost, frequency }) => (
-  <div>
-    <font className="DetailHeader">{title}</font>
+  <div component_name="details">
+    <font className="DetailHeader">{Constant.title}</font>
     <div className="detail">
       <Card>
         <CardContent>
@@ -15,10 +13,18 @@ const Detail = ({ name, cost, frequency }) => (
             {name}
           </Typography>
           <Typography className="text-content" gutterBottom>
-            Cost: <span className="text-content-number">${cost}</span>
+            {Constant.cost}
+            <span className="text-content-number">
+              {Constant.dolar}
+              {cost}
+            </span>
           </Typography>
           <Typography className="text-content">
-            Frequency: <span className="text-content-number">{frequency}/s</span>
+            {Constant.frequency}
+            <span className="text-content-number">
+              {frequency}
+              {Constant.perSec}
+            </span>
           </Typography>
         </CardContent>
       </Card>
@@ -29,7 +35,7 @@ const Detail = ({ name, cost, frequency }) => (
 Detail.defaultProps = {
   cost: 0,
   frequency: 0,
-  name: 'No Name',
+  name: Constant.noName,
 }
 
-export default connector(Detail)
+export default Detail

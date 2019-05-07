@@ -1,65 +1,27 @@
 import React from 'react'
 
 import { storiesOf } from '@storybook/react'
-import configureStore from 'redux-mock-store'
-import { Provider } from 'react-redux'
-import crafter from '../../assets/crafter.png'
-import furnace from '../../assets/furnace.png'
-import seller from '../../assets/seller.png'
-import starter from '../../assets/starter.png'
-import transporter from '../../assets/transporter.png'
+import FurnaceMachine from '../../components/Machine/FurnaceMachine/FurnaceMachine'
+import CrafterMachine from '../../components/Machine/CrafterMachine/CrafterMachine'
+import SellerMachine from '../../components/Machine/SellerMachine/SellerMachine'
+import StarterMachine from '../../components/Machine/StarterMachine/StarterMachine'
+import TransporterMachine from '../../components/Machine/TransporterMachine/TransporterMachine'
 
-import Machine from '../../components/Machine/Machine'
-
-const crafterMachine = {
-  title: 'Crafter',
-  image: crafter,
-}
-const furnaceMachine = {
-  title: 'Furnace',
-  image: furnace,
-}
-const sellerMachine = {
-  title: 'Seller',
-  image: seller,
-}
-const starterMachine = {
-  title: 'Starter',
-  image: starter,
-}
-const transporterMachine = {
-  title: 'Transporter',
-  image: transporter,
-}
-
-const state = {
-  GameState: {},
-}
-const mockStore = configureStore()
-const store = mockStore(state)
+const machineSelected = {}
+const selectMachine = () => null
 
 storiesOf('Machine', module).add('Crafter', () => (
-  <Provider store={store}>
-    <Machine machine={crafterMachine} />
-  </Provider>
+  <CrafterMachine machineSelected={machineSelected} selectMachine={selectMachine} />
 ))
 storiesOf('Machine', module).add('Furnace', () => (
-  <Provider store={store}>
-    <Machine machine={furnaceMachine} />
-  </Provider>
+  <FurnaceMachine machineSelected={machineSelected} selectMachine={selectMachine} />
 ))
 storiesOf('Machine', module).add('Seller', () => (
-  <Provider store={store}>
-    <Machine machine={sellerMachine} />
-  </Provider>
+  <SellerMachine machineSelected={machineSelected} selectMachine={selectMachine} />
 ))
 storiesOf('Machine', module).add('Starter', () => (
-  <Provider store={store}>
-    <Machine machine={starterMachine} />
-  </Provider>
+  <StarterMachine machineSelected={machineSelected} selectMachine={selectMachine} />
 ))
 storiesOf('Machine', module).add('Transporter', () => (
-  <Provider store={store}>
-    <Machine machine={transporterMachine} />
-  </Provider>
+  <TransporterMachine machineSelected={machineSelected} selectMachine={selectMachine} />
 ))

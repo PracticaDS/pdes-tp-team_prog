@@ -1,30 +1,49 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
-import configureStore from 'redux-mock-store'
-import { Provider } from 'react-redux'
+import { mount } from 'enzyme'
 import Block from './Block'
 
 import { DOWN, LEFT, RIGHT, UP, getDegree } from '../../utils/directions'
 
-const state = {
-  updateBlock: () => true,
-  Grid: {
-    gridValues: Array(2).fill(Array(2).fill({ machine: { type: 'Crafter' } })),
-  },
-  GameState: {
-    machineSelected: 'bla',
-  },
-}
-const mockStore = configureStore()
-const store = mockStore(state)
+describe('Block Suite', () => {
+  describe('Basic rendering', () => {
+    // let nodeMock
+    // let positionMock
+    // let displayActionMock
+    // let directionToRotateMock
+    // let isSelectedMock
+    // let isEmptyBlockMock
+    let renderNodeMock
+    // let blockActionsMock
 
-it('render simple Block component', () => {
-  const tree = renderer.create(
-    <Provider store={store}>
-      <Block position={{ row: 1, column: 1 }} />
-    </Provider>,
-  )
-  expect(tree).toMatchSnapshot()
+    beforeEach(() => {
+      // editionOptionMock = {
+      //   title: Math.random().toString(),
+      //   image: Math.random().toString(),
+      // }
+      // onSelectActionMock = jest.fn()
+
+      // const selectedOptions = [
+      //   { value: false, expectedClass: 'editionOptionElement' },
+      //   { value: true, expectedClass: 'editionOptionElementSelected' },
+      // ]
+      // isOptionSelectedMock = selectedOptions[Math.floor(Math.random() * selectedOptions.length)]
+
+      // editionOption = mount(
+      //   <EditionOption
+      //     editionOption={editionOptionMock}
+      //     onSelectAction={onSelectActionMock}
+      //     isOptionSelected={isOptionSelectedMock.value}
+      //   />,
+      // )
+
+      renderNodeMock = jest.fn()
+    })
+
+    it('render simple Block component', () => {
+      const BlockComponent = mount(<Block renderNode={renderNodeMock} />)
+      expect(BlockComponent).toBeDefined()
+    })
+  })
 })
 
 it('when calling getDegree with direction Left then returns css object with transform 90 degree', () => {

@@ -1,8 +1,12 @@
+/* eslint-disable no-use-before-define */
 import crafter from '../../assets/crafter.png'
 import furnace from '../../assets/furnace.png'
 import seller from '../../assets/seller.png'
 import starter from '../../assets/starter.png'
 import transporter from '../../assets/transporter.png'
+import gold from '../../assets/gold.png'
+import iron from '../../assets/iron.png'
+import silver from '../../assets/silver.png'
 
 import deleteOption from '../../assets/delete.png'
 import rotateOption from '../../assets/rotate.png'
@@ -11,98 +15,105 @@ import moveOption from '../../assets/move.png'
 import { Starter, Seller, Crafter, Furnace, Transporter } from '../../utils/machineUtils'
 import { DOWN } from '../../utils/directions'
 
-export const machines = [
-  {
-    image: starter,
-    name: 'Starter',
-    type: Starter,
-    buy: 800,
-    sell: 400,
-    frequency: 1,
-    direction: DOWN,
-    metadata: {
-      selectedMaterial: { name: 'agua', price: 10 },
-      availableMaterials: [{ name: 'agua', price: 10 }],
-    },
-    process(materials, func) {
-      func(this.direction, [], [{ ...this.metadata.selectedMaterial, frequency: this.frequency }])
-    },
+export const starterMachine = {
+  id: 1,
+  image: starter,
+  name: 'Starter',
+  type: Starter,
+  buy: 800,
+  sell: 400,
+  frequency: 1,
+  direction: DOWN,
+  metadata: {
+    selectedMaterial: null,
+    availableMaterials: [],
   },
-  {
-    image: seller,
-    name: 'Seller',
-    type: Seller,
-    buy: 1000,
-    sell: 500,
-    frequency: 1,
-    direction: DOWN,
-    process: (materials, func) => {
-      func(null, materials, { name: 'currency' })
-    },
+  process(materials, func) {
+    func(this.direction, [], [{ ...this.metadata.selectedMaterial, frequency: this.frequency }])
   },
-  {
-    image: crafter,
-    name: 'Crafter',
-    type: Crafter,
-    buy: 800,
-    sell: 400,
-    frequency: 1,
-    direction: DOWN,
-    metadata: {
-      recipeSelected: {
-        materialsRequired: [{ name: 'harina', quantity: 1 }, { name: 'agua', quantity: 2 }],
-        product: {
-          name: 'pan',
-        },
+}
+
+export const sellerMachine = {
+  id: 2,
+  image: seller,
+  name: 'Seller',
+  type: Seller,
+  buy: 1000,
+  sell: 500,
+  frequency: 1,
+  direction: DOWN,
+  process: (materials, func) => {
+    func(null, materials, { name: 'currency' })
+  },
+}
+
+export const crafterMachine = {
+  id: 3,
+  image: crafter,
+  name: 'Crafter',
+  type: Crafter,
+  buy: 800,
+  sell: 400,
+  frequency: 1,
+  direction: DOWN,
+  metadata: {
+    recipeSelected: {
+      materialsRequired: [{ name: 'harina', quantity: 1 }, { name: 'agua', quantity: 2 }],
+      product: {
+        name: 'pan',
       },
-      availableRecipes: [{ required: ['harina', 'agua'], product: 'pan' }],
     },
-    process: (materials, func) => {
-      func(this.direction, this.metadata.recipeSelected.materialsRequired, [
-        { ...this.metadata.recipeSelected.product, quantity: this.frequency },
-      ])
-    },
+    availableRecipes: [{ required: ['harina', 'agua'], product: 'pan' }],
   },
-  {
-    image: furnace,
-    name: 'Furnace',
-    type: Furnace,
-    buy: 800,
-    sell: 400,
-    frequency: 1,
-    direction: DOWN,
-    metadata: {
-      recipeSelected: {
-        materialsRequired: [{ name: 'gold', quantity: 1 }],
-        product: {
-          name: 'liquid_gold',
-        },
+  process: (materials, func) => {
+    func(this.direction, this.metadata.recipeSelected.materialsRequired, [
+      { ...this.metadata.recipeSelected.product, quantity: this.frequency },
+    ])
+  },
+}
+
+export const furnaceMachine = {
+  id: 4,
+  image: furnace,
+  name: 'Furnace',
+  type: Furnace,
+  buy: 800,
+  sell: 400,
+  frequency: 1,
+  direction: DOWN,
+  metadata: {
+    recipeSelected: {
+      materialsRequired: [{ name: 'gold', quantity: 1 }],
+      product: {
+        name: 'liquid_gold',
       },
-      availableRecipes: [
-        { materialsRequired: [{ name: 'gold', quantity: 1 }], product: 'liquid_gold' },
-        { materialsRequired: [{ name: 'silver', quantity: 1 }], product: 'liquid_silver' },
-      ],
     },
-    process: (materials, func) => {
-      // los materiales estan incluidos en los requeridos de la receta
-      func(this.direction, this.metadata.recipeSelected.materialsRequired, [
-        { ...this.metadata.recipeSelected.product, quantity: this.frequency },
-      ])
-    },
+    availableRecipes: [
+      { materialsRequired: [{ name: 'gold', quantity: 1 }], product: 'liquid_gold' },
+      { materialsRequired: [{ name: 'silver', quantity: 1 }], product: 'liquid_silver' },
+    ],
   },
-  {
-    image: transporter,
-    name: 'Transporter',
-    type: Transporter,
-    buy: 800,
-    sell: 400,
-    frequency: 1,
-    direction: DOWN,
-    process: function(materials, func) {
-      func(this.direction, materials, materials)
-    },
+  process: (materials, func) => {
+    // los materiales estan incluidos en los requeridos de la receta
+    func(this.direction, this.metadata.recipeSelected.materialsRequired, [
+      { ...this.metadata.recipeSelected.product, quantity: this.frequency },
+    ])
   },
-]
+}
+
+export const transporterMachine = {
+  id: 5,
+  image: transporter,
+  name: 'Transporter',
+  type: Transporter,
+  buy: 800,
+  sell: 400,
+  frequency: 1,
+  direction: DOWN,
+  process(materials, func) {
+    func(this.direction, materials, materials)
+  },
+}
 
 export const editionOptions = [
   {
@@ -118,3 +129,26 @@ export const editionOptions = [
     title: 'Move',
   },
 ]
+
+
+const goldMaterial = {
+  name: 'Gold',
+  image: gold,
+  price: 20,
+}
+
+const silverMaterial = {
+  name: 'Silver',
+  image: silver,
+  price: 10,
+}
+
+const ironMaterial = {
+  name: 'Iron',
+  image: iron,
+  price: 5,
+}
+
+export const materials = [goldMaterial, silverMaterial, ironMaterial]
+
+export const areEquals = (machine1, machine2) => machine1 && machine2 && machine1.id === machine2.id

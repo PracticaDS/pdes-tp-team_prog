@@ -1,16 +1,21 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
-import configureStore from 'redux-mock-store'
+import { mount } from 'enzyme'
 import ResourcesBar from './ResourcesBar'
 
-it('render simple ResourcesBar Component', () => {
-  const state = {
-    GameState: {
-      currency: 1000,
-    },
-  }
-  const mockStore = configureStore()
-  const store = mockStore(state)
-  const tree = renderer.create(<ResourcesBar store={store} />)
-  expect(tree).toMatchSnapshot()
+describe('Resources Bar Suite', () => {
+  describe('Rendering Resources Bar', () => {
+    it('Resource bar property 1 - its set currency is always shown', () => {
+      const Currency = Math.random()
+      const MachineComponent = mount(<ResourcesBar currency={Currency} />)
+
+      expect(MachineComponent.prop('currency')).toBeDefined()
+      expect(MachineComponent.prop('currency')).toEqual(Currency)
+    })
+
+    it('Resource bar property 2 - if currenct is not set, then prop is undefined', () => {
+      const MachineComponent = mount(<ResourcesBar />)
+      expect(MachineComponent.prop('currency')).not.toBeDefined()
+      expect(MachineComponent.find('.CountFont').text()).toEqual('$undefined')
+    })
+  })
 })

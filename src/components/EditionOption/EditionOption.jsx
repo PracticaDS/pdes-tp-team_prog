@@ -1,22 +1,15 @@
 import React from 'react'
-import connector from './EditionActionConnector'
 
 import './EditionOption.css'
 
-const EditionOption = ({
-  editionOption: { title, image },
-  onSelectAction,
-  editionActionSelected,
-}) => (
+const EditionOption = ({ editionOption: { title, image }, onSelectAction, isOptionSelected }) => (
   <div onClick={() => onSelectAction(title)}>
     <img
-      className={
-        editionActionSelected === title ? 'editionOptionElementSelected' : 'editionOptionElement'
-      }
+      className={isOptionSelected ? 'editionOptionElementSelected' : 'editionOptionElement'}
       src={image}
       alt="myImage"
     />
   </div>
 )
 
-export default connector(EditionOption)
+export default EditionOption

@@ -3,8 +3,8 @@ import { actionSelected } from '../../selectors/GameState'
 import { selectAction } from '../../actions/GameState'
 
 const connector = EditionOption => {
-  const mapStateToProps = state => ({
-    editionActionSelected: actionSelected(state),
+  const mapStateToProps = (state, props) => ({
+    isOptionSelected: actionSelected(state) === props.editionOption.title,
   })
   const mapDispatchToProps = dispatch => ({
     onSelectAction: action => dispatch(selectAction(action)),

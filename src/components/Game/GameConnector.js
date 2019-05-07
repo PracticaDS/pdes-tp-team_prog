@@ -1,18 +1,28 @@
+import React from 'react'
 import { connect } from 'react-redux'
-import { getDimensions } from '../../selectors/GameDimensions'
 import { machineSelected } from '../../selectors/GameState'
-import { playGame, tick } from '../../actions/GameState'
+import { playGame } from '../../actions/GameState'
 import { restartCurrency } from '../../actions/Currency'
+import ResourcesBar from '../Resources/ResourcesConnected'
+import FactoryGrid from '../FactoryGrid/FactoryGridConnected'
+import LeftPanel from '../LeftPanel/LeftPanel'
+import Detail from '../Detail/DetailConnected'
+import FrequencyConnected from '../Ticker/Frequency/FrequencyConnected'
+// import ClickerConnected from '../Ticker/Clicker/ClickerConnected'
+const renderTicker = () => <FrequencyConnected />
+// const renderTicker = () => <ClickerConnected />
 
 const connector = Game => {
   const mapStateToProps = state => ({
-    dimensions: getDimensions(state),
-    machineSelected: machineSelected(state),
+    renderResources: () => <ResourcesBar />,
+    renderLeftPanel: () => <LeftPanel />,
+    renderFactoryGrid: () => <FactoryGrid />,
+    renderDetail: () => (machineSelected(state) ? <Detail /> : null),
+    renderTicker,
   })
   const mapDispatchToProps = dispatch => ({
     restartCurrency: () => dispatch(restartCurrency()),
     startGame: () => dispatch(playGame()),
-    tick: () => dispatch(tick()),
   })
 
   return connect(
