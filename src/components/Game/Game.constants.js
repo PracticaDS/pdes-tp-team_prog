@@ -130,7 +130,6 @@ export const editionOptions = [
   },
 ]
 
-
 const goldMaterial = {
   name: 'Gold',
   image: gold,
@@ -149,6 +148,98 @@ const ironMaterial = {
   price: 5,
 }
 
-export const materials = [goldMaterial, silverMaterial, ironMaterial]
+const copperMaterial = {
+  name: 'Copper',
+  image: iron, //TODO
+  price: 5,
+}
+
+const zincMaterial = {
+  name: 'Zinc',
+  images: silver, // TODO
+  price: 10,
+}
+
+////////
+
+const bronzeMaterial = {
+  name: 'Bronze',
+  images: iron, // TODO
+  price: 100,
+}
+
+const whiteGoldMaterial = {
+  name: 'White Gold',
+  images: iron, // TODO
+  price: 100,
+}
+
+const chineseSilverMaterial = {
+  name: 'Chinese Silver',
+  images: iron, // TODO
+  price: 100,
+}
+
+const whiteGoldRecipe = {
+  necessaryMaterials: [
+    {
+      material: goldMaterial,
+      count: 2,
+    },
+    {
+      material: silverMaterial,
+      count: 1,
+    },
+    {
+      mterial: copperMaterial,
+      count: 1,
+    },
+  ],
+  currencyCost: 0,
+  result: {
+    material: whiteGoldMaterial,
+    count: 1,
+  },
+}
+
+const chineseSilverRecipe = {
+  necessaryMaterials: [
+    {
+      material: copperMaterial,
+      count: 2,
+    },
+    {
+      material: zincMaterial,
+      count: 2,
+    },
+  ],
+  currencyCost: 0,
+  result: {
+    material: chineseSilverMaterial,
+    count: 1,
+  },
+}
+
+const bronzeRecipe = {
+  necessaryMaterials: [
+    {
+      material: copperMaterial,
+      count: 1,
+    },
+    {
+      material: zincMaterial,
+      count: 1,
+    },
+  ],
+  currencyCost: 0,
+  result: {
+    material: bronzeMaterial,
+    count: 2,
+  },
+}
+
+export const materials = [goldMaterial, silverMaterial, copperMaterial, zincMaterial, ironMaterial]
+
+export const recipes = [bronzeRecipe, whiteGoldRecipe, chineseSilverRecipe]
 
 export const areEquals = (machine1, machine2) => machine1 && machine2 && machine1.id === machine2.id
