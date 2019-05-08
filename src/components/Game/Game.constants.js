@@ -150,7 +150,7 @@ const ironMaterial = {
 
 const copperMaterial = {
   name: 'Copper',
-  image: iron, //TODO
+  image: iron, // TODO
   price: 5,
 }
 
@@ -160,7 +160,7 @@ const zincMaterial = {
   price: 10,
 }
 
-////////
+// //////
 
 const bronzeMaterial = {
   name: 'Bronze',
