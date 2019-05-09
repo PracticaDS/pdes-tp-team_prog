@@ -22,6 +22,7 @@ const initialState = {
   moveSelectedNode: null,
   actionSelected: SELECTION,
   currency: DEFAULT_CURRENCY,
+  machineTypeSelected: '',
   tick: 0,
 }
 
@@ -38,6 +39,8 @@ const changeMachineSelected = (state, { machine }) => ({
   ...state,
   machineSelected: machine,
   actionSelected: SELECTION,
+  machineTypeSelected:
+    machine.type !== state.machineTypeSelected ? machine.type : state.machineTypeSelected,
   moveSelectedNode: null,
 })
 

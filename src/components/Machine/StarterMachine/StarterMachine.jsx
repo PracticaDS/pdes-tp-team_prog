@@ -5,7 +5,7 @@ import Paper from '@material-ui/core/Paper'
 import '../Machine.css'
 import './StarterMachine.css'
 import { Button } from '@material-ui/core'
-import { starterMachine as machine, areEquals, materials } from '../../Game/Game.constants'
+import { starterMachine as machine, materials } from '../../Game/Game.constants'
 
 class StarterMachine extends Component {
   constructor(props) {
@@ -20,8 +20,11 @@ class StarterMachine extends Component {
 
   updateSelection = () => {
     const { materialSelected } = this.state
-    const { selectStarter } = this.props
-    selectStarter(machine, materialSelected)
+    const { selectMachine } = this.props
+    selectMachine({
+      ...machine,
+      metadata: { selectedMaterial: materialSelected, availableMaterials: [materialSelected] },
+    })
   }
 
   onClick = () => {
@@ -33,14 +36,13 @@ class StarterMachine extends Component {
   }
 
   render = () => {
-    const { machineSelected } = this.props
     const { open, materialSelected } = this.state
-    const isSelected = areEquals(machineSelected, machine)
+    const { machineTypeSelected } = this.props
     return (
       <div>
         <div component_name={`machine_${machine.id}`} ref={this.contentRef} onClick={this.onClick}>
           <img
-            className={isSelected ? 'machineSelected' : 'machineElement'}
+            className={machineTypeSelected === machine.type ? 'machineSelected' : 'machineElement'}
             src={machine.image}
             alt="myImage"
           />

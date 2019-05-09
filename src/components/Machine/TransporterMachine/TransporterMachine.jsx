@@ -1,12 +1,12 @@
 import React from 'react'
 
 import '../Machine.css'
-import { transporterMachine as machine, areEquals } from '../../Game/Game.constants'
+import { transporterMachine as machine } from '../../Game/Game.constants'
 
-const TransporterMachine = ({ selectMachine, machineSelected }) => (
+const TransporterMachine = ({ selectMachine, machineTypeSelected }) => (
   <div component_name={`machine_${machine.id}`} onClick={() => selectMachine(machine)}>
     <img
-      className={areEquals(machineSelected, machine) ? 'machineSelected' : 'machineElement'}
+      className={machineTypeSelected === machine.type ? 'machineSelected' : 'machineElement'}
       src={machine.image}
       alt="myImage"
     />

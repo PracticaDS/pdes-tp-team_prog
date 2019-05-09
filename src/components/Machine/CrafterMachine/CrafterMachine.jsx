@@ -5,7 +5,7 @@ import Paper from '@material-ui/core/Paper'
 import { Button } from '@material-ui/core'
 import '../Machine.css'
 import './CrafterMachine.css'
-import { crafterMachine as machine, areEquals, recipes } from '../../Game/Game.constants'
+import { crafterMachine as machine, recipes } from '../../Game/Game.constants'
 
 class CrafterMachine extends Component {
   constructor(props) {
@@ -18,21 +18,31 @@ class CrafterMachine extends Component {
 
   contentRef = React.createRef()
 
+  updateSelection = () => {
+    const { recipeSelected } = this.state
+    const { selectMachine } = this.props
+    selectMachine({
+      ...machine,
+      metadata: { recipeSelected, availableRecipes: [recipeSelected] },
+    })
+  }
+
   onClick = () => {
     this.setState(state => ({ open: !state.open }))
   }
 
-  onRecipeSelected = recipe => {}
+  onRecipeSelected = recipe => {
+    this.setState(() => ({ open: false, recipeSelected: recipe }), this.updateSelection)
+  }
 
   render = () => {
-    const { machineSelected } = this.props
+    const { machineTypeSelected } = this.props
     const { open, recipeSelected } = this.state
-    const isSelected = areEquals(machineSelected, machine)
     return (
       <div>
         <div component_name={`machine_${machine.id}`} ref={this.contentRef} onClick={this.onClick}>
           <img
-            className={isSelected ? 'machineSelected' : 'machineElement'}
+            className={machineTypeSelected === machine.type ? 'machineSelected' : 'machineElement'}
             src={machine.image}
             alt="myImage"
           />

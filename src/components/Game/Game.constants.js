@@ -63,13 +63,8 @@ export const crafterMachine = {
   frequency: 1,
   direction: DOWN,
   metadata: {
-    recipeSelected: {
-      materialsRequired: [{ name: 'harina', quantity: 1 }, { name: 'agua', quantity: 2 }],
-      product: {
-        name: 'pan',
-      },
-    },
-    availableRecipes: [{ required: ['harina', 'agua'], product: 'pan' }],
+    recipeSelected: null,
+    availableRecipes: [],
   },
   process: (materials, func) => {
     func(this.direction, this.metadata.recipeSelected.materialsRequired, [
