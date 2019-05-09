@@ -4,6 +4,7 @@ import Fade from '@material-ui/core/Fade'
 import Paper from '@material-ui/core/Paper'
 import { Button } from '@material-ui/core'
 import '../Machine.css'
+import './CrafterMachine.css'
 import { crafterMachine as machine, areEquals, recipes } from '../../Game/Game.constants'
 
 class CrafterMachine extends Component {
@@ -16,6 +17,12 @@ class CrafterMachine extends Component {
   }
 
   contentRef = React.createRef()
+
+  onClick = () => {
+    this.setState(state => ({ open: !state.open }))
+  }
+
+  onRecipeSelected = recipe => {}
 
   render = () => {
     const { machineSelected } = this.props
@@ -49,8 +56,9 @@ class CrafterMachine extends Component {
                       }
                     >
                       <Button className="recipeButton" onClick={this.onRecipeSelected(recipe)}>
-                        <div className="recipeFont">{recipe.name}</div>
-                        <img className="materialImg" src={recipe.image} alt="myMaterialImg" />
+                        <div className="recipeFont">{`${recipe.necessaryMaterials.map(
+                          m => ` ${m.count} x ${m.material.name}`,
+                        )} = ${recipe.result.count} x ${recipe.result.material.name}`}</div>
                       </Button>
                     </div>
                   ))}

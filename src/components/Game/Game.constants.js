@@ -4,10 +4,16 @@ import furnace from '../../assets/furnace.png'
 import seller from '../../assets/seller.png'
 import starter from '../../assets/starter.png'
 import transporter from '../../assets/transporter.png'
+// Material images
 import gold from '../../assets/gold.png'
 import iron from '../../assets/iron.png'
 import silver from '../../assets/silver.png'
-
+import copper from '../../assets/copper.png'
+import bronze from '../../assets/bronze.png'
+import zinc from '../../assets/zinc.png'
+import whiteGold from '../../assets/whiteGold.png'
+import chineseSilver from '../../assets/chineseSilver.png'
+//
 import deleteOption from '../../assets/delete.png'
 import rotateOption from '../../assets/rotate.png'
 import moveOption from '../../assets/move.png'
@@ -148,39 +154,40 @@ const ironMaterial = {
   price: 5,
 }
 
-const copperMaterial = {
-  name: 'Copper',
-  image: iron, // TODO
+const zincMaterial = {
+  name: 'Zinc',
+  image: zinc,
   price: 5,
 }
 
-const zincMaterial = {
-  name: 'Zinc',
-  images: silver, // TODO
-  price: 10,
+const copperMaterial = {
+  name: 'Copper',
+  image: copper,
+  price: 5,
 }
 
 // //////
 
 const bronzeMaterial = {
   name: 'Bronze',
-  images: iron, // TODO
+  image: bronze,
   price: 100,
 }
 
 const whiteGoldMaterial = {
   name: 'White Gold',
-  images: iron, // TODO
+  image: whiteGold,
   price: 100,
 }
 
 const chineseSilverMaterial = {
   name: 'Chinese Silver',
-  images: iron, // TODO
+  image: chineseSilver,
   price: 100,
 }
 
 const whiteGoldRecipe = {
+  name: 'White Gold Recipe',
   necessaryMaterials: [
     {
       material: goldMaterial,
@@ -191,7 +198,7 @@ const whiteGoldRecipe = {
       count: 1,
     },
     {
-      mterial: copperMaterial,
+      material: copperMaterial,
       count: 1,
     },
   ],
@@ -203,6 +210,7 @@ const whiteGoldRecipe = {
 }
 
 const chineseSilverRecipe = {
+  name: 'Chinese Silver Recipe',
   necessaryMaterials: [
     {
       material: copperMaterial,
@@ -221,6 +229,7 @@ const chineseSilverRecipe = {
 }
 
 const bronzeRecipe = {
+  name: 'Bronze Recipe',
   necessaryMaterials: [
     {
       material: copperMaterial,
@@ -238,7 +247,7 @@ const bronzeRecipe = {
   },
 }
 
-export const materials = [goldMaterial, silverMaterial, copperMaterial, zincMaterial, ironMaterial]
+export const materials = [goldMaterial, silverMaterial, zincMaterial, ironMaterial, copperMaterial]
 
 export const recipes = [bronzeRecipe, whiteGoldRecipe, chineseSilverRecipe]
 
