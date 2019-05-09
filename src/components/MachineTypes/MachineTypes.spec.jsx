@@ -1,5 +1,5 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 import MachineTypes from './MachineTypes'
 import TransporterMachine from '../Machine/TransporterMachine/TransporterMachine'
 import FurnaceMachine from '../Machine/FurnaceMachine/FurnaceMachine'
@@ -16,13 +16,14 @@ describe('Machine Types tests', () => {
       FurnaceMachine,
       TransporterMachine,
     ]
+
     const renderMachine = jest.fn(Machine => Machine)
 
     const props = {
       renderMachine,
     }
 
-    const MachineTypesComponent = mount(<MachineTypes {...props} />)
+    const MachineTypesComponent = shallow(<MachineTypes {...props} />)
 
     it('should call the renderMachine function with every machine as argument', () => {
       machines.forEach(Ma => {

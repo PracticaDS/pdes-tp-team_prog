@@ -9,18 +9,18 @@ describe('CrafterMachine tests', () => {
       name: 'machine',
       image: 'machine',
     }
-    const machineSelected = {}
+    const machineTypeSelected = 'Type'
     const selectMachineProp = jest.fn(() => null)
     const MachineComponent = mount(
       <FurnaceMachine
         machine={machineProp}
         selectMachine={selectMachineProp}
-        machineSelected={machineSelected}
+        machineTypeSelected={machineTypeSelected}
       />,
     )
 
     it('Should match the machine prop', () => {
-      expect(MachineComponent.prop('machineSelected')).toBe(machineSelected)
+      expect(MachineComponent.prop('machineTypeSelected')).toBe(machineTypeSelected)
       expect(MachineComponent.prop('selectMachine')).toBe(selectMachineProp)
     })
   })
