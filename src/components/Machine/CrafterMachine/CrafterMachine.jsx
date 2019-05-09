@@ -5,14 +5,14 @@ import Paper from '@material-ui/core/Paper'
 import { Button } from '@material-ui/core'
 import '../Machine.css'
 import './CrafterMachine.css'
-import { crafterMachine as machine, recipes } from '../../Game/Game.constants'
+import { crafterMachine as machine } from '../../Game/Game.constants'
 
 class CrafterMachine extends Component {
   constructor(props) {
     super(props)
     this.state = {
       open: false,
-      recipeSelected: recipes[0],
+      recipeSelected: props.recipes[0],
     }
   }
 
@@ -36,7 +36,7 @@ class CrafterMachine extends Component {
   }
 
   render = () => {
-    const { machineTypeSelected } = this.props
+    const { machineTypeSelected, recipes } = this.props
     const { open, recipeSelected } = this.state
     const isSelected = machineTypeSelected === machine.type
     return (

@@ -5,14 +5,14 @@ import Paper from '@material-ui/core/Paper'
 import '../Machine.css'
 import './StarterMachine.css'
 import { Button } from '@material-ui/core'
-import { starterMachine as machine, materials } from '../../Game/Game.constants'
+import { starterMachine as machine } from '../../Game/Game.constants'
 
 class StarterMachine extends Component {
   constructor(props) {
     super(props)
     this.state = {
       open: false,
-      materialSelected: materials[0],
+      materialSelected: props.basicMaterials[0],
     }
   }
 
@@ -37,7 +37,7 @@ class StarterMachine extends Component {
 
   render = () => {
     const { open, materialSelected } = this.state
-    const { machineTypeSelected } = this.props
+    const { machineTypeSelected, basicMaterials } = this.props
     const isSelected = machineTypeSelected === machine.type
     return (
       <div>
@@ -62,7 +62,7 @@ class StarterMachine extends Component {
                   component_name={`material_selector_${machine.id}`}
                   className="MaterialSelector"
                 >
-                  {materials.map(material => (
+                  {basicMaterials.map(material => (
                     <div
                       key={material.name}
                       className={
