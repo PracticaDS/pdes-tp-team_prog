@@ -249,6 +249,6 @@ const bronzeRecipe = {
 
 export const materials = [goldMaterial, silverMaterial, zincMaterial, ironMaterial, copperMaterial]
 
-export const recipes = [bronzeRecipe, whiteGoldRecipe, chineseSilverRecipe]
+export const recipes = [bronzeRecipe, chineseSilverRecipe, whiteGoldRecipe]
 
 export const areEquals = (machine1, machine2) => machine1 && machine2 && machine1.id === machine2.id

@@ -56,9 +56,26 @@ class CrafterMachine extends Component {
                       }
                     >
                       <Button className="recipeButton" onClick={this.onRecipeSelected(recipe)}>
-                        <div className="recipeFont">{`${recipe.necessaryMaterials.map(
-                          m => ` ${m.count} x ${m.material.name}`,
-                        )} = ${recipe.result.count} x ${recipe.result.material.name}`}</div>
+                        <div className="recipeFont">
+                          {recipe.necessaryMaterials.map(m => (
+                            <span key={m.material.name} className="recipeMaterial">
+                              {` ${m.count} x ${m.material.name}`}
+                              <img
+                                className="materialImg"
+                                src={m.material.image}
+                                alt="myMaterialImg"
+                              />
+                            </span>
+                          ))}
+                          <span className="recipeMaterial">
+                            {` = ${recipe.result.count} x ${recipe.result.material.name}`}
+                            <img
+                              className="materialImg"
+                              src={recipe.result.material.image}
+                              alt="myMaterialImg"
+                            />
+                          </span>
+                        </div>
                       </Button>
                     </div>
                   ))}
