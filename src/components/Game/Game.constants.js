@@ -13,6 +13,7 @@ import bronze from '../../assets/bronze.png'
 import zinc from '../../assets/zinc.png'
 import whiteGold from '../../assets/whiteGold.png'
 import chineseSilver from '../../assets/chineseSilver.png'
+import billon from '../../assets/billon.png'
 //
 import deleteOption from '../../assets/delete.png'
 import rotateOption from '../../assets/rotate.png'
@@ -181,6 +182,12 @@ const chineseSilverMaterial = {
   price: 100,
 }
 
+const billonMaterial = {
+  name: 'Billon',
+  image: billon,
+  price: 20,
+}
+
 const whiteGoldRecipe = {
   name: 'White Gold Recipe',
   necessaryMaterials: [
@@ -242,8 +249,27 @@ const bronzeRecipe = {
   },
 }
 
+const billonRecipe = {
+  name: 'Billon Recipe',
+  necessaryMaterials: [
+    {
+      material: bronzeMaterial,
+      count: 1,
+    },
+    {
+      material: silverMaterial,
+      count: 1,
+    },
+  ],
+  currencyCost: 0,
+  result: {
+    material: billonMaterial,
+    count: 1,
+  },
+}
+
 export const materials = [goldMaterial, silverMaterial, zincMaterial, ironMaterial, copperMaterial]
 
-export const recipes = [bronzeRecipe, chineseSilverRecipe, whiteGoldRecipe]
+export const recipes = [bronzeRecipe, billonRecipe, chineseSilverRecipe, whiteGoldRecipe]
 
 export const areEquals = (machine1, machine2) => machine1 && machine2 && machine1.id === machine2.id
