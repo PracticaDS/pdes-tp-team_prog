@@ -25,11 +25,11 @@ class StarterMachine extends Component {
   }
 
   onClick = () => {
-    this.setState(state => ({ open: !state.open }), this.updateSelection)
+    this.setState(state => ({ ...state, open: !state.open }))
   }
 
   onMaterialSelected = material => () => {
-    this.setState({ materialSelected: material }, this.updateSelection)
+    this.setState(() => ({ open: false, materialSelected: material }), this.updateSelection)
   }
 
   render = () => {
@@ -55,7 +55,10 @@ class StarterMachine extends Component {
           {({ TransitionProps }) => (
             <Fade {...TransitionProps}>
               <Paper>
-                <div className="MaterialSelector">
+                <div
+                  component_name={`material_selector_${machine.id}`}
+                  className="MaterialSelector"
+                >
                   {materials.map(material => (
                     <div
                       key={material.name}
