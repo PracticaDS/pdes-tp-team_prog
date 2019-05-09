@@ -10,7 +10,13 @@ before_script:
   - ./cc-test-reporter before-build
 script:
   - yarn test
+  - yarn build
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
-addons:
-  code_climate: true
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_API_KEY
+  local_dir: build
+  keep_history: true
+  on: dev
