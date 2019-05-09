@@ -28,7 +28,7 @@ class CrafterMachine extends Component {
   }
 
   onClick = () => {
-    this.setState(state => ({ open: !state.open }))
+    this.setState(state => ({ open: !state.open }), this.updateSelection)
   }
 
   onRecipeSelected = recipe => {
@@ -65,7 +65,10 @@ class CrafterMachine extends Component {
                         recipeSelected === recipe ? 'recipeOptionSelected' : 'recipeOption'
                       }
                     >
-                      <Button className="recipeButton" onClick={this.onRecipeSelected(recipe)}>
+                      <Button
+                        className="recipeButton"
+                        onClick={() => this.onRecipeSelected(recipe)}
+                      >
                         <div className="recipeFont">
                           {recipe.necessaryMaterials.map(m => (
                             <span key={m.material.name} className="recipeMaterial">
