@@ -73,7 +73,7 @@ class CrafterMachine extends Component {
                         <div className="recipeFont">
                           {recipe.necessaryMaterials.map(m => (
                             <span key={m.material.name} className="recipeMaterial">
-                              {` ${m.count} x ${m.material.name}`}
+                              {` ${m.quantity} x ${m.material.name}`}
                               <img
                                 className="materialImg"
                                 src={m.material.image}
@@ -82,7 +82,7 @@ class CrafterMachine extends Component {
                             </span>
                           ))}
                           <span className="recipeMaterial">
-                            {` = ${recipe.result.count} x ${recipe.result.material.name}`}
+                            {` = ${recipe.result.quantity} x ${recipe.result.material.name}`}
                             <img
                               className="materialImg"
                               src={recipe.result.material.image}

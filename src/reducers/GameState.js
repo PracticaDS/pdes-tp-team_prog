@@ -39,8 +39,7 @@ const changeMachineSelected = (state, { machine }) => ({
   ...state,
   machineSelected: machine,
   actionSelected: SELECTION,
-  machineTypeSelected:
-    machine.type !== state.machineTypeSelected ? machine.type : state.machineTypeSelected,
+  machineTypeSelected: machine.type,
   moveSelectedNode: null,
 })
 

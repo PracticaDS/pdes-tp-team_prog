@@ -193,21 +193,21 @@ const whiteGoldRecipe = {
   necessaryMaterials: [
     {
       material: goldMaterial,
-      count: 2,
+      quantity: 2,
     },
     {
       material: silverMaterial,
-      count: 1,
+      quantity: 1,
     },
     {
       material: copperMaterial,
-      count: 1,
+      quantity: 1,
     },
   ],
-  currencyCost: 0,
+  price: 0,
   result: {
     material: whiteGoldMaterial,
-    count: 1,
+    quantity: 1,
   },
 }
 
@@ -216,17 +216,17 @@ const chineseSilverRecipe = {
   necessaryMaterials: [
     {
       material: copperMaterial,
-      count: 2,
+      quantity: 2,
     },
     {
       material: zincMaterial,
-      count: 2,
+      quantity: 2,
     },
   ],
-  currencyCost: 0,
+  price: 0,
   result: {
     material: chineseSilverMaterial,
-    count: 1,
+    quantity: 1,
   },
 }
 
@@ -235,17 +235,17 @@ const bronzeRecipe = {
   necessaryMaterials: [
     {
       material: copperMaterial,
-      count: 1,
+      quantity: 1,
     },
     {
       material: zincMaterial,
-      count: 1,
+      quantity: 1,
     },
   ],
-  currencyCost: 0,
+  price: 0,
   result: {
     material: bronzeMaterial,
-    count: 2,
+    quantity: 2,
   },
 }
 
@@ -254,17 +254,17 @@ const billonRecipe = {
   necessaryMaterials: [
     {
       material: bronzeMaterial,
-      count: 1,
+      quantity: 1,
     },
     {
       material: silverMaterial,
-      count: 1,
+      quantity: 1,
     },
   ],
-  currencyCost: 0,
+  price: 0,
   result: {
     material: billonMaterial,
-    count: 1,
+    quantity: 1,
   },
 }
 
