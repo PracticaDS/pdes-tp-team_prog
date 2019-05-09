@@ -5,12 +5,8 @@ const connector = ResourcesBar => {
   const mapStateToProps = state => ({
     currency: getCurrency(state),
   })
-  const mapDispatchToProps = () => ({})
 
-  return connect(
-    mapStateToProps,
-    mapDispatchToProps,
-  )(ResourcesBar)
+  return connect(mapStateToProps)(ResourcesBar)
 }
 
 export default connector
