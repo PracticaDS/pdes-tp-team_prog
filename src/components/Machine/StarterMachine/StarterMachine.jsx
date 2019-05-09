@@ -28,7 +28,7 @@ class StarterMachine extends Component {
   }
 
   onClick = () => {
-    this.setState(state => ({ ...state, open: !state.open }))
+    this.setState(state => ({ open: !state.open }), this.updateSelection)
   }
 
   onMaterialSelected = material => () => {
@@ -38,18 +38,19 @@ class StarterMachine extends Component {
   render = () => {
     const { open, materialSelected } = this.state
     const { machineTypeSelected } = this.props
+    const isSelected = machineTypeSelected === machine.type
     return (
       <div>
         <div component_name={`machine_${machine.id}`} ref={this.contentRef} onClick={this.onClick}>
           <img
-            className={machineTypeSelected === machine.type ? 'machineSelected' : 'machineElement'}
+            className={isSelected ? 'machineSelected' : 'machineElement'}
             src={machine.image}
             alt="myImage"
           />
         </div>
         <Popper
           className="Popper"
-          open={open}
+          open={open && isSelected}
           anchorEl={this.contentRef.current}
           placement="right-start"
           transition
