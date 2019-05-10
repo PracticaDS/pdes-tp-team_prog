@@ -67,11 +67,6 @@ export const crafterMachine = {
     recipeSelected: null,
     availableRecipes: [],
   },
-  process: (materials, func) => {
-    func(this.direction, this.metadata.recipeSelected.materialsRequired, [
-      { ...this.metadata.recipeSelected.product, quantity: this.frequency },
-    ])
-  },
 }
 
 export const furnaceMachine = {
@@ -204,7 +199,7 @@ const whiteGoldRecipe = {
       quantity: 1,
     },
   ],
-  price: 0,
+  price: whiteGoldMaterial.price,
   result: {
     material: whiteGoldMaterial,
     quantity: 1,
@@ -223,7 +218,7 @@ const chineseSilverRecipe = {
       quantity: 2,
     },
   ],
-  price: 0,
+  price: chineseSilverMaterial.price,
   result: {
     material: chineseSilverMaterial,
     quantity: 1,
@@ -242,7 +237,7 @@ const bronzeRecipe = {
       quantity: 1,
     },
   ],
-  price: 0,
+  price: bronzeMaterial.price,
   result: {
     material: bronzeMaterial,
     quantity: 2,
@@ -261,7 +256,7 @@ const billonRecipe = {
       quantity: 1,
     },
   ],
-  price: 0,
+  price: billonMaterial.price,
   result: {
     material: billonMaterial,
     quantity: 1,
