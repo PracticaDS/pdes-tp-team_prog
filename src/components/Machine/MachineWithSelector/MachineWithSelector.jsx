@@ -22,7 +22,15 @@ class MachineWithSelector extends Component {
   }
 
   onClick = () => {
-    this.setState(state => ({ open: !state.open }), this.updateSelection)
+    this.setState(state => ({ open: !state.open }))
+    if (!this.isSelected()) {
+      this.updateSelection()
+    }
+  }
+
+  isSelected = () => {
+    const { machineTypeSelected, machine } = this.props
+    return machineTypeSelected === machine.type
   }
 
   onItemSelected = recipe => {
@@ -30,21 +38,20 @@ class MachineWithSelector extends Component {
   }
 
   render = () => {
-    const { machineTypeSelected, list, renderItems, machine } = this.props
+    const { list, renderItems, machine } = this.props
     const { open, itemSelected } = this.state
-    const isSelected = machineTypeSelected === machine.type
     return (
       <div>
         <div component_name={`machine_${machine.id}`} ref={this.contentRef} onClick={this.onClick}>
           <img
-            className={isSelected ? 'machineSelected' : 'machineElement'}
+            className={this.isSelected() ? 'machineSelected' : 'machineElement'}
             src={machine.image}
             alt="myImage"
           />
         </div>
         <Popper
           className="Popper"
-          open={open && isSelected}
+          open={open && this.isSelected()}
           anchorEl={this.contentRef.current}
           placement="right-start"
           transition
@@ -52,7 +59,7 @@ class MachineWithSelector extends Component {
           {({ TransitionProps }) => (
             <Fade {...TransitionProps}>
               <Paper>
-                <div className="RecipeSelector">
+                <div className="Selector">
                   {renderItems(list, itemSelected, this.onItemSelected)}
                 </div>
               </Paper>
