@@ -62,6 +62,7 @@ const addMaterial = material => block => ({
       quantity: block.items[material.name]
         ? block.items[material.name].quantity + material.quantity
         : material.quantity,
+      price: material.price,
     },
   },
 })
