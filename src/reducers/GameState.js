@@ -7,6 +7,7 @@ import {
   SELECT_MOVE_BLOCK,
   DESELECT_MOVE_BLOCK,
   BUY_MACHINE,
+  INCREMENT_CURRENCY,
 } from '../utils/actionTypes'
 import { SELECTION, EDITIONS } from '../utils/editionUtils'
 import { DEFAULT_CURRENCY } from '../utils/defaultValues'
@@ -33,6 +34,10 @@ const changeActionSelected = (state, { actionType }) => ({
   moveSelectedNode: null,
 })
 const restartCurrency = state => ({ ...state, currency: DEFAULT_CURRENCY })
+const incrementCurrency = (state, { addedCurrency }) => ({
+  ...state,
+  currency: state.currency + addedCurrency,
+})
 const nextTick = state => ({ ...state, tick: state.tick + 1 })
 const changeMachineSelected = (state, { machine }) => ({
   ...state,
@@ -65,6 +70,7 @@ const ACTION_HANDLER_TYPES = {
   [SELECT_MOVE_BLOCK]: changeSelectedMoveBlock,
   [DESELECT_MOVE_BLOCK]: deselectMoveBlock,
   [BUY_MACHINE]: buyMachine,
+  [INCREMENT_CURRENCY]: incrementCurrency,
 }
 
 export const GameState = (state = initialState, { type, body }) => {

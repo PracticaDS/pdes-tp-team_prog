@@ -1,4 +1,5 @@
 export const RESTART_CURRENCY = 'restartCurrency'
+export const INCREMENT_CURRENCY = 'incrementCurrency'
 export const SELECT_MACHINE = 'selectMachine'
 export const UPDATE_BLOCK = 'updateBlock'
 export const ROTATE_BLOCK = 'rotateBlock'
