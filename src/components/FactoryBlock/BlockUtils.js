@@ -11,8 +11,11 @@ export const isSelectedInMoveAction = (position, moveSelectedNode) =>
 
 export const actionHandler = {
   [DELETE]: ({ deleteBlock, position }) => deleteBlock(position),
-  [SELECTION]: ({ updateBlock, position, machineSelected, currency }) =>
-    updateBlock(position, machineSelected, currency),
+  [SELECTION]: ({ node, updateBlock, position, machineSelected, currency }) => {
+    if (machineSelected && isEmptyNode(node)) {
+      updateBlock(position, machineSelected, currency)
+    }
+  },
   [ROTATE]: ({ node, rotateBlock }) => {
     if (node.machine.type !== Empty) {
       rotateBlock(node.position)
