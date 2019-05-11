@@ -1,5 +1,6 @@
 {
   "name": "pdes-tp",
+  "homepage": "https://PracticaDS.github.io/pdes-tp-team_prog/",
   "version": "0.1.0",
   "private": true,
   "jest": {

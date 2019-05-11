@@ -4,13 +4,13 @@ node_js:
 cache:
   directories:
     - 'node_modules'
-before_script:
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
 script:
   - yarn test
-after_script:
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
-addons:
-  code_climate: true
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_API_KEY
+  local_dir: build
+  keep_history: true
+  on:
+    branch: dev
