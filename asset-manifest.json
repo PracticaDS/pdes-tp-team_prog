@@ -1,0 +1,19 @@
+{
+  "main.css": "/pdes-tp-team_prog/static/css/main.376f0f28.chunk.css",
+  "main.js": "/pdes-tp-team_prog/static/js/main.c3bec5c9.chunk.js",
+  "main.js.map": "/pdes-tp-team_prog/static/js/main.c3bec5c9.chunk.js.map",
+  "runtime~main.js": "/pdes-tp-team_prog/static/js/runtime~main.bb9794b8.js",
+  "runtime~main.js.map": "/pdes-tp-team_prog/static/js/runtime~main.bb9794b8.js.map",
+  "static/js/2.fb5117e3.chunk.js": "/pdes-tp-team_prog/static/js/2.fb5117e3.chunk.js",
+  "static/js/2.fb5117e3.chunk.js.map": "/pdes-tp-team_prog/static/js/2.fb5117e3.chunk.js.map",
+  "index.html": "/pdes-tp-team_prog/index.html",
+  "precache-manifest.fb8eea208a246fb258f7567b0dad2023.js": "/pdes-tp-team_prog/precache-manifest.fb8eea208a246fb258f7567b0dad2023.js",
+  "service-worker.js": "/pdes-tp-team_prog/service-worker.js",
+  "static/css/main.376f0f28.chunk.css.map": "/pdes-tp-team_prog/static/css/main.376f0f28.chunk.css.map",
+  "static/media/crafter.png": "/pdes-tp-team_prog/static/media/crafter.d8901469.png",
+  "static/media/delete.png": "/pdes-tp-team_prog/static/media/delete.1699795c.png",
+  "static/media/furnace.png": "/pdes-tp-team_prog/static/media/furnace.88919555.png",
+  "static/media/seller.png": "/pdes-tp-team_prog/static/media/seller.a422cc5e.png",
+  "static/media/starter.png": "/pdes-tp-team_prog/static/media/starter.49ea4d2b.png",
+  "static/media/transporter.png": "/pdes-tp-team_prog/static/media/transporter.cdb5a0f8.png"
+}
