@@ -1,7 +1,7 @@
 import StarterMachineNode from '../components/MachineNodes/StarterMachineNode/StarterMachineNode'
 import TransporterMachineNode from '../components/MachineNodes/TransporterMachineNode/TransporterMachineNode'
 import SellerMachineNode from '../components/MachineNodes/SellerMachineNode/SellerMachineNode'
-import CrafterMachineNode from '../components/MachineNodes/CrafterMachineNode/CrafterMachineNode'
+import CrafterMachineNode from '../components/MachineNodes/CrafterMachineNode/CrafterMachineNodeConnected'
 import FurnaceMachineNode from '../components/MachineNodes/FurnaceMachineNode/FurnaceMachineNode'
 import EmptyMachineNode from '../components/MachineNodes/EmptyMachineNode/EmptyMachineNode'
 

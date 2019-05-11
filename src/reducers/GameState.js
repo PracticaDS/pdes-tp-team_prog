@@ -23,6 +23,7 @@ const initialState = {
   moveSelectedNode: null,
   actionSelected: SELECTION,
   currency: DEFAULT_CURRENCY,
+  machineTypeSelected: '',
   tick: 0,
 }
 
@@ -43,6 +44,7 @@ const changeMachineSelected = (state, { machine }) => ({
   ...state,
   machineSelected: machine,
   actionSelected: SELECTION,
+  machineTypeSelected: machine.type,
   moveSelectedNode: null,
 })
 
