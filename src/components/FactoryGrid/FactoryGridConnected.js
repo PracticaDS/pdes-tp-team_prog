@@ -20,9 +20,9 @@ const renderNode = node => {
     <div className="Node">
       <MachineNode className="MachineNode" node={node} />
       {materialImg && (
-        <figure>
+        <span className="MaterialSpan">
           <img className="Material" src={materialImg} alt="material" />
-        </figure>
+        </span>
       )}
     </div>
   )

@@ -17,11 +17,10 @@
 }
 
 .Material {
-  z-index: 2;
-  width: 1rem;
-  height: 1rem;
+  width: 0.8rem;
+  height: 0.8rem;
 }
 
-.MachineImg {
-  z-index: 1;
+.MaterialSpan {
+  position: absolute;
 }
