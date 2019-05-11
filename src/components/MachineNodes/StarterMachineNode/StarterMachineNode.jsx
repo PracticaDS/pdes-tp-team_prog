@@ -6,7 +6,7 @@ import { applyDirection, isPositionValid } from '../../../utils/directions'
 import '../../FactoryGrid/FactoryGrid.css'
 
 const StarterMachineNode = () => (
-  <Card className="MachineImg">
+  <Card>
     <CardMedia component="img" image={starter} />
   </Card>
 )
