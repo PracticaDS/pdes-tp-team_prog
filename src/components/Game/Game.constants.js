@@ -127,6 +127,19 @@ export const editionOptions = [
   },
 ]
 
+export const materialsImg = {
+  Gold: gold,
+  Silver: silver,
+  Iron: iron,
+  Zinc: zinc,
+  Copper: copper,
+  Bronze: bronze,
+  'White Gold': whiteGold,
+  'Chinese Silver': chineseSilver,
+  Billon: billon,
+  DEFAULT: silver,
+}
+
 export const goldMaterial = {
   name: 'Gold',
   image: gold,
