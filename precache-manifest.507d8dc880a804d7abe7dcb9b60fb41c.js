@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/pdes-tp-team_prog/static/media/transporter.cdb5a0f8.png"
   },
   {
-    "revision": "4b9b4b0d3d1270e4cb4a",
+    "revision": "85663f5ca35a10f6734c",
     "url": "/pdes-tp-team_prog/static/css/main.376f0f28.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "/pdes-tp-team_prog/static/media/starter.49ea4d2b.png"
   },
   {
-    "revision": "4b9b4b0d3d1270e4cb4a",
-    "url": "/pdes-tp-team_prog/static/js/main.c3bec5c9.chunk.js"
+    "revision": "85663f5ca35a10f6734c",
+    "url": "/pdes-tp-team_prog/static/js/main.7fb1779e.chunk.js"
   },
   {
     "revision": "a422cc5eb81aab3f627e524b0fd0e14d",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/pdes-tp-team_prog/static/media/delete.1699795c.png"
   },
   {
-    "revision": "b2bcaec768b9686c7c30e794874bb635",
+    "revision": "2782460b3eef878cc3c4a864e2ea7a4a",
     "url": "/pdes-tp-team_prog/index.html"
   }
 ];
