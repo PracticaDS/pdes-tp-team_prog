@@ -17,7 +17,7 @@ const renderNode = node => {
     keys.length === 1 ? materialsImg[keys[0]] : keys.length > 1 ? materialsImg[DEFAULT] : null
   const MachineNode = machineByType[machine.type]
   return (
-    <div className="Bla">
+    <div className="Node">
       <MachineNode className="MachineNode" node={node} />
       {materialImg && (
         <figure>
