@@ -127,31 +127,31 @@ export const editionOptions = [
   },
 ]
 
-const goldMaterial = {
+export const goldMaterial = {
   name: 'Gold',
   image: gold,
   price: 20,
 }
 
-const silverMaterial = {
+export const silverMaterial = {
   name: 'Silver',
   image: silver,
   price: 10,
 }
 
-const ironMaterial = {
+export const ironMaterial = {
   name: 'Iron',
   image: iron,
   price: 5,
 }
 
-const zincMaterial = {
+export const zincMaterial = {
   name: 'Zinc',
   image: zinc,
   price: 5,
 }
 
-const copperMaterial = {
+export const copperMaterial = {
   name: 'Copper',
   image: copper,
   price: 5,
@@ -159,31 +159,31 @@ const copperMaterial = {
 
 // //////
 
-const bronzeMaterial = {
+export const bronzeMaterial = {
   name: 'Bronze',
   image: bronze,
   price: 100,
 }
 
-const whiteGoldMaterial = {
+export const whiteGoldMaterial = {
   name: 'White Gold',
   image: whiteGold,
   price: 100,
 }
 
-const chineseSilverMaterial = {
+export const chineseSilverMaterial = {
   name: 'Chinese Silver',
   image: chineseSilver,
   price: 100,
 }
 
-const billonMaterial = {
+export const billonMaterial = {
   name: 'Billon',
   image: billon,
   price: 20,
 }
 
-const whiteGoldRecipe = {
+export const whiteGoldRecipe = {
   name: 'White Gold Recipe',
   necessaryMaterials: [
     {
@@ -206,7 +206,7 @@ const whiteGoldRecipe = {
   },
 }
 
-const chineseSilverRecipe = {
+export const chineseSilverRecipe = {
   name: 'Chinese Silver Recipe',
   necessaryMaterials: [
     {
@@ -225,7 +225,7 @@ const chineseSilverRecipe = {
   },
 }
 
-const bronzeRecipe = {
+export const bronzeRecipe = {
   name: 'Bronze Recipe',
   necessaryMaterials: [
     {
@@ -244,7 +244,7 @@ const bronzeRecipe = {
   },
 }
 
-const billonRecipe = {
+export const billonRecipe = {
   name: 'Billon Recipe',
   necessaryMaterials: [
     {

@@ -9,13 +9,13 @@ const CrafterMachineNode = () => (
   </Card>
 )
 
-const areAllMaterials = (necessaryMaterials, currentMaterials) =>
+export const areAllMaterials = (necessaryMaterials, currentMaterials) =>
   necessaryMaterials.every(materialRecipe => {
     const materialInGrid = currentMaterials[materialRecipe.material.name]
     return materialInGrid && materialInGrid.quantity >= materialRecipe.quantity
   })
 
-const materialsFiltered = (necessaryMaterials, currentMaterials) =>
+export const materialsFiltered = (necessaryMaterials, currentMaterials) =>
   necessaryMaterials.map(materialRecipe => {
     const materialInGrid = currentMaterials[materialRecipe.material.name]
     return { ...materialInGrid, quantity: materialRecipe.quantity }
