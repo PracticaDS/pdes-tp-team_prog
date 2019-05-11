@@ -3,9 +3,10 @@ import { Card, CardMedia } from '@material-ui/core'
 import starter from '../../../assets/starter.png'
 import connector from './StarterMachineNodeConnector'
 import { applyDirection, isPositionValid } from '../../../utils/directions'
+import '../../FactoryGrid/FactoryGrid.css'
 
 const StarterMachineNode = () => (
-  <Card>
+  <Card className="MachineImg">
     <CardMedia component="img" image={starter} />
   </Card>
 )
