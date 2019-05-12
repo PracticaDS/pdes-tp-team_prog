@@ -38,7 +38,7 @@ class CrafterMachine extends Component {
     ))
 
   render = () => {
-    const { machineTypeSelected, recipes } = this.props
+    const { machineTypeSelected, recipes, currency } = this.props
     return (
       <MachineWithSelector
         machineTypeSelected={machineTypeSelected}
@@ -46,6 +46,7 @@ class CrafterMachine extends Component {
         machine={machine}
         renderItems={this.renderItems}
         updateSelection={this.updateSelection}
+        currency={currency}
       />
     )
   }
