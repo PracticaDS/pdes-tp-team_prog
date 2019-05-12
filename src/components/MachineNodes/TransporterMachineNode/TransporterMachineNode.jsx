@@ -20,10 +20,9 @@ class TransporterMachineNodeStateful extends React.Component {
         const newDirection = applyDirection(node.position, node.machine.direction)
         const items = node.items
 
-        deleteItems(node.position, Object.values(items))
         createItems(newDirection, Object.values(items))
+        deleteItems(node.position, Object.values(items))
       }
-
       node.machine.process([], func)
     }
   }
