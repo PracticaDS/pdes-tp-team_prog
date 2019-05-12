@@ -41,9 +41,9 @@ const connector = Block => {
   const mapDispatchToProps = dispatch => ({
     blockActions: {
       updateBlock: (position, machine, currency) => {
-        if (machine && currency >= machine.buy) {
+        if (machine && currency >= machine.price) {
           dispatch(actionUpdate(position, machine))
-          dispatch(actionBuyMachine(machine.buy))
+          dispatch(actionBuyMachine(machine.price))
         }
       },
       deleteBlock: position => dispatch(actionDelete(position)),

@@ -28,8 +28,7 @@ export const starterMachine = {
   image: starter,
   name: 'Starter',
   type: Starter,
-  buy: 800,
-  sell: 400,
+  price: 800,
   frequency: 1,
   direction: DOWN,
   metadata: {
@@ -46,8 +45,7 @@ export const sellerMachine = {
   image: seller,
   name: 'Seller',
   type: Seller,
-  buy: 1000,
-  sell: 500,
+  price: 1000,
   frequency: 1,
   direction: DOWN,
   process: (materials, func) => {
@@ -60,8 +58,7 @@ export const crafterMachine = {
   image: crafter,
   name: 'Crafter',
   type: Crafter,
-  buy: 800,
-  sell: 400,
+  price: 800,
   frequency: 1,
   direction: DOWN,
   metadata: {
@@ -75,8 +72,7 @@ export const furnaceMachine = {
   image: furnace,
   name: 'Furnace',
   type: Furnace,
-  buy: 800,
-  sell: 400,
+  price: 800,
   frequency: 1,
   direction: DOWN,
 }
@@ -86,8 +82,7 @@ export const transporterMachine = {
   image: transporter,
   name: 'Transporter',
   type: Transporter,
-  buy: 800,
-  sell: 400,
+  price: 800,
   frequency: 1,
   direction: DOWN,
   process(materials, func) {

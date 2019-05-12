@@ -33,16 +33,10 @@ const starterMachineMetadata = ({
   selectedMaterial,
   availableMaterials,
 })
-export const createStarterMachine = ({
-  buy = 800,
-  sell = 400,
-  frequency = 1,
-  direction = 'DOWN',
-}) => ({
+export const createStarterMachine = ({ price = 800, frequency = 1, direction = 'DOWN' }) => ({
   name: 'Starter',
   type: Starter,
-  buy,
-  sell,
+  price,
   frequency,
   direction,
   metadata: starterMachineMetadata({}),
