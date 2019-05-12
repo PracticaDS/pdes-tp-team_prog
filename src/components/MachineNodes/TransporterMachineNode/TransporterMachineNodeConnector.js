@@ -1,12 +1,14 @@
 import { connect } from 'react-redux'
 import { createItems, deleteItems } from '../../../actions/Grid'
 import { getCurrency, getTick } from '../../../selectors/GameState'
+import { getDimensions } from '../../../selectors/GameDimensions'
 
 const connector = TransporterMachineNode => {
   const mapStateToProps = (state, props) => ({
     ...props,
     currency: getCurrency(state),
     tick: getTick(state),
+    dimensions: getDimensions(state),
   })
   const mapDispatchToProps = dispatch => ({
     deleteItems: (position, items) => {
