@@ -30,12 +30,12 @@
     "precommit": "NODE_ENV=production lint-staged",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest",
+    "test:unit": "jest",
+    "test:e2e": "cypress run",
+    "cypress:open": "cypress open",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "build-storybook": "build-storybook -s public"
   },
   "browserslist": [
     ">0.2%",
