@@ -38,11 +38,18 @@ class MachineWithSelector extends Component {
   }
 
   render = () => {
-    const { list, renderItems, machine } = this.props
+    const { list, renderItems, machine, currency } = this.props
     const { open, itemSelected } = this.state
+    const isDisabled = currency < machine.price
+    const containerClassName = isDisabled ? 'machine-disabled' : ''
     return (
       <div>
-        <div component_name={`machine_${machine.id}`} ref={this.contentRef} onClick={this.onClick}>
+        <div
+          component_name={`machine_${machine.id}`}
+          className={containerClassName}
+          ref={this.contentRef}
+          onClick={() => !isDisabled && this.onClick()}
+        >
           <img
             className={this.isSelected() ? 'machineSelected' : 'machineElement'}
             src={machine.image}

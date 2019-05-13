@@ -6,6 +6,7 @@ import starter from '../../assets/starter.png'
 import transporter from '../../assets/transporter.png'
 // Material images
 import gold from '../../assets/gold.png'
+import gold_melted from '../../assets/gold_melted.png'
 import iron from '../../assets/iron.png'
 import silver from '../../assets/silver.png'
 import copper from '../../assets/copper.png'
@@ -27,8 +28,7 @@ export const starterMachine = {
   image: starter,
   name: 'Starter',
   type: Starter,
-  buy: 800,
-  sell: 400,
+  price: 800,
   frequency: 1,
   direction: DOWN,
   metadata: {
@@ -45,8 +45,7 @@ export const sellerMachine = {
   image: seller,
   name: 'Seller',
   type: Seller,
-  buy: 1000,
-  sell: 500,
+  price: 1000,
   frequency: 1,
   direction: DOWN,
   process: (materials, func) => {
@@ -59,8 +58,7 @@ export const crafterMachine = {
   image: crafter,
   name: 'Crafter',
   type: Crafter,
-  buy: 800,
-  sell: 400,
+  price: 800,
   frequency: 1,
   direction: DOWN,
   metadata: {
@@ -74,28 +72,9 @@ export const furnaceMachine = {
   image: furnace,
   name: 'Furnace',
   type: Furnace,
-  buy: 800,
-  sell: 400,
+  price: 800,
   frequency: 1,
   direction: DOWN,
-  metadata: {
-    recipeSelected: {
-      materialsRequired: [{ name: 'gold', quantity: 1 }],
-      product: {
-        name: 'liquid_gold',
-      },
-    },
-    availableRecipes: [
-      { materialsRequired: [{ name: 'gold', quantity: 1 }], product: 'liquid_gold' },
-      { materialsRequired: [{ name: 'silver', quantity: 1 }], product: 'liquid_silver' },
-    ],
-  },
-  process: (materials, func) => {
-    // los materiales estan incluidos en los requeridos de la receta
-    func(this.direction, this.metadata.recipeSelected.materialsRequired, [
-      { ...this.metadata.recipeSelected.product, quantity: this.frequency },
-    ])
-  },
 }
 
 export const transporterMachine = {
@@ -103,8 +82,7 @@ export const transporterMachine = {
   image: transporter,
   name: 'Transporter',
   type: Transporter,
-  buy: 800,
-  sell: 400,
+  price: 800,
   frequency: 1,
   direction: DOWN,
   process(materials, func) {
@@ -138,36 +116,50 @@ export const materialsImg = {
   'Chinese Silver': chineseSilver,
   Billon: billon,
   DEFAULT: silver,
+  'Gold Melted': gold_melted,
+  'Silver Melted': silver,
+  'Iron Melted': iron,
+  'Zinc Melted': zinc,
+  'Copper Melted': copper,
+  'Bronze Melted': bronze,
+  'White Gold Melted': whiteGold,
+  'Chinese Silver Melted': chineseSilver,
+  'Billon Melted': billon,
 }
 
 export const goldMaterial = {
   name: 'Gold',
   image: gold,
   price: 20,
+  type: 'metal',
 }
 
 export const silverMaterial = {
   name: 'Silver',
   image: silver,
   price: 10,
+  type: 'metal',
 }
 
 export const ironMaterial = {
   name: 'Iron',
   image: iron,
   price: 5,
+  type: 'metal',
 }
 
 export const zincMaterial = {
   name: 'Zinc',
   image: zinc,
   price: 5,
+  type: 'metal',
 }
 
 export const copperMaterial = {
   name: 'Copper',
   image: copper,
   price: 5,
+  type: 'metal',
 }
 
 // //////
@@ -176,24 +168,28 @@ export const bronzeMaterial = {
   name: 'Bronze',
   image: bronze,
   price: 100,
+  type: 'metal',
 }
 
 export const whiteGoldMaterial = {
   name: 'White Gold',
   image: whiteGold,
   price: 100,
+  type: 'metal',
 }
 
 export const chineseSilverMaterial = {
   name: 'Chinese Silver',
   image: chineseSilver,
   price: 100,
+  type: 'metal',
 }
 
 export const billonMaterial = {
   name: 'Billon',
   image: billon,
   price: 20,
+  type: 'metal',
 }
 
 export const whiteGoldRecipe = {

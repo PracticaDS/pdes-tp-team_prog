@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import { selectMachine } from '../../actions/GameState'
-import { machineTypeSelected } from '../../selectors/GameState'
+import { getCurrency, machineTypeSelected } from '../../selectors/GameState'
 import { recipes, materials } from '../Game/Game.constants'
 
 const connector = MachineComponent => {
@@ -8,6 +8,7 @@ const connector = MachineComponent => {
     machineTypeSelected: machineTypeSelected(state),
     recipes,
     basicMaterials: materials,
+    currency: getCurrency(state),
   })
   const mapDispatchToProps = dispatch => ({
     selectMachine: machine => dispatch(selectMachine(machine)),

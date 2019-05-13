@@ -63,6 +63,7 @@ const addMaterial = material => block => ({
         ? block.items[material.name].quantity + material.quantity
         : material.quantity,
       price: material.price,
+      type: material.type,
     },
   },
 })
@@ -73,9 +74,9 @@ const createRawMaterial = (state, { position, material }) => ({
 })
 
 const sumItems = (dictItems, currentListItems) => {
-  currentListItems.forEach(({ name, quantity }) => {
+  currentListItems.forEach(({ name, quantity, type, price }) => {
     if (!dictItems[name]) {
-      dictItems[name] = { name, quantity }
+      dictItems[name] = { name, quantity, type, price }
     } else {
       dictItems[name].quantity += quantity
     }

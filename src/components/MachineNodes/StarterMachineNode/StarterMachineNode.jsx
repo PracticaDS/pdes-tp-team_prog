@@ -11,22 +11,37 @@ const StarterMachineNode = () => (
 )
 
 class StarterMachineNodeStateful extends React.Component {
-  componentWillUpdate(prevProps) {
+  constructor(props) {
+    super(props)
+    this.state = { personalCount: 0 }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { personalCount } = this.state
     const { tick, node, createRawMaterial, dimensions } = this.props
-    const updatedTick = prevProps.tick
+    const { machine, position, items } = node
+    const updatedTick = nextProps.tick
 
-    if (updatedTick !== tick && tick % node.machine.frequency === 0) {
-      const func = (dir, input, output) => {
-        const outputPosition = applyDirection(node.position, node.machine.direction)
+    if (updatedTick !== tick) {
+      if (personalCount < machine.frequency) {
+        this.setState(state => ({ personalCount: state.personalCount + 1 }))
+      } else {
+        this.setState(
+          () => ({ personalCount: 0 }),
+          () => {
+            const func = (dir, input, output) => {
+              const outputPosition = applyDirection(position, machine.direction)
 
-        if (isPositionValid(outputPosition, dimensions)) {
-          output.forEach(item => {
-            createRawMaterial(outputPosition, { ...item, quantity: node.machine.frequency })
-          })
-        }
+              if (isPositionValid(outputPosition, dimensions)) {
+                output.forEach(item => {
+                  createRawMaterial(outputPosition, { ...item, quantity: machine.frequency })
+                })
+              }
+            }
+            machine.process(items, func)
+          },
+        )
       }
-
-      node.machine.process(node.items, func)
     }
   }
 
@@ -34,11 +49,5 @@ class StarterMachineNodeStateful extends React.Component {
     return <StarterMachineNode {...this.props} />
   }
 }
-
-// StarterMachineNodeStateful.defaultProps = {
-//   direction: 'SOUTH',
-//   materialType: 'gold',
-//   frequency: 2,
-// }
 
 export default connector(StarterMachineNodeStateful)

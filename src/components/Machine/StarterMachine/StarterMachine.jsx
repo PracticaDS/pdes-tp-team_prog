@@ -28,7 +28,7 @@ class StarterMachine extends Component {
     ))
 
   render = () => {
-    const { machineTypeSelected, basicMaterials } = this.props
+    const { machineTypeSelected, basicMaterials, currency } = this.props
     return (
       <MachineWithSelector
         machineTypeSelected={machineTypeSelected}
@@ -36,6 +36,7 @@ class StarterMachine extends Component {
         machine={machine}
         renderItems={this.renderItems}
         updateSelection={this.updateSelection}
+        currency={currency}
       />
     )
   }
