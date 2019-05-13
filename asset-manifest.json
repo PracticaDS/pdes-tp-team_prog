@@ -1,19 +1,20 @@
 {
-  "main.css": "/pdes-tp-team_prog/static/css/main.4357bfcd.chunk.css",
-  "main.js": "/pdes-tp-team_prog/static/js/main.41707e95.chunk.js",
-  "main.js.map": "/pdes-tp-team_prog/static/js/main.41707e95.chunk.js.map",
+  "main.css": "/pdes-tp-team_prog/static/css/main.03ac1cde.chunk.css",
+  "main.js": "/pdes-tp-team_prog/static/js/main.78b0cb65.chunk.js",
+  "main.js.map": "/pdes-tp-team_prog/static/js/main.78b0cb65.chunk.js.map",
   "runtime~main.js": "/pdes-tp-team_prog/static/js/runtime~main.bb9794b8.js",
   "runtime~main.js.map": "/pdes-tp-team_prog/static/js/runtime~main.bb9794b8.js.map",
-  "static/js/2.c6a6941a.chunk.js": "/pdes-tp-team_prog/static/js/2.c6a6941a.chunk.js",
-  "static/js/2.c6a6941a.chunk.js.map": "/pdes-tp-team_prog/static/js/2.c6a6941a.chunk.js.map",
+  "static/js/2.9fc6cb22.chunk.js": "/pdes-tp-team_prog/static/js/2.9fc6cb22.chunk.js",
+  "static/js/2.9fc6cb22.chunk.js.map": "/pdes-tp-team_prog/static/js/2.9fc6cb22.chunk.js.map",
   "index.html": "/pdes-tp-team_prog/index.html",
-  "precache-manifest.75eb2a142a7bd9fa5c8f87dbba9529b7.js": "/pdes-tp-team_prog/precache-manifest.75eb2a142a7bd9fa5c8f87dbba9529b7.js",
+  "precache-manifest.d27dc50dbdb6665eedbfff5efc4db065.js": "/pdes-tp-team_prog/precache-manifest.d27dc50dbdb6665eedbfff5efc4db065.js",
   "service-worker.js": "/pdes-tp-team_prog/service-worker.js",
-  "static/css/main.4357bfcd.chunk.css.map": "/pdes-tp-team_prog/static/css/main.4357bfcd.chunk.css.map",
+  "static/css/main.03ac1cde.chunk.css.map": "/pdes-tp-team_prog/static/css/main.03ac1cde.chunk.css.map",
   "static/media/crafter.png": "/pdes-tp-team_prog/static/media/crafter.d8901469.png",
   "static/media/delete.png": "/pdes-tp-team_prog/static/media/delete.1699795c.png",
   "static/media/furnace.png": "/pdes-tp-team_prog/static/media/furnace.88919555.png",
+  "static/media/gold_melted.png": "/pdes-tp-team_prog/static/media/gold_melted.46867643.png",
   "static/media/seller.png": "/pdes-tp-team_prog/static/media/seller.a422cc5e.png",
   "static/media/starter.png": "/pdes-tp-team_prog/static/media/starter.49ea4d2b.png",
-  "static/media/transporter.png": "/pdes-tp-team_prog/static/media/transporter.cdb5a0f8.png"
+  "static/media/transporter.png": "/pdes-tp-team_prog/static/media/transporter.7908f587.png"
 }
