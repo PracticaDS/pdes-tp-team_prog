@@ -1,0 +1,27 @@
+.gameMainContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #243646;
+}
+
+.HorizontalGameParts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.gamePanel {
+  padding: 1rem;
+}
+
+.gameLeftPanel {
+  flex-basis: 10rem;
+}
+
+.gameMidPanel {
+}
+
+.gameRightPanel {
+  flex-basis: 10rem;
+}

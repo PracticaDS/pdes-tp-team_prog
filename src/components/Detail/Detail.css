@@ -1,0 +1,31 @@
+.detail {
+  align-self: start;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: darkorange !important;
+  text-align: center;
+}
+
+.text-content {
+  font-weight: bold !important;
+}
+
+.text-content-number {
+  margin-left: 0.2rem;
+  color: rgb(59, 81, 94);
+  font-weight: bold;
+}
+
+.DetailHeader {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 1rem;
+  color: rgb(233, 124, 52);
+  font-weight: bold;
+}

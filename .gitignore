@@ -7,3 +7,7 @@ dist/
 node_modules/
 reports/
 webpack.stats.json
+package-lock.json
+.idea/
+.DS_Store
+cypress/screenshots

@@ -1,0 +1,27 @@
+.editionContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.editionElement {
+  height: 3rem;
+  width: 3rem;
+  margin: 0.2rem;
+  padding: 0.2rem;
+}
+
+.editionHeader {
+  margin-top: 0.3rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 1rem;
+  color: rgb(233, 124, 52);
+  font-weight: bold;
+}
+
+.editionMainContainer {
+  background-color: rgb(73, 78, 78);
+}

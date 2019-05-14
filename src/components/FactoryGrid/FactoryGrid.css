@@ -1,0 +1,28 @@
+.FactoryGrid {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FactoryRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.Node {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+}
+
+.Material {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.MaterialSpan {
+  position: absolute;
+}
