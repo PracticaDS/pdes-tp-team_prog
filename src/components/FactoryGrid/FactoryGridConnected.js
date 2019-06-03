@@ -5,7 +5,7 @@ import FactoryGrid from './FactoryGrid'
 import FactoryConnector from './FactoryGridConnector'
 import { machineByType } from '../../utils/machineUtils'
 import Block from '../FactoryBlock/BlockConnected'
-import { materialsImg } from '../Game/Game.constants'
+import { materialsImg } from '../Game/material.constants'
 import './FactoryGrid.css'
 
 const DEFAULT = 'DEFAULT'

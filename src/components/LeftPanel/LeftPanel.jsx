@@ -5,7 +5,7 @@ import MachineTypes from '../MachineTypes/MachineTypes'
 import Edition from '../Edition/Edition'
 import EditionOptionConnected from '../EditionOption/EditionOptionConnected'
 import renderMachine from '../Machine/MachineConnector'
-import { editionOptions } from '../Game/Game.constants'
+import { editionOptions } from '../Game/option.constants'
 
 const renderOption = edition => <EditionOptionConnected editionOption={edition} />
 const LeftPanel = () => (

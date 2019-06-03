@@ -1,7 +1,7 @@
 import React from 'react'
 
 import '../Machine.css'
-import { transporterMachine as machine } from '../../Game/Game.constants'
+import { transporterMachine as machine } from '../../Game/machine.constants'
 
 const TransporterMachine = ({ machineTypeSelected, currency, selectMachine }) => {
   const isDisabled = currency < machine.price

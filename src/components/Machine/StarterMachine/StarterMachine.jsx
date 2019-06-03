@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import '../Machine.css'
 import './StarterMachine.css'
 import { Button } from '@material-ui/core'
-import { starterMachine as machine } from '../../Game/Game.constants'
+import { starterMachine as machine } from '../../Game/machine.constants'
 import MachineWithSelector from '../MachineWithSelector/MachineWithSelector'
 
 class StarterMachine extends Component {
