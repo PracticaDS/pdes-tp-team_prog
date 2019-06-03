@@ -1,4 +1,4 @@
-import CrafterMachineNode from './CrafterMachineNode'
+import CrafterMachineNode from './CrafterMachineNodeStateful'
 
 import CrafterMachineNodeConnector from './CrafterMachineNodeConnector'
 
