@@ -8,6 +8,14 @@ import {
   BUY_MACHINE,
 } from '../utils/actionTypes'
 
+export const createStackAction = ({ type, body }) => ({
+  type,
+  body: {
+    ...body,
+    stack: true,
+  },
+})
+
 export const playGame = () => ({
   type: PLAY_GAME,
   body: {},
