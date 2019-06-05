@@ -34,39 +34,37 @@ export const materialsImg = {
 export const goldMaterial = {
   name: 'Gold',
   image: gold,
-  price: 20,
+  price: 50,
   type: 'metal',
 }
 
 export const silverMaterial = {
   name: 'Silver',
   image: silver,
-  price: 10,
+  price: 40,
   type: 'metal',
 }
 
 export const ironMaterial = {
   name: 'Iron',
   image: iron,
-  price: 5,
+  price: 30,
   type: 'metal',
 }
 
 export const zincMaterial = {
   name: 'Zinc',
   image: zinc,
-  price: 5,
+  price: 20,
   type: 'metal',
 }
 
 export const copperMaterial = {
   name: 'Copper',
   image: copper,
-  price: 5,
+  price: 10,
   type: 'metal',
 }
-
-// //////
 
 export const bronzeMaterial = {
   name: 'Bronze',
