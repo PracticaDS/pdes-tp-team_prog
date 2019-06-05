@@ -48,20 +48,20 @@ describe('Block Suite', () => {
 
 it('when calling getDegree with direction Left then returns css object with transform 90 degree', () => {
   const cssDown = getDegree(LEFT)
-  expect(cssDown).toEqual({ transform: 'rotate(90deg)' })
+  expect(cssDown).toEqual('left')
 })
 
 it('when calling getDegree with direction Right then returns css object with transform 270 degree', () => {
   const cssDown = getDegree(RIGHT)
-  expect(cssDown).toEqual({ transform: 'rotate(270deg)' })
+  expect(cssDown).toEqual('right')
 })
 
 it('when calling getDegree with direction Up then returns css object with transform 180 degree', () => {
   const cssDown = getDegree(UP)
-  expect(cssDown).toEqual({ transform: 'rotate(180deg)' })
+  expect(cssDown).toEqual('up')
 })
 
 it('when calling getDegree with direction Down then returns css object with transform 0 degree', () => {
   const cssDown = getDegree(DOWN)
-  expect(cssDown).toEqual({ transform: 'rotate(0deg)' })
+  expect(cssDown).toEqual('down')
 })
