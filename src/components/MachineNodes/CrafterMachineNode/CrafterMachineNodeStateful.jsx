@@ -12,7 +12,6 @@ import {
   withTimeout,
 } from '../utils'
 import CrafterMachineNode from './CrafterMachineNode'
-import { createRawMaterial } from '../../../actions/Grid'
 
 class CrafterMachineNodeStateful extends React.Component {
   constructor(props) {
@@ -27,7 +26,7 @@ class CrafterMachineNodeStateful extends React.Component {
     const { tick } = this.props
     if (nextTick !== tick) {
       if (isFrequencyFinished(this.props, this.state)) {
-        const { node, dimensions, deleteItems } = this.props
+        const { node, dimensions, deleteItems, createRawMaterial } = this.props
         const { machine, position, items } = node
         const { direction } = machine
         const outputPosition = applyDirection(position, direction)
