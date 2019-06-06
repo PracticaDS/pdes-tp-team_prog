@@ -1,8 +1,8 @@
-import StarterMachineNode from '../components/MachineNodes/StarterMachineNode/StarterMachineNode'
-import TransporterMachineNode from '../components/MachineNodes/TransporterMachineNode/TransporterMachineNode'
-import SellerMachineNode from '../components/MachineNodes/SellerMachineNode/SellerMachineNode'
+import StarterMachineNode from '../components/MachineNodes/StarterMachineNode/StarterMachineNodeStateful'
+import TransporterMachineNode from '../components/MachineNodes/TransporterMachineNode/TransporterMachineNodeStateful'
+import SellerMachineNode from '../components/MachineNodes/SellerMachineNode/SellerMachineNodeStateful'
 import CrafterMachineNode from '../components/MachineNodes/CrafterMachineNode/CrafterMachineNodeConnected'
-import FurnaceMachineNode from '../components/MachineNodes/FurnaceMachineNode/FurnaceMachineNode'
+import FurnaceMachineNode from '../components/MachineNodes/FurnaceMachineNode/FurnaceMachineNodeStateful'
 import EmptyMachineNode from '../components/MachineNodes/EmptyMachineNode/EmptyMachineNode'
 
 export const Starter = 'Starter'

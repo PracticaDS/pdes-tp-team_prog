@@ -1,7 +1,9 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import CrafterMachineNode, { areAllMaterials, materialsFiltered } from './CrafterMachineNode'
-import { crafterMachine, copperMaterial, zincMaterial } from '../../Game/Game.constants'
+import CrafterMachineNode from './CrafterMachineNode'
+import { copperMaterial, zincMaterial } from '../../Game/material.constants'
+import { crafterMachine } from '../../Game/machine.constants'
+import { areAllMaterials, materialsFiltered } from '../utils'
 
 describe('CrafterMachineNode Suite', () => {
   describe('Basic rendering', () => {

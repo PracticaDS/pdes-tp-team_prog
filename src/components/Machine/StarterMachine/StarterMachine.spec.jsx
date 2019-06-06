@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 import StarterMachine from './StarterMachine'
-import { materials } from '../../Game/Game.constants'
+import { materials } from '../../Game/material.constants'
 
 describe('CrafterMachine tests', () => {
   describe('Render the Machine Component with props machine(name, image) and a selected machine(name, image)', () => {

@@ -1,7 +1,8 @@
 import { connect } from 'react-redux'
 import { selectMachine } from '../../actions/GameState'
 import { getCurrency, machineTypeSelected } from '../../selectors/GameState'
-import { recipes, materials } from '../Game/Game.constants'
+import { recipes } from '../Game/recipe.constants'
+import { materials } from '../Game/material.constants'
 
 const connector = MachineComponent => {
   const mapStateToProps = state => ({

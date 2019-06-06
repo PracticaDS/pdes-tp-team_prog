@@ -1,7 +1,7 @@
 import React from 'react'
 
 import '../Machine.css'
-import { furnaceMachine as machine } from '../../Game/Game.constants'
+import { furnaceMachine as machine } from '../../Game/machine.constants'
 
 const FurnaceMachine = ({ currency, selectMachine, machineTypeSelected }) => {
   const isDisabled = currency < machine.price
