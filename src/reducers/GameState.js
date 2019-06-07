@@ -9,9 +9,7 @@ import {
   BUY_MACHINE,
   INCREMENT_CURRENCY,
   NEW_GAME_SUCCESS,
-  NEW_GAME_FAILURE,
   PLAY_GAME_SUCCESS,
-  PLAY_GAME_FAILURE,
 } from '../utils/actionTypes'
 import { SELECTION, EDITIONS } from '../utils/editionUtils'
 import { DEFAULT_CURRENCY } from '../utils/defaultValues'
@@ -84,9 +82,7 @@ const ACTION_HANDLER_TYPES = {
   [BUY_MACHINE]: buyMachine,
   [INCREMENT_CURRENCY]: incrementCurrency,
   [NEW_GAME_SUCCESS]: startGame,
-  [NEW_GAME_FAILURE]: startGame,
   [PLAY_GAME_SUCCESS]: startGame,
-  [PLAY_GAME_FAILURE]: startGame,
 }
 
 export const GameState = (state = gameState, { type, body }) => {

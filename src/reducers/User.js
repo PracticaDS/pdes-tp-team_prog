@@ -27,7 +27,7 @@ const loginFailure = () => ({
 
 const deleteGame = (state, { id }) => ({
   ...state,
-  games: state.games.filter(g => g.id !== id),
+  games: state.games.filter(g => g !== id),
 })
 
 const ACTION_HANDLER_TYPES = {

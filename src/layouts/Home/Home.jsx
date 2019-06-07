@@ -16,16 +16,6 @@ import { constants } from './constants'
 import './Home.css'
 
 class Home extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      games: [
-        { id: 1, name: 'First', updated_date: '25/05/2019', machine_quantity: 30 },
-        { id: 2, name: 'Second', updated_date: '05/09/2019', machine_quantity: 1 },
-      ],
-    }
-  }
-
   onClickNew = () => {
     const { user, newGame } = this.props
     newGame(user.id)
@@ -41,11 +31,19 @@ class Home extends React.Component {
     deleteGame(user.id, gameId)
   }
 
+  createGames = games =>
+    games.map(game => ({
+      id: game,
+      name: game,
+      updated_date: '',
+      machine_quantity: 1,
+    }))
+
   render() {
     const { user, game } = this.props
     if (!user || !user.id) return <Redirect to="/" />
     if (game && game.id) return <Redirect to="/game" />
-    const { games } = this.state
+    const games = this.createGames(user.games)
     return (
       <div component_name="home" className="home-container">
         <Grid
