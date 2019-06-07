@@ -9,7 +9,7 @@ export const frameStackMiddleware = ({ dispatch }) => next => action => {
       dispatch(ac)
     })
     stack = []
-  } else if (action.body.stack) {
+  } else if (action.body && action.body.stack) {
     const newAction = action
     if (newAction.body && newAction.body.stack) {
       delete newAction.body.stack
