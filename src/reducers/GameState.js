@@ -8,6 +8,10 @@ import {
   DESELECT_MOVE_BLOCK,
   BUY_MACHINE,
   INCREMENT_CURRENCY,
+  NEW_GAME_SUCCESS,
+  NEW_GAME_FAILURE,
+  PLAY_GAME_SUCCESS,
+  PLAY_GAME_FAILURE,
 } from '../utils/actionTypes'
 import { SELECTION, EDITIONS } from '../utils/editionUtils'
 import { DEFAULT_CURRENCY } from '../utils/defaultValues'
@@ -17,7 +21,8 @@ const statuses = {
   PLAYING: 'PLAYING',
   EDITING: 'EDITING',
 }
-const initialState = {
+const gameState = {
+  id: null,
   status: statuses.PAUSED,
   machineSelected: null,
   moveSelectedNode: null,
@@ -63,6 +68,11 @@ const deselectMoveBlock = state => ({
   moveSelectedNode: null,
 })
 
+const startGame = (state, { id }) => ({
+  ...state,
+  id,
+})
+
 const ACTION_HANDLER_TYPES = {
   [PLAY_GAME]: playGame,
   [TICK]: nextTick,
@@ -73,9 +83,13 @@ const ACTION_HANDLER_TYPES = {
   [DESELECT_MOVE_BLOCK]: deselectMoveBlock,
   [BUY_MACHINE]: buyMachine,
   [INCREMENT_CURRENCY]: incrementCurrency,
+  [NEW_GAME_SUCCESS]: startGame,
+  [NEW_GAME_FAILURE]: startGame,
+  [PLAY_GAME_SUCCESS]: startGame,
+  [PLAY_GAME_FAILURE]: startGame,
 }
 
-export const GameState = (state = initialState, { type, body }) => {
+export const GameState = (state = gameState, { type, body }) => {
   const handler = ACTION_HANDLER_TYPES[type]
   return handler ? handler(state, body) : state
 }

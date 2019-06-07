@@ -1,0 +1,18 @@
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #243646;
+}
+
+.home-title {
+  color: white;
+}
+
+.home-margin {
+  margin: 1vw 1vh;
+}
+
+.home-table {
+  background-color: white;
+}
