@@ -17,14 +17,16 @@
     ]
   },
   "dependencies": {
-    "@material-ui/core": "^3.9.3",
+    "@material-ui/core": "^4.0.0-rc.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.2",
+    "react-router-dom": "^5.0.1",
     "react-router-redux": "^4.0.8",
     "react-scripts": "^2.1.8",
     "redux": "^4.0.1",
-    "redux-mock-store": "^1.5.3"
+    "redux-mock-store": "^1.5.3",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "precommit": "NODE_ENV=production lint-staged",
