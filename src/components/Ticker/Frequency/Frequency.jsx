@@ -15,6 +15,12 @@ class Frequency extends Component {
     this.setState({ timer: setInterval(tick, frequency) })
   }
 
+  componentWillReceiveProps({ onUpdate, ticks, user, game }) {
+    if (ticks % 30 === 0) {
+      onUpdate(user, game)
+    }
+  }
+
   componentWillUnmount() {
     const { timer } = this.state
     clearInterval(timer)

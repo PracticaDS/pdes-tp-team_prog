@@ -20,6 +20,7 @@ import {
   createDeleteGameRequest,
   createNewGameRequest,
   createPlayGameRequest,
+  createUpdateGameRequest,
 } from './utils'
 
 export const createStackAction = ({ type, body }) => ({
@@ -76,15 +77,15 @@ const newGameFailure = ({ id }) => ({
 export const newGame = userId => dispatch => {
   dispatch(newGameBegin(userId))
   return fetch(`${API_URL}/users/${userId}/games/`, createNewGameRequest())
-    .then(() => {
-      // .then(res => res.json())
-      // .then(({ result }) => {
-      //   dispatch(newGameSuccess(result))
-      dispatch(newGameSuccess({ id: userId }))
+    .then(res => res.json())
+    .then(({ result }) => {
+      const newResult = {
+        id: result._id,
+      }
+      dispatch(newGameSuccess(newResult))
     })
-    .catch(() => {
-      // dispatch(newGameFailure(err))
-      dispatch(newGameFailure({ id: userId }))
+    .catch(err => {
+      dispatch(newGameFailure(err))
     })
 }
 
@@ -106,7 +107,10 @@ export const playGame = (userId, gameId) => dispatch => {
   return fetch(`${API_URL}/users/${userId}/games/${gameId}`, createPlayGameRequest(gameId))
     .then(res => res.json())
     .then(({ result }) => {
-      dispatch(playGameSuccess(result))
+      const newResult = {
+        id: result._id,
+      }
+      dispatch(playGameSuccess(newResult))
     })
     .catch(err => {
       dispatch(playGameFailure(err))
@@ -131,9 +135,37 @@ export const deleteGame = (userId, gameId) => dispatch => {
   return fetch(`${API_URL}/users/${userId}/games/${gameId}`, createDeleteGameRequest(gameId))
     .then(res => res.json())
     .then(({ result }) => {
-      dispatch(deleteGameSuccess(result))
+      const newResult = {
+        id: result._id,
+      }
+      dispatch(deleteGameSuccess(newResult))
     })
     .catch(err => {
       dispatch(deleteGameFailure(err))
+    })
+}
+
+export const updateGameBegin = () => ({
+  type: DELETE_GAME_BEGIN,
+  body: {},
+})
+export const updateGameSuccess = result => ({
+  type: DELETE_GAME_SUCCESS,
+  body: { ...result },
+})
+export const updateGameFailure = result => ({
+  type: DELETE_GAME_FAILURE,
+  body: { ...result },
+})
+
+export const updateGame = (userId, game) => dispatch => {
+  dispatch(updateGameBegin(game))
+  return fetch(`${API_URL}/users/${userId}/games/${game.id}`, createUpdateGameRequest(game))
+    .then(res => res.json())
+    .then(({ result }) => {
+      dispatch(updateGameSuccess(result))
+    })
+    .catch(err => {
+      dispatch(updateGameFailure(err))
     })
 }

@@ -42,4 +42,13 @@ export const createDeleteGameRequest = () => ({
   },
 })
 
+export const createUpdateGameRequest = game => ({
+  method: 'PUT',
+  mode: 'cors',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(game),
+})
+
 export const API_URL = 'http://localhost:8080'
