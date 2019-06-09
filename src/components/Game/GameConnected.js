@@ -1,9 +1,9 @@
 import React from 'react'
+import { Redirect, withRouter } from 'react-router-dom'
 import Game from './Game'
 import GameConnector from './GameConnector'
 import FrequencyConnected from '../Ticker/Frequency/FrequencyConnected'
 import ResourcesBar from '../Resources/ResourcesConnected'
-// import { machineSelected } from '../../selectors/GameState'
 import LeftPanel from '../LeftPanel/LeftPanel'
 import FactoryGrid from '../FactoryGrid/FactoryGridConnected'
 import Detail from '../Detail/DetailConnected'
@@ -15,14 +15,19 @@ const renderLeftPanel = () => <LeftPanel />
 const renderFactoryGrid = () => <FactoryGrid />
 const renderDetail = machine => () => (machine ? <Detail /> : null)
 
-const game = ({ machineSelected }) => (
-  <Game
-    renderTicker={renderTicker}
-    renderResources={renderResources}
-    renderLeftPanel={renderLeftPanel}
-    renderFactoryGrid={renderFactoryGrid}
-    renderDetail={renderDetail(machineSelected)}
-  />
-)
+const game = ({ machineSelected, gameId }) => {
+  if (!gameId) {
+    return <Redirect to="/" />
+  }
+  return (
+    <Game
+      renderTicker={renderTicker}
+      renderResources={renderResources}
+      renderLeftPanel={renderLeftPanel}
+      renderFactoryGrid={renderFactoryGrid}
+      renderDetail={renderDetail(machineSelected)}
+    />
+  )
+}
 
-export default GameConnector(game)
+export default withRouter(GameConnector(game))

@@ -14,6 +14,9 @@ import {
   NEW_GAME_BEGIN,
   NEW_GAME_SUCCESS,
   NEW_GAME_FAILURE,
+  UPDATE_GAME_BEGIN,
+  UPDATE_GAME_SUCCESS,
+  UPDATE_GAME_FAILURE,
 } from '../utils/actionTypes'
 import {
   API_URL,
@@ -95,11 +98,11 @@ export const playGameBegin = () => ({
 })
 export const playGameSuccess = result => ({
   type: PLAY_GAME_SUCCESS,
-  body: { ...result },
+  body: result,
 })
 export const playGameFailure = result => ({
   type: PLAY_GAME_FAILURE,
-  body: { ...result },
+  body: result,
 })
 
 export const playGame = (userId, gameId) => dispatch => {
@@ -108,6 +111,7 @@ export const playGame = (userId, gameId) => dispatch => {
     .then(res => res.json())
     .then(({ result }) => {
       const newResult = {
+        ...result,
         id: result._id,
       }
       dispatch(playGameSuccess(newResult))
@@ -123,11 +127,11 @@ export const deleteGameBegin = () => ({
 })
 export const deleteGameSuccess = result => ({
   type: DELETE_GAME_SUCCESS,
-  body: { ...result },
+  body: result,
 })
 export const deleteGameFailure = result => ({
   type: DELETE_GAME_FAILURE,
-  body: { ...result },
+  body: result,
 })
 
 export const deleteGame = (userId, gameId) => dispatch => {
@@ -146,16 +150,16 @@ export const deleteGame = (userId, gameId) => dispatch => {
 }
 
 export const updateGameBegin = () => ({
-  type: DELETE_GAME_BEGIN,
+  type: UPDATE_GAME_BEGIN,
   body: {},
 })
 export const updateGameSuccess = result => ({
-  type: DELETE_GAME_SUCCESS,
-  body: { ...result },
+  type: UPDATE_GAME_SUCCESS,
+  body: result,
 })
 export const updateGameFailure = result => ({
-  type: DELETE_GAME_FAILURE,
-  body: { ...result },
+  type: UPDATE_GAME_FAILURE,
+  body: result,
 })
 
 export const updateGame = (userId, game) => dispatch => {

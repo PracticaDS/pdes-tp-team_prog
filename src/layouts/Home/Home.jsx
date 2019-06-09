@@ -33,9 +33,9 @@ class Home extends React.Component {
 
   createGames = games =>
     games.map(game => ({
-      id: game,
-      name: game,
-      updated_date: '',
+      id: game._id,
+      name: game._id,
+      updated_date: game.updated_at,
       machine_quantity: 1,
     }))
 
