@@ -4,5 +4,5 @@ export const constants = {
   name: 'Name',
   actions: 'Actions',
   updated_date: 'Updated Date',
-  machine_quantity: 'Machine Quantity',
+  current_currency: 'Currency',
 }
