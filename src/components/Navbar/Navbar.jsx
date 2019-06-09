@@ -25,8 +25,8 @@ const Navbar = ({ user, gameName }) => (
           </IconButton>
         </div>
         <Typography variant="h6" className="Title">
-          <font className="TitleFont">{`${WELCOME} ${user.username}`}</font>
-          <font className="TitleFont">{`- ${gameName}`}</font>
+          <font>{`${WELCOME} ${user.username} `}</font>
+          <font>{`- ${gameName}`}</font>
         </Typography>
       </Toolbar>
     </AppBar>
