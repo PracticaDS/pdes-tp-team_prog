@@ -9,6 +9,7 @@ import {
   INCREMENT_CURRENCY,
   NEW_GAME_SUCCESS,
   PLAY_GAME_SUCCESS,
+  CLEAN_GAME,
 } from '../utils/actionTypes'
 import { SELECTION, EDITIONS } from '../utils/editionUtils'
 import { DEFAULT_CURRENCY } from '../utils/defaultValues'
@@ -69,6 +70,8 @@ const startGame = (state, { id }) => ({
   id,
 })
 
+const cleanGame = () => gameState
+
 const playGame = (state, { id, currency }) => ({ ...state, id, currency })
 
 const ACTION_HANDLER_TYPES = {
@@ -82,6 +85,7 @@ const ACTION_HANDLER_TYPES = {
   [INCREMENT_CURRENCY]: incrementCurrency,
   [NEW_GAME_SUCCESS]: startGame,
   [PLAY_GAME_SUCCESS]: playGame,
+  [CLEAN_GAME]: cleanGame,
 }
 
 export const GameState = (state = gameState, { type, body }) => {
