@@ -1,12 +1,15 @@
 import { connect } from 'react-redux'
 import { tick, updateGame } from '../../../actions/GameState'
-import { gameState, getTick } from '../../../selectors/GameState'
+import { gameStateId, getCurrency, getTick } from '../../../selectors/GameState'
 import { getUser } from '../../../selectors/User'
+import { getGrid } from '../../../selectors/Grid'
 
 const connector = Frequency => {
   const mapStateToProps = state => ({
     ticks: getTick(state),
-    game: gameState(state),
+    gameId: gameStateId(state),
+    currency: getCurrency(state),
+    grid: getGrid(state),
     user: getUser(state),
   })
   const mapDispatchToProps = dispatch => ({
