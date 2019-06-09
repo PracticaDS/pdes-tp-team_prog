@@ -12,9 +12,12 @@ const DEFAULT = 'DEFAULT'
 
 const renderNode = node => {
   const { machine, items } = node
-  const keys = Object.keys(items)
-  const materialImg =
-    keys.length === 1 ? materialsImg[keys[0]] : keys.length > 1 ? materialsImg[DEFAULT] : null
+  let materialImg = null
+  if (items) {
+    const keys = Object.keys(items)
+    materialImg =
+      keys.length === 1 ? materialsImg[keys[0]] : keys.length > 1 ? materialsImg[DEFAULT] : null
+  }
   const MachineNode = machineByType[machine.type]
   return (
     <div className="Node">

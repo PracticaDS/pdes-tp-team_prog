@@ -1,5 +1,4 @@
 import {
-  PLAY_GAME,
   TICK,
   RESTART_CURRENCY,
   SELECT_MACHINE,
@@ -30,7 +29,6 @@ const gameState = {
   tick: 0,
 }
 
-const playGame = state => ({ ...state, status: statuses.PLAYING })
 const changeActionSelected = (state, { actionType }) => ({
   ...state,
   actionSelected: actionType,
@@ -71,8 +69,9 @@ const startGame = (state, { id }) => ({
   id,
 })
 
+const playGame = (state, { id, currency }) => ({ ...state, id, currency })
+
 const ACTION_HANDLER_TYPES = {
-  [PLAY_GAME]: playGame,
   [TICK]: nextTick,
   [RESTART_CURRENCY]: restartCurrency,
   [SELECT_MACHINE]: changeMachineSelected,
@@ -82,7 +81,7 @@ const ACTION_HANDLER_TYPES = {
   [BUY_MACHINE]: buyMachine,
   [INCREMENT_CURRENCY]: incrementCurrency,
   [NEW_GAME_SUCCESS]: startGame,
-  [PLAY_GAME_SUCCESS]: startGame,
+  [PLAY_GAME_SUCCESS]: playGame,
 }
 
 export const GameState = (state = gameState, { type, body }) => {
