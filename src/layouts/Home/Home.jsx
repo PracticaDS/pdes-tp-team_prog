@@ -36,7 +36,7 @@ class Home extends React.Component {
       id: game._id,
       name: game._id,
       updated_date: game.updated_at,
-      machine_quantity: 1,
+      current_currency: game.currency,
     }))
 
   render() {
@@ -82,7 +82,7 @@ class Home extends React.Component {
                 <TableRow>
                   <TableCell align="center">{constants.name}</TableCell>
                   <TableCell align="center">{constants.updated_date}</TableCell>
-                  <TableCell align="center">{constants.machine_quantity}</TableCell>
+                  <TableCell align="center">{constants.current_currency}</TableCell>
                   <TableCell align="center">{constants.actions}</TableCell>
                 </TableRow>
               </TableHead>
@@ -91,7 +91,7 @@ class Home extends React.Component {
                   <TableRow key={gm.id}>
                     <TableCell align="center">{gm.name}</TableCell>
                     <TableCell align="center">{gm.updated_date}</TableCell>
-                    <TableCell align="center">{gm.machine_quantity}</TableCell>
+                    <TableCell align="center">{gm.current_currency}</TableCell>
                     <TableCell className="buttons" align="center">
                       <Button variant="contained" color="secondary">
                         <PlayArrow onClick={() => this.onClickPlay(gm.id)} />
