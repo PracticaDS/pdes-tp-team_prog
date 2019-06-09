@@ -27,6 +27,11 @@ class Login extends React.Component {
     login({ username: input })
   }
 
+  isDisabled = () => {
+    const { input } = this.state
+    return input === ''
+  }
+
   render() {
     const { user } = this.props
     if (user && user.id) return <Redirect to="/home" />
@@ -57,7 +62,13 @@ class Login extends React.Component {
               />
             </Grid>
             <Grid item xs={6}>
-              <Button variant="contained" size="large" fullWidth onClick={this.onClick}>
+              <Button
+                disabled={this.isDisabled()}
+                variant="contained"
+                size="large"
+                fullWidth
+                onClick={this.onClick}
+              >
                 {constants.button}
               </Button>
             </Grid>
