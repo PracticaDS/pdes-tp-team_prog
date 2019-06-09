@@ -21,11 +21,15 @@ class Login extends React.Component {
   }
 
   onClick = () => {
-    // const { history } = this.props
     const { login } = this.props
     const { input } = this.state
 
     login({ username: input })
+  }
+
+  isDisabled = () => {
+    const { input } = this.state
+    return input === ''
   }
 
   render() {
@@ -45,7 +49,7 @@ class Login extends React.Component {
               {constants.title}
             </Typography>
           </Grid>
-          <Grid item xs={6} container direction="row" alignItems="center" spacing={1}>
+          <Grid item xs={6} container direction="column" alignItems="center" spacing={1}>
             <Grid item xs={6}>
               <TextField
                 className="login-input"
@@ -58,7 +62,13 @@ class Login extends React.Component {
               />
             </Grid>
             <Grid item xs={6}>
-              <Button variant="contained" size="large" fullWidth onClick={this.onClick}>
+              <Button
+                disabled={this.isDisabled()}
+                variant="contained"
+                size="large"
+                fullWidth
+                onClick={this.onClick}
+              >
                 {constants.button}
               </Button>
             </Grid>
