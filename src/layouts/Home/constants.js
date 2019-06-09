@@ -1,7 +1,8 @@
 export const constants = {
   title: name => `Hi ${name}! These are your factories`,
-  create: 'Create',
+  create: 'New game',
   name: 'Name',
+  actions: 'Actions',
   updated_date: 'Updated Date',
   machine_quantity: 'Machine Quantity',
 }
