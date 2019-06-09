@@ -3,12 +3,14 @@ import './Game.css'
 
 const Game = ({
   renderTicker,
+  renderNavBar,
   renderResources,
   renderLeftPanel,
   renderDetail,
   renderFactoryGrid,
 }) => (
   <div className="gameMainContainer">
+    {renderNavBar()} {/* TODO: when the game has a name, show it */}
     {renderTicker()}
     {renderResources()}
     <div className="HorizontalGameParts">
