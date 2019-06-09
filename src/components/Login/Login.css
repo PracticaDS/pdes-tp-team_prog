@@ -10,9 +10,14 @@
 }
 
 .login-content {
+  height: 20rem;
+  width: 20rem;
+  display: flex;
   margin: 1vw 1vh;
 }
 
 .login-input {
+  display: flex;
+  font-weight: bold;
   background-color: white;
 }

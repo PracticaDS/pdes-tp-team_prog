@@ -21,7 +21,6 @@ class Login extends React.Component {
   }
 
   onClick = () => {
-    // const { history } = this.props
     const { login } = this.props
     const { input } = this.state
 
@@ -45,7 +44,7 @@ class Login extends React.Component {
               {constants.title}
             </Typography>
           </Grid>
-          <Grid item xs={6} container direction="row" alignItems="center" spacing={1}>
+          <Grid item xs={6} container direction="column" alignItems="center" spacing={1}>
             <Grid item xs={6}>
               <TextField
                 className="login-input"
