@@ -9,10 +9,20 @@
   color: white;
 }
 
+.new-game-button {
+  margin-top: 1rem !important;
+}
+
 .home-margin {
-  margin: 1vw 1vh;
+  margin: 1vw 0vh;
 }
 
 .home-table {
   background-color: white;
+}
+
+.buttons {
+  display: flex !important;
+  justify-content: space-around;
+  flex-direction: row;
 }

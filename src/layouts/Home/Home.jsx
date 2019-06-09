@@ -53,14 +53,25 @@ class Home extends React.Component {
           justify="center"
           alignItems="center"
         >
-          <Grid className="home-margin" container direction="row" alignItems="center" spacing={1}>
+          <Grid
+            className="home-margin"
+            container
+            direction="column"
+            alignItems="center"
+            spacing={1}
+          >
             <Grid item xs={6}>
               <Typography className="home-title" align="center" variant="h5">
                 {constants.title(user.username)}
               </Typography>
             </Grid>
             <Grid item xs={3}>
-              <Button variant="contained" size="large" fullWidth onClick={this.onClickNew}>
+              <Button
+                className="new-game-button"
+                variant="contained"
+                size="large"
+                onClick={this.onClickNew}
+              >
                 {constants.create}
               </Button>
             </Grid>
@@ -72,7 +83,7 @@ class Home extends React.Component {
                   <TableCell align="center">{constants.name}</TableCell>
                   <TableCell align="center">{constants.updated_date}</TableCell>
                   <TableCell align="center">{constants.machine_quantity}</TableCell>
-                  <TableCell align="center" />
+                  <TableCell align="center">{constants.actions}</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -81,7 +92,7 @@ class Home extends React.Component {
                     <TableCell align="center">{gm.name}</TableCell>
                     <TableCell align="center">{gm.updated_date}</TableCell>
                     <TableCell align="center">{gm.machine_quantity}</TableCell>
-                    <TableCell align="center">
+                    <TableCell className="buttons" align="center">
                       <Button variant="contained" color="secondary">
                         <PlayArrow onClick={() => this.onClickPlay(gm.id)} />
                       </Button>
