@@ -12,13 +12,14 @@ import {
 import { Delete, PlayArrow } from '@material-ui/icons'
 import { Redirect, withRouter } from 'react-router-dom'
 import connector from './HomeConnector'
+import CreateGame from './CreateGame'
 import { constants } from './constants'
 import './Home.css'
 
 class Home extends React.Component {
-  onClickNew = () => {
+  onClickNew = game => {
     const { user, newGame } = this.props
-    newGame(user.id)
+    newGame(user.id, game)
   }
 
   onClickPlay = gameId => {
@@ -34,7 +35,7 @@ class Home extends React.Component {
   createGames = games =>
     games.map(game => ({
       id: game._id,
-      name: game._id,
+      name: game.name,
       updated_date: game.updated_at,
       current_currency: game.currency,
     }))
@@ -66,14 +67,7 @@ class Home extends React.Component {
               </Typography>
             </Grid>
             <Grid item xs={3}>
-              <Button
-                className="new-game-button"
-                variant="contained"
-                size="large"
-                onClick={this.onClickNew}
-              >
-                {constants.create}
-              </Button>
+              <CreateGame onCreate={this.onClickNew} />
             </Grid>
           </Grid>
           <Grid className="home-margin" container direction="row" alignItems="center">

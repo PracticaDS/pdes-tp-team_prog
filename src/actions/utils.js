@@ -18,12 +18,13 @@ export const createUserRequest = user => ({
   body: JSON.stringify(user), // body data type must match "Content-Type" header
 })
 
-export const createNewGameRequest = () => ({
+export const createNewGameRequest = game => ({
   method: 'POST',
   mode: 'cors',
   headers: {
     'Content-Type': 'application/json',
   },
+  body: JSON.stringify(game),
 })
 
 export const createPlayGameRequest = () => ({

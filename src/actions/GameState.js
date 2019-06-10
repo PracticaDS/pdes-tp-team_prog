@@ -77,9 +77,9 @@ const newGameFailure = ({ id }) => ({
   body: { id },
 })
 
-export const newGame = userId => dispatch => {
+export const newGame = (userId, game) => dispatch => {
   dispatch(newGameBegin(userId))
-  return fetch(`${API_URL}/users/${userId}/games/`, createNewGameRequest())
+  return fetch(`${API_URL}/users/${userId}/games/`, createNewGameRequest(game))
     .then(res => res.json())
     .then(({ result }) => {
       const newResult = {
