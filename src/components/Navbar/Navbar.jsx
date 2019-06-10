@@ -4,12 +4,28 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import IconButton from '@material-ui/core/IconButton'
 import AccountCircle from '@material-ui/icons/AccountCircle'
+import ScheduleIcon from '@material-ui/icons/Schedule'
+import MailIcon from '@material-ui/icons/Email'
+import Reporticon from '@material-ui/icons/Report'
 
 import './Navbar.css'
 
 const WELCOME = 'Welcome'
+const STATUS = {
+  success: 'Game saved!',
+  error: 'Game not saved!',
+  default: 'No actions',
+  currentStatus: 'Current Save: ',
+}
 
-const Navbar = ({ user, gameName, onClick }) => (
+const renderIcon = saveStatus => (
+  // <ScheduleIcon className="Idle" />
+  //         <MailIcon className="Saved" />
+  //         <Reporticon className="Error" />
+  <MailIcon className="Saved" />
+)
+
+const Navbar = ({ user, gameName, onClick, renderSave }) => (
   <div className="Navbar">
     <AppBar className="Navbar" position="static">
       <Toolbar>
@@ -27,6 +43,12 @@ const Navbar = ({ user, gameName, onClick }) => (
           <font>{`${WELCOME} ${user.username} `}</font>
           <font>{`- ${gameName}`}</font>
         </Typography>
+        <div className="Status">
+          <Typography className="GameSaveTitle" variant="h7">
+            <font>{`${STATUS.currentStatus}`}</font>
+          </Typography>
+          {renderIcon(renderSave)}
+        </div>
       </Toolbar>
     </AppBar>
   </div>
