@@ -29,9 +29,6 @@ export const sellerMachine = {
   price: 1000,
   frequency: 1,
   direction: DOWN,
-  process: (materials, func) => {
-    func(null, materials, { name: 'currency' })
-  },
 }
 
 export const crafterMachine = {
