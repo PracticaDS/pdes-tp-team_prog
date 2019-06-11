@@ -11,6 +11,7 @@ describe('Game Suite', () => {
       renderMock = jest.fn()
       game = mount(
         <Game
+          renderNavBar={renderMock}
           renderTicker={renderMock}
           renderResources={renderMock}
           renderLeftPanel={renderMock}
@@ -23,8 +24,8 @@ describe('Game Suite', () => {
     it('Should be defined', () => {
       expect(game).toBeDefined()
     })
-    it('should call the render function 5 times', () => {
-      expect(renderMock.mock.calls.length).toBe(5)
+    it('should call the render function 6 times', () => {
+      expect(renderMock.mock.calls.length).toBe(6)
     })
   })
 })
