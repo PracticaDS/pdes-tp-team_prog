@@ -17,6 +17,7 @@ import {
   UPDATE_GAME_BEGIN,
   UPDATE_GAME_SUCCESS,
   UPDATE_GAME_FAILURE,
+  CLEAN_GAME,
 } from '../utils/actionTypes'
 import {
   API_URL,
@@ -77,9 +78,9 @@ const newGameFailure = ({ id }) => ({
   body: { id },
 })
 
-export const newGame = userId => dispatch => {
+export const newGame = (userId, game) => dispatch => {
   dispatch(newGameBegin(userId))
-  return fetch(`${API_URL}/users/${userId}/games/`, createNewGameRequest())
+  return fetch(`${API_URL}/users/${userId}/games/`, createNewGameRequest(game))
     .then(res => res.json())
     .then(({ result }) => {
       const newResult = {
@@ -160,6 +161,11 @@ export const updateGameSuccess = result => ({
 export const updateGameFailure = result => ({
   type: UPDATE_GAME_FAILURE,
   body: result,
+})
+
+export const cleanGame = () => ({
+  type: CLEAN_GAME,
+  body: {},
 })
 
 export const updateGame = (userId, game) => dispatch => {

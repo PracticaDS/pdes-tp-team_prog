@@ -9,6 +9,10 @@ import {
   INCREMENT_CURRENCY,
   NEW_GAME_SUCCESS,
   PLAY_GAME_SUCCESS,
+  CLEAN_GAME,
+  UPDATE_GAME_BEGIN,
+  UPDATE_GAME_SUCCESS,
+  UPDATE_GAME_FAILURE,
 } from '../utils/actionTypes'
 import { SELECTION, EDITIONS } from '../utils/editionUtils'
 import { DEFAULT_CURRENCY } from '../utils/defaultValues'
@@ -18,11 +22,19 @@ const statuses = {
   PLAYING: 'PLAYING',
   EDITING: 'EDITING',
 }
+
+export const saveStatuses = {
+  WAITING: 'WAITING',
+  SUCCESS: 'SUCCESS',
+  FAILURE: 'FAILURE',
+}
+
 const gameState = {
   id: null,
   status: statuses.PAUSED,
   machineSelected: null,
   moveSelectedNode: null,
+  saveState: saveStatuses.WAITING,
   actionSelected: SELECTION,
   currency: DEFAULT_CURRENCY,
   machineTypeSelected: '',
@@ -69,7 +81,13 @@ const startGame = (state, { id }) => ({
   id,
 })
 
+const cleanGame = () => gameState
+
 const playGame = (state, { id, currency }) => ({ ...state, id, currency })
+
+const saveBegin = state => ({ ...state, saveState: saveStatuses.WAITING })
+const saveFailure = state => ({ ...state, saveState: saveStatuses.FAILURE })
+const saveSuccess = state => ({ ...state, saveState: saveStatuses.SUCCESS })
 
 const ACTION_HANDLER_TYPES = {
   [TICK]: nextTick,
@@ -82,6 +100,10 @@ const ACTION_HANDLER_TYPES = {
   [INCREMENT_CURRENCY]: incrementCurrency,
   [NEW_GAME_SUCCESS]: startGame,
   [PLAY_GAME_SUCCESS]: playGame,
+  [CLEAN_GAME]: cleanGame,
+  [UPDATE_GAME_BEGIN]: saveBegin,
+  [UPDATE_GAME_SUCCESS]: saveSuccess,
+  [UPDATE_GAME_FAILURE]: saveFailure,
 }
 
 export const GameState = (state = gameState, { type, body }) => {

@@ -1,0 +1,32 @@
+.Navbar {
+  background: #2e7ead !important;
+}
+
+.Title {
+  color: white;
+}
+
+.Status {
+  display: flex !important;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  right: 0;
+  margin-right: 1rem;
+}
+
+.Idle {
+  color: rgb(200, 233, 125);
+}
+
+.Saved {
+  color: rgb(150, 216, 52);
+}
+
+.Error {
+  color: rgb(230, 107, 107);
+}
+
+.GameSaveTitle {
+  margin-right: 0.5rem !important;
+}

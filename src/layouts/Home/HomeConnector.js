@@ -9,7 +9,7 @@ const connector = Home => {
     game: gameState(state),
   })
   const mapDispatchToProps = dispatch => ({
-    newGame: userId => dispatch(newGame(userId)),
+    newGame: (userId, game) => dispatch(newGame(userId, game)),
     playGame: (userId, gameId) => dispatch(playGame(userId, gameId)),
     deleteGame: (userId, gameId) => dispatch(deleteGame(userId, gameId)),
   })
