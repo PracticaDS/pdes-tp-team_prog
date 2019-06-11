@@ -4,6 +4,7 @@ import {
   LOGIN_BEGIN,
   LOGIN_FAILURE,
   LOGIN_SUCCESS,
+  NEW_GAME_SUCCESS,
 } from '../utils/actionTypes'
 
 const userState = {
@@ -30,12 +31,18 @@ const deleteGame = (state, { id }) => ({
   games: state.games.filter(g => g._id !== id),
 })
 
+const addGame = (state, game) => ({
+  ...state,
+  games: [...state.games, game],
+})
+
 const ACTION_HANDLER_TYPES = {
   [LOGIN_BEGIN]: loginBegin,
   [LOGIN_SUCCESS]: loginSuccess,
   [LOGIN_FAILURE]: loginFailure,
   [DELETE_GAME_SUCCESS]: deleteGame,
   [DELETE_GAME_FAILURE]: deleteGame,
+  [NEW_GAME_SUCCESS]: addGame,
 }
 
 export const User = (state = userState, { type, body }) => {
