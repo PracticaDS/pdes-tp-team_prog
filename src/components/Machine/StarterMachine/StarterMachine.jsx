@@ -8,9 +8,14 @@ import MachineWithSelector from '../MachineWithSelector/MachineWithSelector'
 class StarterMachine extends Component {
   updateSelection = materialSelected => {
     const { selectMachine } = this.props
+    const copyMaterialSelected = { ...materialSelected }
+    delete copyMaterialSelected.image
     selectMachine({
       ...machine,
-      metadata: { selectedMaterial: materialSelected, availableMaterials: [materialSelected] },
+      metadata: {
+        selectedMaterial: copyMaterialSelected,
+        availableMaterials: [copyMaterialSelected],
+      },
     })
   }
 
