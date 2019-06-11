@@ -1,12 +1,12 @@
 import { connect } from 'react-redux'
 import { getUser } from '../../selectors/User'
 import { cleanGame } from '../../actions/GameState'
-import { currentSaveState } from '../../selectors/GameState'
+import { currentSaveState, currentGameName } from '../../selectors/GameState'
 
 const connector = Navbar => {
   const mapStateToProps = state => ({
     user: getUser(state),
-    gameName: 'Game name',
+    gameName: currentGameName(state),
     saveState: currentSaveState(state),
   })
 

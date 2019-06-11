@@ -31,6 +31,7 @@ export const saveStatuses = {
 
 const gameState = {
   id: null,
+  name: '',
   status: statuses.PAUSED,
   machineSelected: null,
   moveSelectedNode: null,
@@ -76,14 +77,15 @@ const deselectMoveBlock = state => ({
   moveSelectedNode: null,
 })
 
-const startGame = (state, { id }) => ({
+const startGame = (state, { id, name }) => ({
   ...state,
+  name: name || '',
   id,
 })
 
 const cleanGame = () => gameState
 
-const playGame = (state, { id, currency }) => ({ ...state, id, currency })
+const playGame = (state, { id, currency, name }) => ({ ...state, name: name || '', id, currency })
 
 const saveBegin = state => ({ ...state, saveState: saveStatuses.WAITING })
 const saveFailure = state => ({ ...state, saveState: saveStatuses.FAILURE })
