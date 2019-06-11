@@ -69,9 +69,9 @@ const newGameBegin = () => ({
   type: NEW_GAME_BEGIN,
   body: {},
 })
-const newGameSuccess = ({ id }) => ({
+const newGameSuccess = result => ({
   type: NEW_GAME_SUCCESS,
-  body: { id },
+  body: result,
 })
 const newGameFailure = ({ id }) => ({
   type: NEW_GAME_FAILURE,
@@ -84,6 +84,7 @@ export const newGame = (userId, game) => dispatch => {
     .then(res => res.json())
     .then(({ result }) => {
       const newResult = {
+        ...result,
         id: result._id,
       }
       dispatch(newGameSuccess(newResult))
