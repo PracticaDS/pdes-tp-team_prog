@@ -139,10 +139,9 @@ export const deleteGameFailure = result => ({
 export const deleteGame = (userId, gameId) => dispatch => {
   dispatch(deleteGameBegin(gameId))
   return fetch(`${API_URL}/users/${userId}/games/${gameId}`, createDeleteGameRequest(gameId))
-    .then(res => res.json())
-    .then(({ result }) => {
+    .then(() => {
       const newResult = {
-        id: result._id,
+        id: gameId,
       }
       dispatch(deleteGameSuccess(newResult))
     })
