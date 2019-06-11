@@ -18,14 +18,13 @@ const STATUS = {
   currentStatus: 'Current Save: ',
 }
 
-const renderIcon = saveStatus => (
-  // <ScheduleIcon className="Idle" />
-  //         <MailIcon className="Saved" />
-  //         <Reporticon className="Error" />
-  <MailIcon className="Saved" />
-)
+const renderIcon = {
+  WAITING: <ScheduleIcon className="Idle" />,
+  SUCCESS: <MailIcon className="Saved" />,
+  FAILURE: <Reporticon className="Error" />,
+}
 
-const Navbar = ({ user, gameName, onClick, renderSave }) => (
+const Navbar = ({ user, gameName, onClick, saveState }) => (
   <div className="Navbar">
     <AppBar className="Navbar" position="static">
       <Toolbar>
@@ -47,7 +46,7 @@ const Navbar = ({ user, gameName, onClick, renderSave }) => (
           <Typography className="GameSaveTitle" variant="h7">
             <font>{`${STATUS.currentStatus}`}</font>
           </Typography>
-          {renderIcon(renderSave)}
+          {renderIcon[saveState]}
         </div>
       </Toolbar>
     </AppBar>

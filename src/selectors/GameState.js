@@ -6,3 +6,4 @@ export const getTick = state => gameState(state).tick
 export const moveSelectedNode = state => gameState(state).moveSelectedNode
 export const machineTypeSelected = state => gameState(state).machineTypeSelected
 export const gameStateId = state => state.GameState.id
+export const currentSaveState = state => gameState(state).saveState
