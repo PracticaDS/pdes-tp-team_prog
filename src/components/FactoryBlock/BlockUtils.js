@@ -10,10 +10,10 @@ export const isSelectedInMoveAction = (position, moveSelectedNode) =>
   moveSelectedNode && areSamePosition(moveSelectedNode.position, position)
 
 export const actionHandler = {
-  [DELETE]: ({ deleteBlock, position }) => deleteBlock(position),
-  [SELECTION]: ({ node, updateBlock, position, machineSelected, currency }) => {
+  [DELETE]: ({ node, deleteBlock }) => deleteBlock(node.position),
+  [SELECTION]: ({ node, machineSelected, currency, updateBlock }) => {
     if (machineSelected && isEmptyNode(node)) {
-      updateBlock(position, machineSelected, currency)
+      updateBlock(node.position, machineSelected, currency)
     }
   },
   [ROTATE]: ({ node, rotateBlock }) => {
@@ -21,13 +21,16 @@ export const actionHandler = {
       rotateBlock(node.position)
     }
   },
-  [MOVE]: ({ moveBlock, selectMoveBlock, position, node, moveSelectedNode }) =>
-    moveSelectedNode && !areSamePosition(moveSelectedNode.position, position)
-      ? moveBlock(moveSelectedNode, position)
+  [MOVE]: ({ node, moveSelectedNode, moveBlock, selectMoveBlock }) =>
+    moveSelectedNode && !areSamePosition(moveSelectedNode.position, node.position)
+      ? moveBlock(moveSelectedNode, node.position)
       : selectMoveBlock(node),
 }
 
-export const displayAction = props =>
-  actionHandler[props.actionSelected] ? actionHandler[props.actionSelected](props) : null
+export const displayAction = props => {
+  if (actionHandler[props.actionSelected]) {
+    actionHandler[props.actionSelected](props)
+  }
+}
 
 export const getDirection = node => node.machine.direction

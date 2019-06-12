@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
 import {
-  machineSelected,
   actionSelected,
   moveSelectedNode,
   getCurrency,
+  machineSelected,
 } from '../../selectors/GameState'
 import { selectMachineNode } from '../../selectors/Grid'
 import {
@@ -17,7 +17,7 @@ import {
   deselectMoveBlock as actionDeselectMove,
   buyMachine as actionBuyMachine,
 } from '../../actions/GameState'
-import { actionHandler, getDirection, isEmptyNode, isSelectedInMoveAction } from './BlockUtils'
+import { getDirection, isEmptyNode, isSelectedInMoveAction } from './BlockUtils'
 
 const connector = Block => {
   const mapStateToProps = (state, props) => ({
@@ -25,18 +25,10 @@ const connector = Block => {
     isSelected: isSelectedInMoveAction(props.position, moveSelectedNode(state)),
     isEmptyBlock: isEmptyNode(selectMachineNode(state, props.position)),
     directionToRotate: getDirection(selectMachineNode(state, props.position)),
-    displayAction: (position, blockActions) => {
-      if (actionSelected(state)) {
-        actionHandler[actionSelected(state)]({
-          position,
-          machineSelected: machineSelected(state),
-          node: selectMachineNode(state, position),
-          moveSelectedNode: moveSelectedNode(state),
-          currency: getCurrency(state),
-          ...blockActions,
-        })
-      }
-    },
+    moveSelectedNode: moveSelectedNode(state),
+    actionSelected: actionSelected(state),
+    currency: getCurrency(state),
+    machineSelected: machineSelected(state),
   })
   const mapDispatchToProps = dispatch => ({
     blockActions: {

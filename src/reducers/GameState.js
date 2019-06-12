@@ -1,5 +1,4 @@
 import {
-  PLAY_GAME,
   TICK,
   RESTART_CURRENCY,
   SELECT_MACHINE,
@@ -8,6 +7,12 @@ import {
   DESELECT_MOVE_BLOCK,
   BUY_MACHINE,
   INCREMENT_CURRENCY,
+  NEW_GAME_SUCCESS,
+  PLAY_GAME_SUCCESS,
+  CLEAN_GAME,
+  UPDATE_GAME_BEGIN,
+  UPDATE_GAME_SUCCESS,
+  UPDATE_GAME_FAILURE,
 } from '../utils/actionTypes'
 import { SELECTION, EDITIONS } from '../utils/editionUtils'
 import { DEFAULT_CURRENCY } from '../utils/defaultValues'
@@ -17,17 +22,26 @@ const statuses = {
   PLAYING: 'PLAYING',
   EDITING: 'EDITING',
 }
-const initialState = {
+
+export const saveStatuses = {
+  WAITING: 'WAITING',
+  SUCCESS: 'SUCCESS',
+  FAILURE: 'FAILURE',
+}
+
+const gameState = {
+  id: null,
+  name: '',
   status: statuses.PAUSED,
   machineSelected: null,
   moveSelectedNode: null,
+  saveState: saveStatuses.WAITING,
   actionSelected: SELECTION,
   currency: DEFAULT_CURRENCY,
   machineTypeSelected: '',
   tick: 0,
 }
 
-const playGame = state => ({ ...state, status: statuses.PLAYING })
 const changeActionSelected = (state, { actionType }) => ({
   ...state,
   actionSelected: actionType,
@@ -63,8 +77,21 @@ const deselectMoveBlock = state => ({
   moveSelectedNode: null,
 })
 
+const startGame = (state, { id, name }) => ({
+  ...state,
+  name: name || '',
+  id,
+})
+
+const cleanGame = () => gameState
+
+const playGame = (state, { id, currency, name }) => ({ ...state, name: name || '', id, currency })
+
+const saveBegin = state => ({ ...state, saveState: saveStatuses.WAITING })
+const saveFailure = state => ({ ...state, saveState: saveStatuses.FAILURE })
+const saveSuccess = state => ({ ...state, saveState: saveStatuses.SUCCESS })
+
 const ACTION_HANDLER_TYPES = {
-  [PLAY_GAME]: playGame,
   [TICK]: nextTick,
   [RESTART_CURRENCY]: restartCurrency,
   [SELECT_MACHINE]: changeMachineSelected,
@@ -73,9 +100,15 @@ const ACTION_HANDLER_TYPES = {
   [DESELECT_MOVE_BLOCK]: deselectMoveBlock,
   [BUY_MACHINE]: buyMachine,
   [INCREMENT_CURRENCY]: incrementCurrency,
+  [NEW_GAME_SUCCESS]: startGame,
+  [PLAY_GAME_SUCCESS]: playGame,
+  [CLEAN_GAME]: cleanGame,
+  [UPDATE_GAME_BEGIN]: saveBegin,
+  [UPDATE_GAME_SUCCESS]: saveSuccess,
+  [UPDATE_GAME_FAILURE]: saveFailure,
 }
 
-export const GameState = (state = initialState, { type, body }) => {
+export const GameState = (state = gameState, { type, body }) => {
   const handler = ACTION_HANDLER_TYPES[type]
   return handler ? handler(state, body) : state
 }

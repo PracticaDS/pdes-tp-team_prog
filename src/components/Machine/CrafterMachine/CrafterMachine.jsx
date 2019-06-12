@@ -2,15 +2,20 @@ import React, { Component } from 'react'
 import { Button } from '@material-ui/core'
 import '../Machine.css'
 import './CrafterMachine.css'
-import { crafterMachine as machine } from '../../Game/Game.constants'
+import { crafterMachine as machine } from '../../Game/machine.constants'
 import MachineWithSelector from '../MachineWithSelector/MachineWithSelector'
 
 class CrafterMachine extends Component {
   updateSelection = recipeSelected => {
     const { selectMachine } = this.props
+    const copyRecipeSelected = JSON.parse(JSON.stringify(recipeSelected))
+    copyRecipeSelected.necessaryMaterials.forEach(elem => {
+      delete elem.material.image
+    })
+    delete copyRecipeSelected.result.material.image
     selectMachine({
       ...machine,
-      metadata: { recipeSelected, availableRecipes: [recipeSelected] },
+      metadata: { recipeSelected: copyRecipeSelected, availableRecipes: [copyRecipeSelected] },
     })
   }
 

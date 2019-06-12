@@ -7,6 +7,9 @@ import {
   DELETE_ITEMS,
   MOVE_BLOCK,
   ROTATE_BLOCK,
+  PLAY_GAME_SUCCESS,
+  CLEAN_GAME,
+  NEW_GAME_SUCCESS,
 } from '../utils/actionTypes'
 import { Empty } from '../utils/machineUtils'
 import { generateEmptyGrid } from '../utils/gridUtils'
@@ -26,6 +29,11 @@ const initialState = {
   dimensions: DEFAULT_DIMENSIONS,
   gridValues: generateEmptyGrid(10, 10),
 }
+
+const createInitialState = () => ({
+  dimensions: DEFAULT_DIMENSIONS,
+  gridValues: generateEmptyGrid(10, 10),
+})
 
 const modifyBlock = (gridValues, { row, column }, func) => {
   const oldGridValues = gridValues
@@ -149,6 +157,16 @@ const rotateBlock = (state, { position }) => ({
   gridValues: modifyBlock(state.gridValues, position, rotatePositionOfBlock),
 })
 
+const playGame = (state, { factory: { dimensions, gridValues } }) => ({
+  ...state,
+  dimensions,
+  gridValues,
+})
+
+const cleanGame = () => createInitialState()
+
+const startGame = () => createInitialState()
+
 const ACTION_HANDLER_TYPES = {
   [UPDATE_BLOCK]: updateBlock,
   [DELETE_BLOCK]: deleteBlock,
@@ -157,6 +175,9 @@ const ACTION_HANDLER_TYPES = {
   [DELETE_ITEMS]: deleteItems,
   [MOVE_BLOCK]: moveSelectBlock,
   [ROTATE_BLOCK]: rotateBlock,
+  [NEW_GAME_SUCCESS]: startGame,
+  [PLAY_GAME_SUCCESS]: playGame,
+  [CLEAN_GAME]: cleanGame,
 }
 
 export const Grid = (state = initialState, { type, body }) => {

@@ -1,11 +1,12 @@
 import { connect } from 'react-redux'
 import { playGame } from '../../actions/GameState'
 import { restartCurrency } from '../../actions/Currency'
-import { machineSelected } from '../../selectors/GameState'
+import { gameStateId, machineSelected } from '../../selectors/GameState'
 
 const connector = Game => {
   const mapStateToProps = state => ({
     machineSelected: machineSelected(state),
+    gameId: gameStateId(state),
   })
   const mapDispatchToProps = dispatch => ({
     restartCurrency: () => dispatch(restartCurrency()),

@@ -15,6 +15,13 @@ class Frequency extends Component {
     this.setState({ timer: setInterval(tick, frequency) })
   }
 
+  componentWillReceiveProps({ onUpdate, ticks: nextTick, user, gameId, currency, grid }) {
+    const { ticks } = this.props
+    if (nextTick !== ticks && ticks % 15 === 0) {
+      onUpdate(user, { id: gameId, currency, factory: grid })
+    }
+  }
+
   componentWillUnmount() {
     const { timer } = this.state
     clearInterval(timer)

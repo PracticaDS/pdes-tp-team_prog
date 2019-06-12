@@ -1,0 +1,23 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #243646;
+}
+
+.login-title {
+  color: white;
+}
+
+.login-content {
+  height: 20rem;
+  width: 20rem;
+  display: flex;
+  margin: 1vw 1vh;
+}
+
+.login-input {
+  display: flex;
+  font-weight: bold;
+  background-color: white;
+}
