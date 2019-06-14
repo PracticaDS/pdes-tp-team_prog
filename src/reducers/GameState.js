@@ -77,10 +77,11 @@ const deselectMoveBlock = state => ({
   moveSelectedNode: null,
 })
 
-const startGame = (state, { id, name }) => ({
+const newGame = (state, { id, name, currency }) => ({
   ...state,
-  name: name || '',
   id,
+  name,
+  currency,
 })
 
 const cleanGame = () => gameState
@@ -100,7 +101,7 @@ const ACTION_HANDLER_TYPES = {
   [DESELECT_MOVE_BLOCK]: deselectMoveBlock,
   [BUY_MACHINE]: buyMachine,
   [INCREMENT_CURRENCY]: incrementCurrency,
-  [NEW_GAME_SUCCESS]: startGame,
+  [NEW_GAME_SUCCESS]: newGame,
   [PLAY_GAME_SUCCESS]: playGame,
   [CLEAN_GAME]: cleanGame,
   [UPDATE_GAME_BEGIN]: saveBegin,

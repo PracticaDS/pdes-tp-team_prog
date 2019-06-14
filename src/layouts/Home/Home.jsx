@@ -17,6 +17,13 @@ import { constants } from './constants'
 import './Home.css'
 
 class Home extends React.Component {
+  componentDidMount() {
+    const { getGames, user } = this.props
+    if (user && user.id) {
+      getGames(user.id)
+    }
+  }
+
   onClickNew = game => {
     const { user, newGame } = this.props
     newGame(user.id, game)
@@ -44,7 +51,10 @@ class Home extends React.Component {
     const { user, game } = this.props
     if (!user || !user.id) return <Redirect to="/" />
     if (game && game.id) return <Redirect to="/game" />
-    const games = this.createGames(user.games)
+    let games = []
+    if (user.games) {
+      games = this.createGames(user.games)
+    }
     return (
       <div component_name="home" className="home-container">
         <Grid
