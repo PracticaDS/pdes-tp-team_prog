@@ -1,13 +1,15 @@
 import {
-  TICK,
   SELECT_MACHINE,
   SELECT_ACTION,
   SELECT_MOVE_BLOCK,
   DESELECT_MOVE_BLOCK,
   BUY_MACHINE,
   CLEAN_GAME,
+  TICK_BEGIN,
+  TICK_SUCCESS,
 } from '../utils/actionTypes'
-import { createThunk, DELETE, GET, PUT, POST, SUCCESS } from './utils'
+import { createThunk, DELETE, GET, PUT, POST, SUCCESS, createAction } from './utils'
+import { TIMER_TIME } from '../utils/defaultValues'
 
 export const createStackAction = ({ type, body }) => ({
   type,
@@ -15,11 +17,6 @@ export const createStackAction = ({ type, body }) => ({
     ...body,
     stack: true,
   },
-})
-
-export const tick = () => ({
-  type: TICK,
-  body: {},
 })
 
 export const selectMachine = machine => ({
@@ -99,5 +96,15 @@ export const updateGame = (userId, game) => {
     payload: game,
     parse,
     method: PUT,
+  })
+}
+
+export const tick = () => dispatch => {
+  dispatch(createAction(TICK_BEGIN))
+  return new Promise(resolve => {
+    setTimeout(() => {
+      dispatch(createAction(TICK_SUCCESS))
+      resolve()
+    }, TIMER_TIME / 2)
   })
 }

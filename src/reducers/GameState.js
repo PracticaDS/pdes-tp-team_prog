@@ -13,6 +13,9 @@ import {
   UPDATE_GAME_BEGIN,
   UPDATE_GAME_SUCCESS,
   UPDATE_GAME_FAILURE,
+  TICK_BEGIN,
+  TICK_SUCCESS,
+  TICK_FAILURE,
 } from '../utils/actionTypes'
 import { SELECTION, EDITIONS } from '../utils/editionUtils'
 import { DEFAULT_CURRENCY } from '../utils/defaultValues'
@@ -40,6 +43,8 @@ const gameState = {
   currency: DEFAULT_CURRENCY,
   machineTypeSelected: '',
   tick: 0,
+  isUpdating: false,
+  updateRate: 30,
 }
 
 const changeActionSelected = (state, { actionType }) => ({
@@ -92,8 +97,22 @@ const saveBegin = state => ({ ...state, saveState: saveStatuses.WAITING })
 const saveFailure = state => ({ ...state, saveState: saveStatuses.FAILURE })
 const saveSuccess = state => ({ ...state, saveState: saveStatuses.SUCCESS })
 
+const tickBegin = state => ({
+  ...state,
+  tick: state.tick + 1, // here or in finish?
+  isUpdating: true,
+})
+
+const tickFinish = state => ({
+  ...state,
+  isUpdating: false,
+})
+
 const ACTION_HANDLER_TYPES = {
   [TICK]: nextTick,
+  [TICK_BEGIN]: tickBegin,
+  [TICK_SUCCESS]: tickFinish,
+  [TICK_FAILURE]: tickFinish,
   [RESTART_CURRENCY]: restartCurrency,
   [SELECT_MACHINE]: changeMachineSelected,
   [SELECT_ACTION]: changeActionSelected,
