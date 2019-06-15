@@ -5,20 +5,23 @@ import {
   LOGIN_FAILURE,
   LOGIN_SUCCESS,
   NEW_GAME_SUCCESS,
+  GET_GAMES_SUCCESS,
 } from '../utils/actionTypes'
 
 const userState = {
   id: null,
   username: '',
   games: [],
+  isFetching: false,
 }
 
-const loginBegin = () => ({
+const loginBegin = state => ({
+  ...state,
   isFetching: true,
 })
-const loginSuccess = (state, { _id, games, username }) => ({
-  id: _id,
-  games,
+const loginSuccess = (state, { id, username }) => ({
+  ...state,
+  id,
   username,
   isFetching: false,
 })
@@ -36,6 +39,11 @@ const addGame = (state, game) => ({
   games: [...state.games, game],
 })
 
+const getGames = (state, games) => ({
+  ...state,
+  games,
+})
+
 const ACTION_HANDLER_TYPES = {
   [LOGIN_BEGIN]: loginBegin,
   [LOGIN_SUCCESS]: loginSuccess,
@@ -43,6 +51,7 @@ const ACTION_HANDLER_TYPES = {
   [DELETE_GAME_SUCCESS]: deleteGame,
   [DELETE_GAME_FAILURE]: deleteGame,
   [NEW_GAME_SUCCESS]: addGame,
+  [GET_GAMES_SUCCESS]: getGames,
 }
 
 export const User = (state = userState, { type, body }) => {

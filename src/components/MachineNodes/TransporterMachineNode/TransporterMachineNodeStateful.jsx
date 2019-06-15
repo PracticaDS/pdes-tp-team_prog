@@ -8,7 +8,6 @@ import {
   incrementCount,
   isFrequencyFinished,
   runCBInValidPosition,
-  withTimeout,
 } from '../utils'
 
 class TransporterMachineNodeStateful extends React.Component {
@@ -38,9 +37,6 @@ class TransporterMachineNodeStateful extends React.Component {
             this.setState(activateNode, () => {
               createItems(outputPosition, values)
               deleteItems(position, values)
-              withTimeout(() => {
-                this.setState(deactivate)
-              })
             })
           }
         }
@@ -48,13 +44,15 @@ class TransporterMachineNodeStateful extends React.Component {
         runCBInValidPosition(outputPosition, dimensions, cb)
       } else {
         this.setState(incrementCount)
+        this.setState(deactivate)
       }
     }
   }
 
   render() {
+    const { isUpdating } = this.props
     const { isActive } = this.state
-    return <TransporterMachineNode isActive={isActive} />
+    return <TransporterMachineNode isActive={isActive && isUpdating} />
   }
 }
 

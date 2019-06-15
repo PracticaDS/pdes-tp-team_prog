@@ -1,3 +1,11 @@
+export const BEGIN = 'BEGIN'
+export const SUCCESS = 'SUCCESS'
+export const ERROR = 'ERROR'
+export const GET = 'GET'
+export const POST = 'POST'
+export const PUT = 'PUT'
+export const DELETE = 'DELETE'
+
 export const customFetch = (api, req) =>
   new Promise((resolve, reject) => {
     try {
@@ -9,40 +17,6 @@ export const customFetch = (api, req) =>
     }
   })
 
-export const createUserRequest = user => ({
-  method: 'POST', // *GET, POST, PUT, DELETE, etc.
-  mode: 'cors', // no-cors, cors, *same-origin
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(user), // body data type must match "Content-Type" header
-})
-
-export const createNewGameRequest = game => ({
-  method: 'POST',
-  mode: 'cors',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(game),
-})
-
-export const createPlayGameRequest = () => ({
-  method: 'GET', // *GET, POST, PUT, DELETE, etc.
-  mode: 'cors', // no-cors, cors, *same-origin
-  headers: {
-    'Content-Type': 'application/json',
-  },
-})
-
-export const createDeleteGameRequest = () => ({
-  method: 'DELETE', // *GET, POST, PUT, DELETE, etc.
-  mode: 'cors', // no-cors, cors, *same-origin
-  headers: {
-    'Content-Type': 'application/json',
-  },
-})
-
 export const createUpdateGameRequest = game => ({
   method: 'PUT',
   mode: 'cors',
@@ -53,3 +27,32 @@ export const createUpdateGameRequest = game => ({
 })
 
 export const API_URL = ''
+
+export const createAction = (type, body) => ({ type, body })
+
+const createRequest = (payload, method) => ({
+  method,
+  mode: 'cors',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  ...(method !== 'GET' && payload && { body: JSON.stringify(payload) }),
+})
+
+export const createThunk = ({
+  action,
+  url,
+  payload,
+  parse = ({ result }) => result,
+  method,
+}) => dispatch => {
+  dispatch(createAction(`${action}_${BEGIN}`))
+  return fetch(`${API_URL}${url}`, createRequest(payload, method))
+    .then(result => result.json())
+    .then(result => {
+      dispatch(createAction(`${action}_${SUCCESS}`, parse({ result, type: SUCCESS })))
+    })
+    .catch(result => {
+      dispatch(createAction(`${action}_${SUCCESS}`, parse({ result, type: ERROR })))
+    })
+}

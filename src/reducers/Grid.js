@@ -165,7 +165,10 @@ const playGame = (state, { factory: { dimensions, gridValues } }) => ({
 
 const cleanGame = () => createInitialState()
 
-const startGame = () => createInitialState()
+const newGame = (state, { factory }) => ({
+  ...state,
+  ...factory,
+})
 
 const ACTION_HANDLER_TYPES = {
   [UPDATE_BLOCK]: updateBlock,
@@ -175,7 +178,7 @@ const ACTION_HANDLER_TYPES = {
   [DELETE_ITEMS]: deleteItems,
   [MOVE_BLOCK]: moveSelectBlock,
   [ROTATE_BLOCK]: rotateBlock,
-  [NEW_GAME_SUCCESS]: startGame,
+  [NEW_GAME_SUCCESS]: newGame,
   [PLAY_GAME_SUCCESS]: playGame,
   [CLEAN_GAME]: cleanGame,
 }

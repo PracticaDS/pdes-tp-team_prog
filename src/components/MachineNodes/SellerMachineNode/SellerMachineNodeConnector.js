@@ -1,12 +1,13 @@
 import { connect } from 'react-redux'
 import { deleteItems } from '../../../actions/Grid'
-import { getTick } from '../../../selectors/GameState'
+import { getIsUpdating, getTick } from '../../../selectors/GameState'
 import { incrementCurrency } from '../../../actions/Currency'
 import { createStackAction } from '../../../actions/GameState'
 
 const connector = StarterMachineNode => {
   const mapStateToProps = state => ({
     tick: getTick(state),
+    isUpdating: getIsUpdating(state),
   })
   const mapDispatchToProps = dispatch => ({
     incrementCurrency: addedCurrency =>

@@ -8,3 +8,4 @@ export const machineTypeSelected = state => gameState(state).machineTypeSelected
 export const gameStateId = state => state.GameState.id
 export const currentSaveState = state => gameState(state).saveState
 export const currentGameName = state => gameState(state).name
+export const getIsUpdating = state => gameState(state).isUpdating
