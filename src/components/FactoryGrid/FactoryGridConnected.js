@@ -35,6 +35,8 @@ const renderBlock = position => (
   <Block key={`${position.row}_${position.column}`} position={position} renderNode={renderNode} />
 )
 
-const factoryGrid = props => <FactoryGrid {...props} renderBlock={renderBlock} />
+const factoryGrid = ({ dimensions }) => (
+  <FactoryGrid dimensions={dimensions} renderBlock={renderBlock} />
+)
 
 export default FactoryConnector(factoryGrid)

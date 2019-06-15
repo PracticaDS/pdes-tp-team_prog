@@ -8,7 +8,6 @@ import {
   incrementCount,
   isFrequencyFinished,
   runCBInValidPosition,
-  withTimeout,
 } from '../utils'
 
 class StarterMachineNodeStateful extends React.Component {
@@ -39,21 +38,20 @@ class StarterMachineNodeStateful extends React.Component {
                 quantity: machine.frequency,
               })
             })
-            withTimeout(() => {
-              this.setState(deactivate)
-            })
           })
         }
         runCBInValidPosition(outputPosition, dimensions, cb)
       } else {
         this.setState(incrementCount)
+        this.setState(deactivate)
       }
     }
   }
 
   render() {
+    const { isUpdating } = this.props
     const { isActive } = this.state
-    return <StarterMachineNode isActive={isActive} />
+    return <StarterMachineNode isActive={isActive && isUpdating} />
   }
 }
 

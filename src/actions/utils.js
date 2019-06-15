@@ -28,7 +28,7 @@ export const createUpdateGameRequest = game => ({
 
 export const API_URL = ''
 
-const createAction = (type, body) => ({ type, body })
+export const createAction = (type, body) => ({ type, body })
 
 const createRequest = (payload, method) => ({
   method,
