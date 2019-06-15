@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/pdes-tp-team_prog/static/media/furnace.fc5b44a9.png"
   },
   {
-    "revision": "82e78cbf89512a425eba",
+    "revision": "337837b3e83decea72dd",
     "url": "/pdes-tp-team_prog/static/css/main.85b673b8.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/pdes-tp-team_prog/static/js/runtime~main.bb9794b8.js"
   },
   {
-    "revision": "bc9bc2ae1ae1ad59e000",
-    "url": "/pdes-tp-team_prog/static/js/2.86863d10.chunk.js"
+    "revision": "c0733eb9020215b4865d",
+    "url": "/pdes-tp-team_prog/static/js/2.b7675627.chunk.js"
   },
   {
     "revision": "4b741a52e1a0f8a834d92614ebb5685b",
@@ -32,8 +32,8 @@ self.__precacheManifest = [
     "url": "/pdes-tp-team_prog/static/media/crafter.679fd74f.png"
   },
   {
-    "revision": "82e78cbf89512a425eba",
-    "url": "/pdes-tp-team_prog/static/js/main.4d335815.chunk.js"
+    "revision": "337837b3e83decea72dd",
+    "url": "/pdes-tp-team_prog/static/js/main.5c20345e.chunk.js"
   },
   {
     "revision": "dddb139c2e606f47cc96f5e1e90480e9",
@@ -60,7 +60,7 @@ self.__precacheManifest = [
     "url": "/pdes-tp-team_prog/static/media/gold_melted.46867643.png"
   },
   {
-    "revision": "d75aed0f15f0a6855fa359ce8bd90bbd",
+    "revision": "1fd45085c60c8645d0541e4a9aab4681",
     "url": "/pdes-tp-team_prog/index.html"
   }
 ];
