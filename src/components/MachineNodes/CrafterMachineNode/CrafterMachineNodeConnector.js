@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import { createRawMaterial, deleteItems } from '../../../actions/Grid'
-import { getTick } from '../../../selectors/GameState'
+import { getIsUpdating, getTick } from '../../../selectors/GameState'
 import { getDimensions } from '../../../selectors/GameDimensions'
 import { createStackAction } from '../../../actions/GameState'
 
@@ -8,6 +8,7 @@ const connector = CrafterMachineNode => {
   const mapStateToProps = state => ({
     tick: getTick(state),
     dimensions: getDimensions(state),
+    isUpdating: getIsUpdating(state),
   })
   const mapDispatchToProps = dispatch => ({
     createRawMaterial: (position, material) =>

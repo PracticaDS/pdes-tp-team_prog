@@ -1,12 +1,6 @@
 import React from 'react'
 import connector from './SellerMachineNodeConnector'
-import {
-  activateNode,
-  deactivate,
-  incrementCount,
-  isFrequencyFinished,
-  withTimeout,
-} from '../utils'
+import { activateNode, deactivate, incrementCount, isFrequencyFinished } from '../utils'
 import SellerMachineNode from './SellerMachineNode'
 
 class SellerMachineNodeStateful extends React.Component {
@@ -35,20 +29,19 @@ class SellerMachineNodeStateful extends React.Component {
           this.setState(activateNode, () => {
             deleteItems(position, values)
             incrementCurrency(addedCurrency)
-            withTimeout(() => {
-              this.setState(deactivate)
-            })
           })
         }
       } else {
         this.setState(incrementCount)
+        this.setState(deactivate)
       }
     }
   }
 
   render() {
     const { isActive } = this.state
-    return <SellerMachineNode isActive={isActive} />
+    const { isUpdating } = this.props
+    return <SellerMachineNode isActive={isActive && isUpdating} />
   }
 }
 

@@ -9,7 +9,6 @@ import {
   incrementCount,
   isFrequencyFinished,
   runCBInValidPosition,
-  withTimeout,
 } from '../utils'
 import CrafterMachineNode from './CrafterMachineNode'
 
@@ -38,21 +37,20 @@ class CrafterMachineNodeStateful extends React.Component {
 
             deleteItems(position, toDeleteItems)
             createRawMaterial(outputPosition, { ...material, quantity })
-            withTimeout(() => {
-              this.setState(deactivate)
-            })
           })
         }
         runCBInValidPosition(outputPosition, dimensions, cb)
       } else {
         this.setState(incrementCount)
+        this.setState(deactivate)
       }
     }
   }
 
   render() {
     const { isActive } = this.state
-    return <CrafterMachineNode isActive={isActive} />
+    const { isUpdating } = this.props
+    return <CrafterMachineNode isActive={isActive && isUpdating} />
   }
 }
 

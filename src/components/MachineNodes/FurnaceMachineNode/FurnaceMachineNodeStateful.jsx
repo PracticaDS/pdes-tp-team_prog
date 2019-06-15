@@ -8,7 +8,6 @@ import {
   incrementCount,
   isFrequencyFinished,
   runCBInValidPosition,
-  withTimeout,
 } from '../utils'
 
 const canMeltMaterial = material => material.type === 'metal'
@@ -49,10 +48,6 @@ class FurnaceMachineNodeStateful extends React.Component {
 
               deleteItems(position, toDeleteItems)
               createItems(outputPosition, toCreateItems)
-
-              withTimeout(() => {
-                this.setState(deactivate())
-              })
             })
           }
         }
@@ -60,13 +55,15 @@ class FurnaceMachineNodeStateful extends React.Component {
         runCBInValidPosition(outputPosition, dimensions, cb)
       } else {
         this.setState(incrementCount)
+        this.setState(deactivate)
       }
     }
   }
 
   render() {
     const { isActive } = this.state
-    return <FurnaceMachineNode isActive={isActive} />
+    const { isUpdating } = this.props
+    return <FurnaceMachineNode isActive={isActive && isUpdating} />
   }
 }
 
