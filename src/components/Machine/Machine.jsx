@@ -7,7 +7,7 @@ const Machine = ({ name, isActive, isSelected, isDisabled, onClick, activeImg, n
     <Card
       className={`machine ${className}`}
       component_name={name}
-      onClick={() => !isDisabled && onClick()}
+      onClick={() => !isDisabled && onClick && onClick()}
     >
       <CardMedia component="img" image={isActive ? activeImg : nonActiveImg} />
     </Card>
