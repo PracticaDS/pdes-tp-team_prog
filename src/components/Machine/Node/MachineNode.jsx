@@ -1,10 +1,5 @@
 import React from 'react'
-import {
-  activateNode,
-  deactivate,
-  incrementCount,
-  isFrequencyFinished,
-} from '../../MachineNodes/utils'
+import { activateNode, deactivate, incrementCount, isFrequencyFinished } from '../utils'
 import Machine from '../Machine'
 import { createStackAction } from '../../../actions/GameState'
 

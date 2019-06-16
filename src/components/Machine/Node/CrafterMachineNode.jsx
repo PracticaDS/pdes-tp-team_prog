@@ -3,11 +3,7 @@ import MachineNode from './MachineNode'
 import crafter from '../../../assets/machines/crafter.png'
 import crafterActive from '../../../assets/machines/crafter-active.png'
 import { applyDirection, isPositionValid } from '../../../utils/directions'
-import {
-  getCraftedMaterial,
-  getItemsFromMaterials,
-  hasNecessaryMaterials,
-} from '../../MachineNodes/utils'
+import { getCraftedMaterial, getItemsFromMaterials, hasNecessaryMaterials } from '../utils'
 import { createRawMaterial, deleteItems } from '../../../actions/Grid'
 import connector from './MachineNodeConnector'
 
