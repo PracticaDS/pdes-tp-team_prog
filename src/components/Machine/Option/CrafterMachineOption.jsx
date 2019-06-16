@@ -21,8 +21,8 @@ class CrafterMachineOption extends Component {
     })
   }
 
-  renderItems = (recipeSelected, onItemSelected) =>
-    recipes.map(recipe => (
+  renderItems = (items, recipeSelected, onItemSelected) =>
+    items.map(recipe => (
       <div
         key={recipe.name}
         className={recipeSelected === recipe ? 'recipeOptionSelected' : 'recipeOption'}
