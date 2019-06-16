@@ -28,7 +28,7 @@ const run = props => {
 }
 
 const StarterMachineNode = props => (
-  <MachineNode {...props} activeImg={crafter} nonActiveImg={crafterActive} run={run} />
+  <MachineNode {...props} activeImg={crafterActive} nonActiveImg={crafter} run={run} />
 )
 
 export default connector(StarterMachineNode)

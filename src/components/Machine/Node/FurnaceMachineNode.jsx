@@ -37,7 +37,7 @@ const run = props => {
 }
 
 const FurnaceMachineNode = props => (
-  <MachineNode {...props} activeImg={furnace} nonActiveImg={furnaceActive} run={run} />
+  <MachineNode {...props} activeImg={furnaceActive} nonActiveImg={furnace} run={run} />
 )
 
 export default connector(FurnaceMachineNode)

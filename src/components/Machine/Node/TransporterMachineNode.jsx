@@ -24,7 +24,7 @@ const run = props => {
 }
 
 const TransporterMachineNode = props => (
-  <MachineNode {...props} activeImg={transporter} nonActiveImg={transporterActive} run={run} />
+  <MachineNode {...props} activeImg={transporterActive} nonActiveImg={transporter} run={run} />
 )
 
 export default connector(TransporterMachineNode)
