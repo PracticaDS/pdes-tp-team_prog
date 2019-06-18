@@ -30,6 +30,7 @@ const Navbar = ({ user, gameName, onClick, saveState }) => (
       <Toolbar>
         <div>
           <IconButton
+            component_name="nav-bar-profile-button"
             aria-controls="menu-appbar"
             aria-haspopup="true"
             onClick={onClick}

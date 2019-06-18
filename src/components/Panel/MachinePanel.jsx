@@ -23,7 +23,7 @@ const MachinePanel = () => (
     <Card className="machineTypesMainContainer">
       <CardContent className="machineTypesContainer">
         {machinesComponents.map((MachineComponent, index) => (
-          <div key={index} className="machineTypesElement">
+          <div className="machineTypesElement" key={index}>
             <MachineComponent />
           </div>
         ))}

@@ -45,7 +45,7 @@ class MachineWithSelector extends Component {
     return (
       <div>
         <div
-          component_name={`machine_${machine.id}`}
+          component_name={`machine-option-${machine.type}`}
           className={containerClassName}
           ref={this.contentRef}
           onClick={() => !isDisabled && this.onClick()}

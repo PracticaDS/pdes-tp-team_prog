@@ -29,8 +29,9 @@ function createGame({ isOpen, onCreate }) {
   }
 
   return (
-    <div>
+    <div component_name="create-game">
       <Button
+        component_name="create-game-open-button"
         className="new-game-button"
         color="primary"
         variant="contained"
@@ -39,10 +40,16 @@ function createGame({ isOpen, onCreate }) {
       >
         {constants.new_game}
       </Button>
-      <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+      <Dialog
+        component_name="create-game-dialog"
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="form-dialog-title"
+      >
         <DialogTitle id="form-dialog-title">{constants.new_game}</DialogTitle>
         <DialogContent>
           <TextField
+            component_name="create-game-input"
             margin="dense"
             id="game_name"
             label={constants.game_label}
@@ -54,10 +61,15 @@ function createGame({ isOpen, onCreate }) {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button component_name="create-game-cancel-button" onClick={handleClose} color="primary">
             {constants.cancel}
           </Button>
-          <Button onClick={handleOnCreate} color="primary" disabled={name === ''}>
+          <Button
+            component_name="create-game-create-button"
+            onClick={handleOnCreate}
+            color="primary"
+            disabled={name === ''}
+          >
             {constants.create}
           </Button>
         </DialogActions>

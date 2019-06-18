@@ -17,6 +17,7 @@ const Block = ({
   blockActions,
 }) => (
   <div
+    component_name={`block-${node.position.row}-${node.position.column}`}
     className={`block ${isSelected ? 'selected' : 'unselected'} ${
       !isEmptyBlock ? ` ${getDegree(directionToRotate)}` : ''
     }`}
