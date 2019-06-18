@@ -18,3 +18,9 @@
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+// index.js
+import commands from './commands'
+
+module.exports = {
+  commands,
+}
