@@ -13,8 +13,8 @@ const COLUMNS_LIMIT = 15
 function createGame({ isOpen, onCreate }) {
   const [open, setOpen] = React.useState(isOpen || false)
   const [name, setName] = React.useState('')
-  const [rows, setRows] = React.useState(0)
-  const [columns, setColumns] = React.useState(0)
+  const [rows, setRows] = React.useState('')
+  const [columns, setColumns] = React.useState('')
 
   function handleClickOpen() {
     setOpen(true)
@@ -32,9 +32,15 @@ function createGame({ isOpen, onCreate }) {
   const onDisable = () =>
     name === '' || (rows < 1 || rows > ROWS_LIMIT) || (columns < 1 || columns > COLUMNS_LIMIT)
 
-  const handleRows = ({ target: value }) => setRows(value)
+  const handleRows = event => {
+    const { value } = event.target
+    setRows(value)
+  }
 
-  const handleColumns = ({ target: value }) => setColumns(value)
+  const handleColumns = event => {
+    const { value } = event.target
+    setColumns(value)
+  }
 
   function handleOnCreate() {
     onCreate({ name, dimensions: { rows, columns } })
