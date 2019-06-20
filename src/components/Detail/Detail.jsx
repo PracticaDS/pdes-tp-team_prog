@@ -8,11 +8,11 @@ const Detail = ({ name, cost, frequency }) => (
     <font className="DetailHeader">{Constant.title}</font>
     <div className="detail">
       <Card>
-        <CardContent>
-          <Typography className="text-content" gutterBottom>
+        <CardContent component_name="details-content">
+          <Typography component_name="details-content-name" className="text-content" gutterBottom>
             {name}
           </Typography>
-          <Typography className="text-content" gutterBottom>
+          <Typography component_name="details-content-cost" className="text-content" gutterBottom>
             {Constant.cost}
             <span className="text-content-number">
               {Constant.dolar}

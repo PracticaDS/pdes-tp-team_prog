@@ -22,8 +22,9 @@ class StarterMachineOption extends Component {
   }
 
   renderItems = (items, materialSelected, onItemSelected) =>
-    items.map(material => (
+    items.map((material, index) => (
       <div
+        component_name={`item-${index}`}
         key={material.name}
         className={materialSelected === material ? 'materialOptionSelected' : 'materialOption'}
       >

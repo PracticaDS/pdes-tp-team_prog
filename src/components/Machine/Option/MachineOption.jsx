@@ -8,6 +8,7 @@ const MachineOption = ({ currency, selectMachine, machine, machineSelected }) =>
     machineSelected && machineSelected.type && machineSelected.type === machine.type
   return (
     <Machine
+      name={`machine-option-${machine.type}`}
       currency={currency}
       isDisabled={isDisabled}
       isSelected={isSelected}

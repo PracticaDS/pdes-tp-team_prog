@@ -36,10 +36,11 @@ class MachineNode extends React.Component {
   }
 
   render() {
-    const { isUpdating, activeImg, nonActiveImg } = this.props
+    const { name, isUpdating, activeImg, nonActiveImg } = this.props
     const { isActive } = this.state
     return (
       <Machine
+        name={`machine-node-${name}`}
         isActive={isActive && isUpdating}
         activeImg={activeImg}
         nonActiveImg={nonActiveImg}

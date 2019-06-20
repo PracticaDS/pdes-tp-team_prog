@@ -1,0 +1,19 @@
+{
+  "existing": {
+    "username": "test",
+    "game_name": "test-game",
+    "initial_requests": [
+      { "url": "/test/db-clean", "method": "POST" },
+      { "url": "/test/db-seed", "method": "POST" }
+    ],
+    "games": 1,
+    "currency": 10000
+  },
+  "new": {
+    "username": "test1",
+    "game_name": "test1",
+    "initial_requests": [{ "url": "/test/db-clean", "method": "POST" }],
+    "games": 0,
+    "currency": 10000
+  }
+}

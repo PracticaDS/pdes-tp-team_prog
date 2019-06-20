@@ -72,7 +72,12 @@ class Home extends React.Component {
             spacing={1}
           >
             <Grid item xs={6}>
-              <Typography className="home-title" align="center" variant="h5">
+              <Typography
+                component_name="home-title"
+                className="home-title"
+                align="center"
+                variant="h5"
+              >
                 {constants.title(user.username)}
               </Typography>
             </Grid>
@@ -83,7 +88,7 @@ class Home extends React.Component {
           <Grid className="home-margin" container direction="row" alignItems="center">
             <Table className="home-table">
               <TableHead>
-                <TableRow>
+                <TableRow component_name="head-game-row">
                   <TableCell align="center">{constants.name}</TableCell>
                   <TableCell align="center">{constants.updated_date}</TableCell>
                   <TableCell align="center">{constants.current_currency}</TableCell>
@@ -92,15 +97,23 @@ class Home extends React.Component {
               </TableHead>
               <TableBody>
                 {games.map(gm => (
-                  <TableRow key={gm.id}>
+                  <TableRow component_name="body-game-row" key={gm.id}>
                     <TableCell align="center">{gm.name}</TableCell>
                     <TableCell align="center">{gm.updated_date}</TableCell>
                     <TableCell align="center">{gm.current_currency}</TableCell>
                     <TableCell className="buttons" align="center">
-                      <Button variant="contained" color="secondary">
+                      <Button
+                        component_name="play-game-button"
+                        variant="contained"
+                        color="secondary"
+                      >
                         <PlayArrow onClick={() => this.onClickPlay(gm.id)} />
                       </Button>
-                      <Button variant="contained" color="primary">
+                      <Button
+                        component_name="delete-game-button"
+                        variant="contained"
+                        color="primary"
+                      >
                         <Delete onClick={() => this.onClickDelete(gm.id)} />
                       </Button>
                     </TableCell>
