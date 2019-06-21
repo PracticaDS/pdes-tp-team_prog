@@ -3,26 +3,12 @@ import { Card, CardContent } from '@material-ui/core'
 import Constants from './MachinePanel.constants'
 import './MachinePanel.css'
 
-import StarterMachineOption from '../Machine/Option/StarterMachineOption'
-import SellerMachineOption from '../Machine/Option/SellerMachineOption'
-import CrafterMachineOption from '../Machine/Option/CrafterMachineOption'
-import FurnaceMachineOption from '../Machine/Option/FurnaceMachineOption'
-import TransporterMachineOption from '../Machine/Option/TransporterMachineOption'
-
-const machinesComponents = [
-  StarterMachineOption,
-  SellerMachineOption,
-  CrafterMachineOption,
-  FurnaceMachineOption,
-  TransporterMachineOption,
-]
-
-const MachinePanel = () => (
+const MachinePanel = ({ machines }) => (
   <div>
     <font className="machineTypesHeader">{Constants.title}</font>
     <Card className="machineTypesMainContainer">
       <CardContent className="machineTypesContainer">
-        {machinesComponents.map((MachineComponent, index) => (
+        {machines.map((MachineComponent, index) => (
           <div className="machineTypesElement" key={index}>
             <MachineComponent />
           </div>

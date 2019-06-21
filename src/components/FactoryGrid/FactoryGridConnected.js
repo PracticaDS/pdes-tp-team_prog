@@ -10,7 +10,7 @@ import './FactoryGrid.css'
 
 const DEFAULT = 'DEFAULT'
 
-const renderNode = node => {
+export const renderNode = node => {
   const { machine, items } = node
   let materialImg = null
   if (items) {

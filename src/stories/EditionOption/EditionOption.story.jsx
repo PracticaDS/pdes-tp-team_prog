@@ -3,9 +3,9 @@ import { storiesOf } from '@storybook/react'
 import configureStore from 'redux-mock-store'
 import { Provider } from 'react-redux'
 import EditionOption from '../../components/EditionOption/EditionOption'
-import deleteImage from '../../assets/delete.png'
-import rotateImage from '../../assets/rotate.png'
-import moveImage from '../../assets/move.png'
+import deleteImage from '../../assets/options/delete.png'
+import rotateImage from '../../assets/options/rotate.png'
+import moveImage from '../../assets/options/move.png'
 
 const deleteOption = {
   title: 'Delete',

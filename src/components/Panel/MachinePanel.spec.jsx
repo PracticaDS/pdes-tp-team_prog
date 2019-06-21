@@ -17,7 +17,7 @@ describe('Machine Types tests', () => {
       TransporterMachine,
     ]
 
-    const machinePanel = shallow(<MachinePanel />)
+    const machinePanel = shallow(<MachinePanel machines={machines} />)
 
     it('should contain every machine component rendered', () => {
       machines.forEach(Ma => {
