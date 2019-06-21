@@ -34,7 +34,7 @@ export const updateMiddleware = ({ getState, dispatch }) => next => action => {
         factory: currentState.Grid,
       }
       dispatch(updateGame(userId, game))
-      counts = 0
+      counts = 1
     } else {
       counts++
     }

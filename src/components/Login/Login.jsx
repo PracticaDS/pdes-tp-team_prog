@@ -52,6 +52,7 @@ class Login extends React.Component {
           <Grid item xs={6} container direction="column" alignItems="center" spacing={1}>
             <Grid item xs={6}>
               <TextField
+                component_name="login-input"
                 className="login-input"
                 label={constants.label}
                 placeholder={constants.placeholder}
@@ -63,6 +64,7 @@ class Login extends React.Component {
             </Grid>
             <Grid item xs={6}>
               <Button
+                component_name="login-button"
                 disabled={this.isDisabled()}
                 variant="contained"
                 size="large"

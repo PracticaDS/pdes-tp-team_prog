@@ -6,41 +6,21 @@ import { DOWN, LEFT, RIGHT, UP, getDegree } from '../../utils/directions'
 
 describe('Block Suite', () => {
   describe('Basic rendering', () => {
-    // let nodeMock
-    // let positionMock
-    // let displayActionMock
-    // let directionToRotateMock
-    // let isSelectedMock
-    // let isEmptyBlockMock
     let renderNodeMock
-    // let blockActionsMock
+    let node
 
     beforeEach(() => {
-      // editionOptionMock = {
-      //   title: Math.random().toString(),
-      //   image: Math.random().toString(),
-      // }
-      // onSelectActionMock = jest.fn()
-
-      // const selectedOptions = [
-      //   { value: false, expectedClass: 'editionOptionElement' },
-      //   { value: true, expectedClass: 'editionOptionElementSelected' },
-      // ]
-      // isOptionSelectedMock = selectedOptions[Math.floor(Math.random() * selectedOptions.length)]
-
-      // editionOption = mount(
-      //   <EditionOption
-      //     editionOption={editionOptionMock}
-      //     onSelectAction={onSelectActionMock}
-      //     isOptionSelected={isOptionSelectedMock.value}
-      //   />,
-      // )
-
       renderNodeMock = jest.fn()
+      node = {
+        position: {
+          row: 0,
+          column: 0,
+        },
+      }
     })
 
     it('render simple Block component', () => {
-      const BlockComponent = mount(<Block renderNode={renderNodeMock} />)
+      const BlockComponent = mount(<Block node={node} renderNode={renderNodeMock} />)
       expect(BlockComponent).toBeDefined()
     })
   })
