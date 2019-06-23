@@ -3,7 +3,7 @@ sudo: required
 services:
   - docker
 before_install:
-  # login to docker registries (dockerhub + heroku)
+  # login to docker registries dockerhub
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 node_js:
   - '10'
