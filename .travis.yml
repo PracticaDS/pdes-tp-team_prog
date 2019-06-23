@@ -1,4 +1,10 @@
 language: node_js
+sudo: required
+services:
+  - docker
+before_install:
+  # login to docker registries dockerhub
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 node_js:
   - '10'
 cache:
@@ -7,11 +13,17 @@ cache:
 script:
   - yarn test:unit
   - yarn build
+    # build docker images
+  - docker build -t teamprogpdes/team-prog-front .
+
 deploy:
-  provider: pages
+  provider: script
   skip_cleanup: true
   github_token: $GITHUB_API_KEY
   local_dir: build
+  script:
+    # push to dockerhub
+    docker push teamprogpdes/team-prog-front;
   keep_history: true
   on:
     branch: dev
