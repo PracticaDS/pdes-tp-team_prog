@@ -78,6 +78,7 @@ function createGame({ isOpen, onCreate }) {
             required
           />
           <TextField
+            component_name="create-game-rows"
             margin="dense"
             id="game_rows"
             label={constants.rows}
@@ -88,6 +89,7 @@ function createGame({ isOpen, onCreate }) {
             required
           />
           <TextField
+            component_name="create-game-columns"
             margin="dense"
             id="game_columns"
             label={constants.columns}
