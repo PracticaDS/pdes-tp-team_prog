@@ -7,9 +7,14 @@ import DialogContent from '@material-ui/core/DialogContent'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import { constants } from './constants'
 
+const ROWS_LIMIT = 15
+const COLUMNS_LIMIT = 15
+
 function createGame({ isOpen, onCreate }) {
   const [open, setOpen] = React.useState(isOpen || false)
   const [name, setName] = React.useState('')
+  const [rows, setRows] = React.useState('')
+  const [columns, setColumns] = React.useState('')
 
   function handleClickOpen() {
     setOpen(true)
@@ -24,8 +29,21 @@ function createGame({ isOpen, onCreate }) {
     setName(value)
   }
 
+  const onDisable = () =>
+    name === '' || (rows < 1 || rows > ROWS_LIMIT) || (columns < 1 || columns > COLUMNS_LIMIT)
+
+  const handleRows = event => {
+    const { value } = event.target
+    setRows(value)
+  }
+
+  const handleColumns = event => {
+    const { value } = event.target
+    setColumns(value)
+  }
+
   function handleOnCreate() {
-    onCreate({ name })
+    onCreate({ name, dimensions: { rows, columns } })
   }
 
   return (
@@ -59,6 +77,28 @@ function createGame({ isOpen, onCreate }) {
             fullWidth
             required
           />
+          <TextField
+            component_name="create-game-rows"
+            margin="dense"
+            id="game_rows"
+            label={constants.rows}
+            type="number"
+            placeholder={10}
+            onChange={handleRows}
+            fullWidth
+            required
+          />
+          <TextField
+            component_name="create-game-columns"
+            margin="dense"
+            id="game_columns"
+            label={constants.columns}
+            type="number"
+            placeholder={10}
+            onChange={handleColumns}
+            fullWidth
+            required
+          />
         </DialogContent>
         <DialogActions>
           <Button component_name="create-game-cancel-button" onClick={handleClose} color="primary">
@@ -68,7 +108,7 @@ function createGame({ isOpen, onCreate }) {
             component_name="create-game-create-button"
             onClick={handleOnCreate}
             color="primary"
-            disabled={name === ''}
+            disabled={onDisable()}
           >
             {constants.create}
           </Button>
