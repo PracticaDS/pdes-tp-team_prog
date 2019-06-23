@@ -2,6 +2,8 @@
   "existing": {
     "username": "test",
     "game_name": "test-game",
+    "game_rows": 10,
+    "game_columns": 10,
     "initial_requests": [
       { "url": "/test/db-clean", "method": "POST" },
       { "url": "/test/db-seed", "method": "POST" }
@@ -12,6 +14,8 @@
   "new": {
     "username": "test1",
     "game_name": "test1",
+    "game_rows": 10,
+    "game_columns": 10,
     "initial_requests": [{ "url": "/test/db-clean", "method": "POST" }],
     "games": 0,
     "currency": 10000
