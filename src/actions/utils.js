@@ -26,7 +26,7 @@ export const createUpdateGameRequest = game => ({
   body: JSON.stringify(game),
 })
 
-export const API_URL = ''
+export const API_URL = process.env.API_URL || 'http://localhost:8080/'
 
 export const createAction = (type, body) => ({ type, body })
 
