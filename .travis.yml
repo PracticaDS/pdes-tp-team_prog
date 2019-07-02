@@ -15,15 +15,27 @@ script:
   - yarn build
     # build docker images
   - docker build -t teamprogpdes/team-prog-front .
-
+env:
+  - AWS_ACCESS_KEY_ID="YOUR AWS ACCESS KEY"
+  - AWS_SECRET_KEY="YOUR AWS SECRET KEY"
 deploy:
-  provider: script
-  skip_cleanup: true
-  github_token: $GITHUB_API_KEY
-  local_dir: build
-  script:
-    # push to dockerhub
-    docker push teamprogpdes/team-prog-front;
-  keep_history: true
-  on:
-    branch: dev
+  - provider: script
+    skip_cleanup: true
+    github_token: $GITHUB_API_KEY
+    local_dir: build
+    script:
+      # push to dockerhub
+      docker push teamprogpdes/team-prog-front;
+    keep_history: true
+    on:
+      branch: dev
+  - provider: s3
+    access_key_id: AWS_ACCESS_KEY_ID
+    secret_access_key: AWS_SECRET_KEY
+    bucket: 'tprog-s3-frontend'
+    skip_cleanup: true
+    local_dir: build
+    before_deploy:
+      - yarn build
+    on:
+      branch: dev
