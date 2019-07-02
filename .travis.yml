@@ -15,9 +15,6 @@ script:
   - yarn build
     # build docker images
   - docker build -t teamprogpdes/team-prog-front .
-env:
-  - AWS_ACCESS_KEY_ID="YOUR AWS ACCESS KEY"
-  - AWS_SECRET_KEY="YOUR AWS SECRET KEY"
 deploy:
   - provider: script
     skip_cleanup: true
