@@ -11,9 +11,6 @@
 describe('Login', () => {
   it('login to the application', () => {
     cy.fixture('user.json').then(fixture_user => {
-      console.log('------------------------------------------')
-      console.log(fixture_user)
-      console.log('------------------------------------------')
       const user = fixture_user.new
 
       cy.login(user)

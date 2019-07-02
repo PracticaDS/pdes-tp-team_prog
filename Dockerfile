@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:11-alpine
 
 # Directory
 ARG APP_DIR=app/front
@@ -11,11 +11,7 @@ WORKDIR ${APP_DIR}
 COPY package*.json ./
 COPY yarn.lock ./
 
-RUN yarn install; \
-    yarn global add serve
-
-# For production 
-# RUN npm install --production
+RUN yarn install;
 
 # Copy project files
 COPY . .
@@ -27,4 +23,4 @@ ENV NODE_ENV=production
 EXPOSE 3000
 
 # Run the project
-CMD serve -p 3000 -s build
+CMD npm run serve

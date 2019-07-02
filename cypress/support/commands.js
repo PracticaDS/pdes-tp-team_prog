@@ -1,6 +1,8 @@
 Cypress.Commands.add('login', user => {
   user.initial_requests.forEach(req => {
-    cy.request(req)
+    const newUrl = Cypress.env('API_URL')
+    req.url = newUrl + req.url
+    cy.request(req).then(res => cy.log(res))
   })
   cy.visit('/')
   cy.get('[component_name="login-input"]')
