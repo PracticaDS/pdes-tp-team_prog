@@ -26,7 +26,7 @@ export const createUpdateGameRequest = game => ({
   body: JSON.stringify(game),
 })
 
-export const API_URL = process.env.API_URL || 'http://localhost:8080'
+export const API_URL = process.env.API_URL || 'http://localhost:3001'
 
 export const createAction = (type, body) => ({ type, body })
 
@@ -47,7 +47,7 @@ export const createThunk = ({
   method,
 }) => dispatch => {
   dispatch(createAction(`${action}_${BEGIN}`))
-  return fetch(`${API_URL}${url}`, createRequest(payload, method))
+  return fetch(`${API_URL}/api${url}`, createRequest(payload, method))
     .then(result => result.json())
     .then(result => {
       dispatch(createAction(`${action}_${SUCCESS}`, parse({ result, type: SUCCESS })))
